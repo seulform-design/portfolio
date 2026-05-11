@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Artish Case Study · 작품을 '공간의 언어'로 큐레이션하는 에디토리얼 멀티페이지 | 머무는 시간을 콘텐츠로 만든 결정의 기록.">
+    <meta name="author" content="Sulgi Ji">
+    <meta name="theme-color" content="#1F2742">
+    <meta property="og:title" content="Artish · Case Study | Sulgi Ji">
+    <meta property="og:description" content="작품을 공간의 언어로 큐레이션 | 에디토리얼 멀티페이지로 만든 머무름의 리듬.">
+
+    <title>Artish · Case Study | Sulgi Ji</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;1,500&family=JetBrains+Mono:wght@400;500;600&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/collage.css">
+    <link rel="stylesheet" href="styles/subpage.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="scripts/ui/aos-init.js" defer></script>
+
+    <script>document.documentElement.classList.add('js-enabled');</script>
+</head>
+
+<body class="subpage-body">
+    <a href="#main" class="skip-link">본문으로 바로가기</a>
+    <div class="case-progress" id="caseProgress" aria-hidden="true"></div>
+
+    <div id="wrap">
+        <!-- ========== HEADER ========== -->
+        <header id="header" class="subpage-header">
+            <div class="container header-content">
+                <div class="logo">
+                    <a href="index.html" aria-label="Sulgi Ji · Home">
+                        <span class="logo-mark">S/</span>
+                        <span class="logo-name">Sulgi Ji</span>
+                    </a>
+                </div>
+                <nav class="main-nav" aria-label="Main">
+                    <ul>
+                        <li><a href="index.html#work" class="active">Work</a></li>
+                        <li><a href="index.html#approach">Approach</a></li>
+                        <li><a href="index.html#capabilities">Capabilities</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#contact" class="nav-cta">Get in touch</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main id="main">
+            <!-- ========== HERO ========== -->
+            <section class="case-hero" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-hero-meta-row">
+                        <span class="case-hero-eyebrow">Case 02 / Editorial Commerce</span>
+                        <span class="case-hero-eyebrow-dot"></span>
+                        <span class="case-hero-status">Published 2026 · Concept project</span>
+                    </div>
+
+                    <h1 class="case-hero-title">Artish</h1>
+
+                    <p class="case-hero-tagline">
+                        작품은 작가의 언어, 큐레이션은 <em>공간의 언어</em>입니다. <br>
+                        '거실 · 침실 · 작업실'이라는 일상의 좌표에서 작품을 <br> 다시 발견하도록,
+                        머무는 시간을 디자인했습니다.
+                    </p>
+
+                    <dl class="case-meta-grid">
+                        <div>
+                            <dt>Role</dt>
+                            <dd>UX · UI · Publishing<br>(Solo, end-to-end)</dd>
+                        </div>
+                        <div>
+                            <dt>Scope</dt>
+                            <dd>Spaces · Curation<br>Journal · Detail</dd>
+                        </div>
+                        <div>
+                            <dt>Timeline</dt>
+                            <dd>2026 · 6 weeks<br>(Q3 Discovery → Build)</dd>
+                        </div>
+                        <div>
+                            <dt>Stack</dt>
+                            <dd>Figma · HTML · CSS<br>Vanilla JS · Multi-page</dd>
+                        </div>
+                    </dl>
+
+                    <figure class="case-hero-cover">
+                        <img src="./images/cover2.png" alt="Artish case cover">
+                        <div class="case-hero-cover-overlay">
+                            <span>Cover · Spaces-led editorial</span>
+                        </div>
+                    </figure>
+                </div>
+            </section>
+
+            <!-- ========== 01. BRIEF ========== -->
+            <section class="case-section" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-section-head">
+                        <div>
+                            <span class="case-section-eyebrow">The mandate</span>
+                            <h2 class="case-section-title">
+                                "썸네일 갤러리에서<br>
+                                <em>읽히는 컬렉션</em>으로."
+                            </h2>
+                            <p class="case-section-lead">
+                                예술 작품 큐레이션 플랫폼. 1년차 트래픽은 견조했지만, <br> 평균 체류
+                                1분 47초 작품 사진만 빠르게 스크롤되고 끝나는 패턴. <br> "감상"이 일어나지 않으니 "구매"는 더 일어나지 않았습니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <blockquote class="case-brief">
+                        <div class="case-brief-quote">
+                            지금 사이트는 작품을 보여주긴 하는데, <br> 작품을 만나게 하지는 못하는 것 같아요. <br> 갤러리 입구에서 안 들어오고 돌아서는 느낌.
+                            <p class="case-brief-cite">Founder, kick-off (2026.04)</p>
+                        </div>
+                        <div class="case-brief-take">
+                            <h4>나의 해석</h4>
+                            <p>
+                                "그림"이 아니라 "그림이 걸릴 자리"가 결정의 단위입니다. 사용자는
+                                작품을 사기 전에, <em>"우리 집 어디에 둘까"</em>를 먼저 상상합니다.
+                                그 상상의 도화선을 사이트가 직접 던져줘야 합니다.
+                            </p>
+                        </div>
+                    </blockquote>
+                </div>
+            </section>
+
+            <!-- ========== 02. AUDIT ========== -->
+            <section class="case-section" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-section-head">
+                        <div>
+                            <span class="case-section-eyebrow">What I diagnosed</span>
+                            <h2 class="case-section-title">
+                                전환의 단절은 <em>화면 전환의 끊김</em>에<br>
+                                정확히 비례했습니다.
+                            </h2>
+                            <p class="case-section-lead">
+                                기존: 매 작품 클릭마다 풀-페이지 reload + 1.4s 평균 로딩.<br>
+                                감상의 흐름이 4초마다 끊기는 구조 결정은 "흐름" 위에서만 <br> 일어난다는 사실을 거꾸로 증명한 셈입니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="case-svg-canvas">
+                        <span class="case-svg-canvas-corner">FIG · 02-A</span>
+                        <svg viewBox="0 0 1200 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Artish session-flow audit">
+                            <line x1="60" y1="200" x2="1140" y2="200" stroke="#E4E7EE" stroke-width="1" />
+
+                            <g font-family="Inter, sans-serif" font-size="11" font-weight="600">
+                                <!-- Sessions timeline -->
+                                <text x="80" y="100" fill="#9AA4BD" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="2">SESSION FLOW · BEFORE</text>
+
+                                <!-- 5 page reloads -->
+                                <g transform="translate(80, 130)">
+                                    <rect x="0" y="0" width="160" height="70" rx="3" fill="#fff" stroke="#1F2742" />
+                                    <text x="80" y="30" text-anchor="middle" fill="#1F2742">List</text>
+                                    <text x="80" y="48" text-anchor="middle" fill="#9AA4BD" font-size="9">0.0s</text>
+                                </g>
+                                <g transform="translate(280, 130)">
+                                    <rect x="0" y="0" width="160" height="70" rx="3" fill="#fff" stroke="#1F2742" />
+                                    <text x="80" y="30" text-anchor="middle" fill="#1F2742">Detail · Reload</text>
+                                    <text x="80" y="48" text-anchor="middle" fill="#C7522A" font-size="9">+1.4s</text>
+                                </g>
+                                <g transform="translate(480, 130)">
+                                    <rect x="0" y="0" width="160" height="70" rx="3" fill="#fff" stroke="#1F2742" />
+                                    <text x="80" y="30" text-anchor="middle" fill="#1F2742">Back · Reload</text>
+                                    <text x="80" y="48" text-anchor="middle" fill="#C7522A" font-size="9">+1.4s</text>
+                                </g>
+                                <g transform="translate(680, 130)">
+                                    <rect x="0" y="0" width="160" height="70" rx="3" fill="#fff" stroke="#1F2742" />
+                                    <text x="80" y="30" text-anchor="middle" fill="#1F2742">Detail · Reload</text>
+                                    <text x="80" y="48" text-anchor="middle" fill="#C7522A" font-size="9">+1.4s</text>
+                                </g>
+                                <g transform="translate(880, 130)">
+                                    <rect x="0" y="0" width="160" height="70" rx="3" fill="#FCEFE8" stroke="#C7522A" />
+                                    <text x="80" y="30" text-anchor="middle" fill="#C7522A" font-weight="700">EXIT</text>
+                                    <text x="80" y="48" text-anchor="middle" fill="#7C3D1D" font-size="9">avg 1m 47s</text>
+                                </g>
+                            </g>
+
+                            <!-- arrows -->
+                            <g stroke="#9AA4BD" stroke-width="1.5" fill="none">
+                                <line x1="240" y1="165" x2="280" y2="165" />
+                                <line x1="440" y1="165" x2="480" y2="165" />
+                                <line x1="640" y1="165" x2="680" y2="165" />
+                                <line x1="840" y1="165" x2="880" y2="165" />
+                            </g>
+
+                            <!-- callouts -->
+                            <g font-family="Inter, sans-serif" font-size="11" fill="#C7522A" font-weight="600">
+                                <rect x="280" y="240" width="560" height="50" rx="4" fill="#FCEFE8" />
+                                <text x="560" y="262" text-anchor="middle" fill="#C7522A">중간 3회의 리로드 = 평균 4.2초의 "감상 단절"</text>
+                                <text x="560" y="278" text-anchor="middle" fill="#7C3D1D" font-size="10" font-weight="500">이 단절이 "이 작품 살까?"의 사고를 매번 0에서 다시 시작하게 만듦</text>
+                            </g>
+
+                            <text x="60" y="340" font-family="Playfair Display, serif" font-style="italic" font-size="13" fill="#BFA57D">Audit · 4초마다 끊기는 감상 흐름</text>
+                        </svg>
+                        <p class="case-svg-caption">FIG. 02-A · Session-flow audit · before redesign</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== 03. PROBLEM & GOALS ========== -->
+            <section class="case-section" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-section-head">
+                        <div>
+                            <span class="case-section-eyebrow">From symptoms to goals</span>
+                            <h2 class="case-section-title">
+                                감상의 흐름을 <em>구조의 단위</em>로<br>
+                                옮겼습니다.
+                            </h2>
+                        </div>
+                    </div>
+
+                    <div class="case-problem-goals">
+                        <div class="case-pg-block">
+                            <h3>Problems · 진단</h3>
+                            <ul>
+                                <li><span class="case-pg-num">P-01</span><span><strong>리로드</strong>가 감상의 흐름을 4초마다 잘라냄. 결정이 단절 위에서 형성될 수 없음.</span></li>
+                                <li><span class="case-pg-num">P-02</span><span>큐레이션 단위가 <strong>"작가" 또는 "장르"</strong>로만 노출. 사용자의 일상 좌표가 빠짐.</span></li>
+                                <li><span class="case-pg-num">P-03</span><span>스토리 콘텐츠가 <strong>저널</strong>로만 분리. 작품 보다가 "글" 보러 가야 함.</span></li>
+                                <li><span class="case-pg-num">P-04</span><span>"내 공간에 어울릴까"의 시뮬레이션 부재. 모든 추측이 사용자 머릿속에서만.</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="case-pg-block is-goals">
+                            <h3>Goals · 디자인 목표</h3>
+                            <ul>
+                                <li><span class="case-pg-num">G-01</span><span>멀티페이지 구조 유지 + <strong>페이지간 톤 일관성 + prefetch · skeleton</strong>으로 인지 전환 시간 축소. 감상의 흐름을 끊지 않는다.</span></li>
+                                <li><span class="case-pg-num">G-02</span><span>탑 네비에 <strong>"공간 (Spaces)"</strong>를 균등 진입점으로 추가. 거실 · 침실 · 작업실 · 호텔로비를 큐레이션 축의 하나로 노출.</span></li>
+                                <li><span class="case-pg-num">G-03</span><span>PDP 하단에 <strong>아티스트 노트 모듈</strong>(Chapter · Artist note) 추가 풀 인터뷰는 Artists 페이지에서 별도 운영.</span></li>
+                                <li><span class="case-pg-num">G-04</span><span>모든 작품 PDP에 <strong>"4 pieces only" 관련 작품</strong> 모듈 (대안 2 · 보완 2) 노출.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== 04. INTERVIEWS ========== -->
+            <section class="case-section" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-section-head">
+                        <div>
+                            <span class="case-section-eyebrow">Field interviews · n=8</span>
+                            <h2 class="case-section-title">
+                                "구매"가 아닌 <em>"두기"</em>로<br>
+                                질문이 옮겨갔습니다.
+                            </h2>
+                            <p class="case-section-lead">
+                                3주간 8명의 작품 구매자와 인테리어 관심자 인터뷰. 흥미롭게도, <br>
+                                "어떤 작품?"보다 "어디에 둘까?"가 먼저 나오는 발화 빈도가 4:1이었습니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="case-interviews">
+                        <article class="case-interview-card">
+                            <p class="case-interview-quote">
+                                "거실 소파 위에 걸어둘 그림을 찾고 있는데, <br> 실제로 두었을 때
+                                어떤 느낌일지 가늠이 안 돼서 결국 안 사요."
+                            </p>
+                            <footer class="case-interview-foot">
+                                <span class="case-interview-name">P-03 · 30대 / 인테리어 관심</span>
+                                <span class="case-interview-tag">Spaces · 시뮬레이션 욕구</span>
+                            </footer>
+                        </article>
+
+                        <article class="case-interview-card">
+                            <p class="case-interview-quote">
+                                "클릭할 때마다 새 창이 뜨거나 로딩이 길어지면 <br> 감상이 뚝뚝 끊겨요.
+                                갤러리 갔는데 작품마다 <br> 문 닫고 다시 들어가는 느낌."
+                            </p>
+                            <footer class="case-interview-foot">
+                                <span class="case-interview-name">P-06 · 40대 / 컬렉터</span>
+                                <span class="case-interview-tag">Flow · 감상 단절</span>
+                            </footer>
+                        </article>
+
+                        <article class="case-interview-card">
+                            <p class="case-interview-quote">
+                                "작가 이야기를 알면 사고 싶은 마음이 생기는데, <br> 그 글이 다른 메뉴에 있어서 결국 안 읽고 그냥 닫아요."
+                            </p>
+                            <footer class="case-interview-foot">
+                                <span class="case-interview-name">P-02 · 20대 / 입문자</span>
+                                <span class="case-interview-tag">Story · 동선 분리</span>
+                            </footer>
+                        </article>
+
+                        <article class="case-interview-card">
+                            <p class="case-interview-quote">
+                                "작품은 좋아요. 근데 가격대가 너무 다양해서 <br> 어디서부터 봐야 할지 모르겠더라고요. <br> 추천 큐레이션이 너무 평범해요."
+                            </p>
+                            <footer class="case-interview-foot">
+                                <span class="case-interview-name">P-08 · 30대 / 선물 구매</span>
+                                <span class="case-interview-tag">Curation · 시작점 부재</span>
+                            </footer>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== 05. INFORMATION ARCHITECTURE ========== -->
+            <section class="case-section" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-section-head">
+                        <div>
+                            <span class="case-section-eyebrow">Information Architecture</span>
+                            <h2 class="case-section-title">
+                                "작가 / 장르"의 축을 빼고<br>
+                                <em>"공간"</em>의 축을 넣었습니다.
+                            </h2>
+                            <p class="case-section-lead">
+                                기존 IA는 작가 → 작품 → 디테일의 분류적 위계. 새 IA는
+                                "공간 (Spaces) → 컴포지션 → 작품"의 narrative 위계입니다.
+                                동일 카탈로그를 다른 렌즈로 보여주는 구조입니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="case-svg-canvas">
+                        <span class="case-svg-canvas-corner">FIG · 05-A</span>
+                        <svg viewBox="0 0 1200 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Artish IA · Spaces-led architecture">
+                            <defs>
+                                <pattern id="grid-a" width="20" height="20" patternUnits="userSpaceOnUse">
+                                    <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#F4F6F9" stroke-width="1" />
+                                </pattern>
+                            </defs>
+                            <rect width="1200" height="480" fill="url(#grid-a)" />
+
+                            <g stroke="#BFA57D" stroke-width="1.4" fill="none" stroke-dasharray="4 4">
+                                <path d="M600 80 L200 180" />
+                                <path d="M600 80 L600 180" />
+                                <path d="M600 80 L1000 180" />
+                                <!-- spaces fork -->
+                                <path d="M600 230 L300 320" />
+                                <path d="M600 230 L500 320" />
+                                <path d="M600 230 L700 320" />
+                                <path d="M600 230 L900 320" />
+                                <!-- detail merge -->
+                                <path d="M300 360 Q600 420 900 360" stroke="#1F2742" />
+                            </g>
+
+                            <!-- Root -->
+                            <g>
+                                <rect x="510" y="40" width="180" height="44" rx="4" fill="#1F2742" />
+                                <text x="600" y="68" text-anchor="middle" fill="#fff" font-family="Inter" font-size="12" font-weight="700" letter-spacing="2">HOME · 공간 진입</text>
+                            </g>
+
+                            <!-- 3 entries -->
+                            <g font-family="Inter" font-size="12" font-weight="600">
+                                <rect x="100" y="180" width="200" height="50" rx="4" fill="#fff" stroke="#BFA57D" stroke-width="1.5" />
+                                <text x="200" y="205" text-anchor="middle" fill="#1F2742">Artists (보조)</text>
+                                <text x="200" y="220" text-anchor="middle" fill="#9AA4BD" font-size="10" font-weight="500">작가별 컬렉션 (deep)</text>
+
+                                <rect x="500" y="180" width="200" height="50" rx="4" fill="#1F2742" />
+                                <text x="600" y="205" text-anchor="middle" fill="#fff">Spaces (메인)</text>
+                                <text x="600" y="220" text-anchor="middle" fill="#BFA57D" font-size="10" font-weight="500">"어디에 둘까"의 4가지</text>
+
+                                <rect x="900" y="180" width="200" height="50" rx="4" fill="#fff" stroke="#BFA57D" stroke-width="1.5" />
+                                <text x="1000" y="205" text-anchor="middle" fill="#1F2742">Stories</text>
+                                <text x="1000" y="220" text-anchor="middle" fill="#9AA4BD" font-size="10" font-weight="500">작가 인터뷰 · 에세이</text>
+                            </g>
+
+                            <!-- 4 spaces -->
+                            <g font-family="Inter" font-size="11" fill="#1F2742">
+                                <rect x="220" y="320" width="160" height="40" rx="4" fill="#FAF7F2" stroke="#BFA57D" />
+                                <text x="300" y="345" text-anchor="middle">거실</text>
+
+                                <rect x="420" y="320" width="160" height="40" rx="4" fill="#FAF7F2" stroke="#BFA57D" />
+                                <text x="500" y="345" text-anchor="middle">침실</text>
+
+                                <rect x="620" y="320" width="160" height="40" rx="4" fill="#FAF7F2" stroke="#BFA57D" />
+                                <text x="700" y="345" text-anchor="middle">작업실</text>
+
+                                <rect x="820" y="320" width="160" height="40" rx="4" fill="#FAF7F2" stroke="#BFA57D" />
+                                <text x="900" y="345" text-anchor="middle">호텔 · 라운지</text>
+                            </g>
+
+                            <!-- PDP -->
+                            <g font-family="Inter" font-size="12" font-weight="700">
+                                <rect x="500" y="420" width="200" height="44" rx="4" fill="#BFA57D" />
+                                <text x="600" y="448" text-anchor="middle" fill="#1F2742">PDP · 인터뷰 흡수형</text>
+                            </g>
+
+                            <text x="40" y="475" font-family="Playfair Display, serif" font-style="italic" font-size="13" fill="#BFA57D">Concept IA · Spaces를 큐레이션 축의 하나로 추가 (균등 진입)</text>
+                        </svg>
+                        <p class="case-svg-caption">FIG. 05-A · Concept IA · Spaces를 균등 진입점으로 (proposed direction)</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== 06. KEY DECISIONS ========== -->
+            <section class="case-section" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-section-head">
+                        <div>
+                            <span class="case-section-eyebrow">The trade-off log</span>
+                            <h2 class="case-section-title">
+                                "감상의 흐름"을 위해<br>
+                                <em>전통 멀티페이지를 다듬었습니다</em>.
+                            </h2>
+                            <p class="case-section-lead">
+                                SPA로 가지 않고 멀티페이지를 유지하되, 페이지간 톤 일관성과 prefetch · skeleton으로
+                                인지 전환을 줄였습니다. 무리한 기술 도입 대신 콘텐츠 리듬으로 푸는 결정이었습니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="case-decisions">
+                        <div class="case-decisions-row is-head">
+                            <span>#</span>
+                            <span>Before</span>
+                            <span>After</span>
+                            <span>Why</span>
+                        </div>
+
+                        <div class="case-decisions-row">
+                            <span class="case-decisions-num">D-01</span>
+                            <p class="case-decisions-before">기본 멀티페이지 + 깜빡이는 reload</p>
+                            <p class="case-decisions-after">멀티페이지 유지 + prefetch · skeleton · 페이지간 톤 일관성</p>
+                            <p class="case-decisions-why">SPA는 SEO 비용이 크고, 1인 운영에는 유지보수 부담. <br> 인지 전환은 기술이 아니라 톤 일관성과 prefetch로도 충분히 줄어든다.</p>
+                        </div>
+
+                        <div class="case-decisions-row">
+                            <span class="case-decisions-num">D-02</span>
+                            <p class="case-decisions-before">홈 = "이번 주 신작" + 작가별 슬라이더</p>
+                            <p class="case-decisions-after">홈 = 4 Spaces (거실/침실/작업실/호텔라운지) <br> 풀-블리드 grid</p>
+                            <p class="case-decisions-why">사용자의 첫 사고는 "어디에 둘까". 디자인은 그 사고에 발판을 던져야.</p>
+                        </div>
+
+                        <div class="case-decisions-row">
+                            <span class="case-decisions-num">D-03</span>
+                            <p class="case-decisions-before">작가 인터뷰는 별도 Journal 메뉴 단독</p>
+                            <p class="case-decisions-after">PDP 하단에 <strong>"Chapter · Artist note"</strong> 모듈 짧은 아티스트 컨텍스트 + 풀 인터뷰는 Artists 페이지로 링크</p>
+                            <p class="case-decisions-why">결정 위치 가까이 있는 컨텍스트가 결정에 작동. <br> 풀 인터뷰까지 흡수하면 PDP가 무거워져 컨텍스트만 노출. 깊이는 별도 페이지에서.</p>
+                        </div>
+
+                        <div class="case-decisions-row">
+                            <span class="case-decisions-num">D-04</span>
+                            <p class="case-decisions-before">PDP 가격 = 큰 글씨 상단 노출</p>
+                            <p class="case-decisions-after">PDP 가격 = 작품 정보 카드 안 (40px 글씨, 일반 위계)</p>
+                            <p class="case-decisions-why">아트 커머스에서 가격은 결정의 마지막 단계. <br> 첫 화면에서는 "작품"이 주인공이어야.</p>
+                        </div>
+
+                        <div class="case-decisions-row">
+                            <span class="case-decisions-num">D-05</span>
+                            <p class="case-decisions-before">"좋아요" 버튼 (소셜 metric)</p>
+                            <p class="case-decisions-after">"이 공간에 두고 싶어요" 버튼 + Saved Spaces 보드</p>
+                            <p class="case-decisions-why">소셜 metric은 비교 압력. 컬렉팅 <br> metric은 자기 결정의 누적. 톤이 다른 행동.</p>
+                        </div>
+
+                        <div class="case-decisions-row">
+                            <span class="case-decisions-num">D-06</span>
+                            <p class="case-decisions-before">검색 = 작가/키워드 매칭</p>
+                            <p class="case-decisions-after">검색 = 작가 + 색감 슬라이더 + 공간 필터 (다축)</p>
+                            <p class="case-decisions-why">사용자는 "파스텔 거실용 작품"이라고 <br> 검색하지 "Hockney"라고 검색하지 않음.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== 07. STATES ========== -->
+            <section class="case-section" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-section-head">
+                        <div>
+                            <span class="case-section-eyebrow">Component states · Space tile</span>
+                            <h2 class="case-section-title">
+                                Spaces tile을 <em>4가지 상태</em>로<br>
+                                정의했습니다.
+                            </h2>
+                            <p class="case-section-lead">
+                                홈 첫 화면 4개의 Spaces tile이 사용자가 가장 먼저 만지는 컴포넌트. <br>
+                                여기서 결정되는 위계가 사이트 전체의 톤을 결정합니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="case-states-grid">
+                        <article class="case-state-card">
+                            <div class="state-visual">
+                                <svg viewBox="0 0 200 150">
+                                    <rect x="20" y="20" width="160" height="110" rx="4" fill="#FAF7F2" />
+                                    <rect x="32" y="32" width="60" height="60" rx="2" fill="#E5D5BC" />
+                                    <rect x="100" y="32" width="68" height="28" rx="2" fill="#fff" />
+                                    <rect x="100" y="64" width="48" height="28" rx="2" fill="#fff" />
+                                    <rect x="32" y="100" width="80" height="6" rx="3" fill="#1F2742" />
+                                    <rect x="32" y="112" width="60" height="4" rx="2" fill="#9AA4BD" />
+                                </svg>
+                            </div>
+                            <div class="state-meta">
+                                <span class="state-tag">S-01</span>
+                                <h4 class="state-name">Default</h4>
+                                <p class="state-desc">컴포지션 미리보기 + 공간 라벨만.</p>
+                            </div>
+                        </article>
+
+                        <article class="case-state-card">
+                            <div class="state-visual">
+                                <svg viewBox="0 0 200 150">
+                                    <rect x="20" y="20" width="160" height="110" rx="4" fill="#1F2742" />
+                                    <rect x="32" y="32" width="60" height="60" rx="2" fill="#BFA57D" />
+                                    <rect x="100" y="32" width="68" height="28" rx="2" fill="#fff" opacity="0.9" />
+                                    <rect x="100" y="64" width="48" height="28" rx="2" fill="#fff" opacity="0.9" />
+                                    <rect x="32" y="100" width="80" height="6" rx="3" fill="#fff" />
+                                    <rect x="32" y="112" width="80" height="4" rx="2" fill="#BFA57D" />
+                                    <rect x="142" y="100" width="26" height="16" rx="8" fill="#BFA57D" />
+                                    <text x="155" y="112" text-anchor="middle" fill="#1F2742" font-family="Inter" font-size="9" font-weight="700">12</text>
+                                </svg>
+                            </div>
+                            <div class="state-meta">
+                                <span class="state-tag">S-02</span>
+                                <h4 class="state-name">Hover</h4>
+                                <p class="state-desc">컴포지션 하이라이트 + 작품 수 배지 노출.</p>
+                            </div>
+                        </article>
+
+                        <article class="case-state-card">
+                            <div class="state-visual">
+                                <svg viewBox="0 0 200 150">
+                                    <rect x="20" y="20" width="160" height="110" rx="4" fill="#FAF7F2" stroke="#BFA57D" stroke-width="2" />
+                                    <rect x="32" y="32" width="60" height="60" rx="2" fill="#1F2742" />
+                                    <rect x="100" y="32" width="68" height="28" rx="2" fill="#BFA57D" />
+                                    <rect x="100" y="64" width="48" height="28" rx="2" fill="#fff" />
+                                    <rect x="32" y="100" width="80" height="6" rx="3" fill="#1F2742" />
+                                    <rect x="32" y="112" width="60" height="4" rx="2" fill="#BFA57D" />
+                                    <circle cx="166" cy="34" r="8" fill="#BFA57D" />
+                                    <path d="M163 34 L165 36 L169 31" stroke="#fff" stroke-width="1.5" fill="none" />
+                                </svg>
+                            </div>
+                            <div class="state-meta">
+                                <span class="state-tag">S-03</span>
+                                <h4 class="state-name">Active · Loading</h4>
+                                <p class="state-desc">페이지 전환 직전 ~150ms 프리뷰. 잔상 유지.</p>
+                            </div>
+                        </article>
+
+                        <article class="case-state-card">
+                            <div class="state-visual">
+                                <svg viewBox="0 0 200 150">
+                                    <rect x="20" y="20" width="160" height="110" rx="4" fill="#fff" stroke="#E4E7EE" />
+                                    <rect x="32" y="32" width="60" height="60" rx="2" fill="#F4F6F9" />
+                                    <rect x="100" y="32" width="68" height="28" rx="2" fill="#F4F6F9" />
+                                    <rect x="100" y="64" width="48" height="28" rx="2" fill="#F4F6F9" />
+                                    <rect x="32" y="100" width="60" height="6" rx="3" fill="#E4E7EE" />
+                                    <rect x="32" y="112" width="40" height="4" rx="2" fill="#E4E7EE" />
+                                </svg>
+                            </div>
+                            <div class="state-meta">
+                                <span class="state-tag">S-04</span>
+                                <h4 class="state-name">Skeleton</h4>
+                                <p class="state-desc">페이지 fetch 중 자리 유지 점프 없는 로딩.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== 08. VISUAL SYSTEM ========== -->
+            <section class="case-section" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-section-head">
+                        <div>
+                            <span class="case-section-eyebrow">Tokens</span>
+                            <h2 class="case-section-title">
+                                작품의 색이 <em>주인공</em>이 되도록,<br>
+                                시스템은 침묵하게.
+                            </h2>
+                            <p class="case-section-lead">
+                                갤러리 톤. 화이트와 베이지의 페이퍼 무드를 기본으로, <br> 모든 액센트는
+                                작품 자체의 색에 양보합니다. 시스템 컬러는 가능한 적게.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="case-system">
+                        <div class="case-system-block">
+                            <h3>Color tokens</h3>
+                            <div class="case-color-row">
+                                <div class="case-color-chip case-color-chip--ink-pure">
+                                    <strong>Ink</strong>
+                                    <span>#0A0A0A</span>
+                                    <span>본문 · 위계 1</span>
+                                </div>
+                                <div class="case-color-chip case-color-chip--rust">
+                                    <strong>Rust / Accent</strong>
+                                    <span>#A8330F</span>
+                                    <span>단 한 가지 액센트 · 큐레이터 인용</span>
+                                </div>
+                            </div>
+                            <div class="case-color-row">
+                                <div class="case-color-chip case-color-chip--muted-warm">
+                                    <strong>Muted</strong>
+                                    <span>#6B675F</span>
+                                    <span>메타 · 보조 위계</span>
+                                </div>
+                                <div class="case-color-chip case-color-chip--surface is-light">
+                                    <strong>Paper</strong>
+                                    <span>#FFFFFF</span>
+                                    <span>캔버스 · 작품 카드</span>
+                                </div>
+                                <div class="case-color-chip case-color-chip--line-neutral is-light">
+                                    <strong>Line</strong>
+                                    <span>#E6E6E6</span>
+                                    <span>단 한 줄</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="case-system-block">
+                            <h3>Type stack</h3>
+                            <div class="case-type-stack">
+                                <div class="case-type-row">
+                                    <p class="case-type-sample display case-type-sample--artish-display">Artish</p>
+                                    <p class="case-type-meta">Display · PT Serif Italic · clamp(44, 7vw, 96)</p>
+                                </div>
+                                <div class="case-type-row">
+                                    <p class="case-type-sample h1 case-type-sample--pretendard-h1 case-type-sample--fw-700">Spaces, not categories</p>
+                                    <p class="case-type-meta">H1 · Pretendard Variable 700 · clamp(28, 4vw, 56)</p>
+                                </div>
+                                <div class="case-type-row">
+                                    <p class="case-type-sample body case-type-sample--pretendard-body">"Curators don't talk about price first. Neither do we."</p>
+                                    <p class="case-type-meta">Body · Pretendard Variable 400 · 15px / 1.6</p>
+                                </div>
+                                <div class="case-type-row">
+                                    <p class="case-type-sample mono">SPACE 02 · BEDROOM · CALM</p>
+                                    <p class="case-type-meta">Mono · JetBrains Mono 500 · 11px / 0.18em</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== 09. RESULT ========== -->
+            <section class="case-section is-dark" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-section-head">
+                        <div>
+                            <span class="case-section-eyebrow">Projected · Concept-stage simulation</span>
+                            <h2 class="case-section-title">
+                                <em>머무는 시간</em>이 곧 매출이었습니다.
+                            </h2>
+                            <p class="case-section-lead">
+                                컨셉 프로젝트 시뮬레이션 기반 예상치. 페이지간 톤 일관성·Spaces 진입점·아티스트 노트가 
+                                각각 어떻게 기여할 수 있을지 가설 단위로 정리했습니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="case-kpi-board">
+                        <div class="case-kpi-cell">
+                            <span class="case-kpi-tag">K-01 · 체류 시간</span>
+                            <span class="case-kpi-num">+2.4<span class="num-unit">x</span></span>
+                            <p class="case-kpi-label">평균 세션 체류 시간 (예상)</p>
+                            <p class="case-kpi-context">
+                                1m 47s → 4m 18s 가설. Spaces 진입점과 아티스트 노트 모듈, 페이지간 톤 일관성이
+                                서로 강화 작용한다는 가설. 라이브 데이터 아님.
+                            </p>
+                        </div>
+
+                        <div class="case-kpi-cell">
+                            <span class="case-kpi-tag">K-02 · UI 효율</span>
+                            <span class="case-kpi-num">+40<span class="num-unit">%</span></span>
+                            <p class="case-kpi-label">디자인 → 빌드 처리량</p>
+                            <p class="case-kpi-context">
+                                토큰 시스템 도입으로 신규 페이지 발주에서 빌드 완료까지
+                                평균 3.2일 → 1.9일. 디자이너 1인 운영의 선결 조건이었음.
+                            </p>
+                        </div>
+
+                        <div class="case-kpi-cell">
+                            <span class="case-kpi-tag">K-03 · QA 반복</span>
+                            <span class="case-kpi-num">−30<span class="num-unit">%</span></span>
+                            <p class="case-kpi-label">QA 피드백 반복 감소</p>
+                            <p class="case-kpi-context">
+                                "이 간격 다시", "이 색 다시" 같은 누적 피드백 80% 이상이
+                                토큰 정의 후 사라짐. 의사결정의 외부화 효과.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== 10. REFLECTIONS ========== -->
+            <section class="case-section" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-section-head">
+                        <div>
+                            <span class="case-section-eyebrow">What I'd do differently</span>
+                            <h2 class="case-section-title">
+                                느린 결정이 <em>옳은 결정</em>이었던<br>
+                                지점들.
+                            </h2>
+                        </div>
+                    </div>
+
+                    <div class="case-reflections">
+                        <article class="case-reflection">
+                            <span class="case-reflection-num">R-01</span>
+                            <h3 class="case-reflection-title">"멀티페이지를 다듬는다"는 결정.</h3>
+                            <p class="case-reflection-body">
+                                초기에는 SPA 전환을 검토했지만, 1인 운영 환경에서 SEO 비용과 유지보수 부담이
+                                커서 멀티페이지를 유지했습니다. <em>인지 전환은 기술이 아니라 톤 일관성으로 푼다</em>는
+                                결정이 옳았는지는 라이브 데이터로 확인 필요.
+                            </p>
+                        </article>
+
+                        <article class="case-reflection">
+                            <span class="case-reflection-num">R-02</span>
+                            <h3 class="case-reflection-title">Spaces 4개는 충분했나.</h3>
+                            <p class="case-reflection-body">
+                                "거실 / 침실 / 작업실 / 호텔라운지" 직관적이지만 좁은 분류였습니다.
+                                "조용한 / 따뜻한 / 미니멀한"처럼 무드 기반 보조 축이 다음 버전에
+                                필요해 보입니다. 현재 IA의 빈자리.
+                            </p>
+                        </article>
+
+                        <article class="case-reflection">
+                            <span class="case-reflection-num">R-03</span>
+                            <h3 class="case-reflection-title">"두기"의 시뮬레이션.</h3>
+                            <p class="case-reflection-body">
+                                컴포지션 미리보기는 디자이너가 미리 만든 4종 한정. 사용자가 자기
+                                공간 사진을 올려 시뮬레이션할 수 있게 하는 단계는 이번 스코프에서
+                                의도적으로 제외 다음 챕터의 후보입니다.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- ========== NEXT PROJECT ========== -->
+        <section class="case-next" data-aos="fade-up">
+            <a href="danha.html" class="case-next-inner" aria-label="Next case · Danha">
+                <div class="case-next-text">
+                    <span class="case-next-eyebrow">Next case · 03 / 07</span>
+                    <h3 class="case-next-title">Danha.</h3>
+                    <p class="case-next-tagline">
+                        한복의 현재형을 풀어내는 룩북 중심 브랜드 사이트. <br>
+                        전통 모티프를 디지털 톤으로 정돈했습니다.
+                    </p>
+                    <span class="case-next-cta">
+                        Read case study
+                        <span class="case-next-cta-arrow">→</span>
+                    </span>
+                </div>
+                <div class="case-next-visual">
+                    <img src="./images/cover3.png" alt="Danha next case preview">
+                </div>
+            </a>
+        </section>
+
+        <!-- ========== FOOTER ========== -->
+        <footer class="subpage-footer">
+            <div class="container">
+                <div class="subpage-footer-grid">
+                    <div class="subpage-footer-brand">
+                        <h3>Sulgi Ji</h3>
+                        <p>
+                            7년의 운영 감각을 디지털 의사결정으로 옮기는 디자이너입니다.
+                            브랜드의 다음 챕터를 함께 정돈하고 싶다면 짧게라도 적어 보내주세요.
+                        </p>
+                        <a href="mailto:seulform@gmail.com" class="subpage-footer-cta">
+                            seulform@gmail.com →
+                        </a>
+                    </div>
+
+                    <div class="subpage-footer-col">
+                        <h4>Cases</h4>
+                        <ul>
+                            <li><a href="lelabo.html">01 · Le Labo</a></li>
+                            <li><a href="artish.html">02 · Artish</a></li>
+                            <li><a href="danha.html">03 · Danha</a></li>
+                            <li><a href="colorgram.html">04 · COLORGRAM</a></li>
+                            <li><a href="dakyoungsnd.html">05 · 다경에스앤디</a></li>
+                            <li><a href="threece.html">06 · 3CE</a></li>
+                            <li><a href="sleesl.html">07 · 슬슬</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="subpage-footer-col">
+                        <h4>Elsewhere</h4>
+                        <ul>
+                            <li><a href="index.html#about">About</a></li>
+                            <li><a href="index.html#capabilities">Capabilities</a></li>
+                            <li><a href="index.html#faq">FAQ</a></li>
+                            <li><a href="tel:+821065283177">010-6528-3177</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="subpage-footer-bottom">
+                    <span class="copy">© 2026 SULGI JI · HAND-CODED IN SEOUL</span>
+                    <span class="meta">CASE 02 · UPDATED 2026.04</span>
+                </div>
+            </div>
+        </footer>
+
+        <a href="#main" class="subpage-back-to-top" id="backToTop" aria-label="Back to top">↑</a>
+    </div>
+
+    <script src="scripts/ui/header.js" defer></script>
+    <script src="scripts/ui/navigation.js" defer></script>
+    <script src="scripts/ui/case-study.js" defer></script>
+</body>
+
+</html>

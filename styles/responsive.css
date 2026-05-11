@@ -1,0 +1,99 @@
+/* ============================================================
+   SULGI Portfolio · responsive.css
+   모든 디바이스 대응 반응형 스타일
+   ============================================================ */
+
+/* TABLET (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 var(--space-24);
+    }
+
+    .hero-title {
+        font-size: clamp(40px, 6vw, 64px);
+    }
+
+    .slide-link {
+        grid-template-columns: 1fr;
+    }
+
+    .slide-visual {
+        height: 350px;
+    }
+
+    .resume-cv-layout,
+    .system-framework {
+        grid-template-columns: 1fr;
+        gap: var(--space-48);
+    }
+
+    .resume-cv-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* MOBILE (max-width: 768px) */
+@media (max-width: 768px) {
+    :root {
+        --header-h: 70px;
+    }
+
+    section {
+        padding: var(--space-48) 0;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .hero-subtitle {
+        font-size: 15px;
+    }
+
+    .thinking-enhanced {
+        grid-template-columns: 1fr;
+    }
+
+    .slide-info {
+        padding: var(--space-32);
+    }
+
+    .slide-title {
+        font-size: 28px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: var(--space-24);
+        text-align: center;
+    }
+}
+
+/* SMALL MOBILE (max-width: 480px) */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 30px;
+    }
+
+    .container {
+        padding: 0 var(--space-16);
+    }
+
+    .hero-choice-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-choice-item button {
+        width: 100%;
+        max-width: 240px;
+    }
+}

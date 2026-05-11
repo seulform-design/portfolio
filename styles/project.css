@@ -1,0 +1,468 @@
+/* =========================================================
+   SULGI Portfolio · project.css (Project)
+   - Styles for Case Study / Project Detail Pages
+   ========================================================= */
+
+/* Project Hero */
+.project-hero {
+    padding: 160px 0 100px;
+    text-align: center;
+    background-color: var(--bg-main);
+    border-bottom: 1px solid var(--border-light);
+    position: relative;
+    overflow: hidden;
+}
+
+.project-hero .hero-eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--primary);
+    margin-bottom: var(--space-16);
+}
+
+.project-hero .hero-subtitle {
+    font-family: var(--font-family-italic);
+    font-style: italic;
+    font-size: clamp(17px, 1.4vw, 20px);
+    color: var(--text-sub);
+    max-width: 640px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.project-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at 50% 30%, rgba(220, 229, 242, 0.4) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.project-hero .hero-title {
+    font-family: var(--font-family-serif);
+    font-size: clamp(48px, 8vw, 84px);
+    line-height: 1.05;
+    margin: var(--space-16) 0;
+    letter-spacing: var(--ls-tight);
+    text-transform: uppercase;
+}
+
+.project-hero .italic-text {
+    display: inline-block;
+    font-family: var(--font-family-italic);
+    font-style: italic;
+    font-weight: 500;
+    text-transform: none;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+/* Project Meta */
+.project-meta {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-48);
+    border-top: 1px dashed var(--border);
+    padding-top: var(--space-32);
+    max-width: 800px;
+    margin: 40px auto 0;
+    text-align: left;
+}
+
+.project-meta > div {
+    flex: 1;
+}
+
+.project-meta dt,
+.project-meta span {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    color: var(--text-light);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: var(--space-8);
+}
+
+.project-meta dd,
+.project-meta strong {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-main);
+    letter-spacing: 0.02em;
+    display: block;
+}
+
+/* Project Showcase / Overview */
+.project-showcase {
+    padding: var(--space-80) 0;
+}
+
+.showcase-visual {
+    width: 100%;
+    height: clamp(320px, 60vh, 640px);
+    background-color: var(--bg-soft);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-soft);
+}
+
+.showcase-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Context / Background */
+.project-context {
+    padding: var(--space-80) 0;
+}
+
+.context-inner,
+.project-context .context-wrap {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.project-context h2,
+.context-inner h2 {
+    font-family: var(--font-family-serif);
+    font-size: clamp(28px, 3vw, 38px);
+    margin-bottom: var(--space-24);
+    color: var(--text-main);
+}
+
+.project-context p,
+.context-inner p {
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text-sub);
+    margin-bottom: var(--space-20);
+}
+
+.project-context p:last-child,
+.context-inner p:last-child {
+    margin-bottom: 0;
+}
+
+/* Before / After Section */
+.before-after {
+    padding: var(--space-120) 0;
+}
+
+.before-after-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-40);
+}
+
+.ba-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    padding: var(--space-32);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.ba-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.ba-header {
+    margin-bottom: var(--space-24);
+}
+
+.ba-label {
+    display: inline-block;
+    padding: 5px 14px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    border-radius: var(--radius-pill);
+    margin-bottom: var(--space-12);
+}
+
+.ba-label.before { background-color: var(--danger-soft); color: var(--danger); }
+.ba-label.after { background-color: var(--accent-pale); color: var(--primary); }
+
+.ba-title {
+    font-family: var(--font-family-serif);
+    font-size: 1.25rem;
+    color: var(--text-main);
+}
+
+.ba-visual {
+    position: relative;
+    aspect-ratio: 5 / 3;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--border-light);
+    background-color: var(--bg-sub);
+}
+
+/* Before: muted skeleton mock */
+.ba-card.is-before .ba-visual {
+    background:
+        linear-gradient(var(--border-light) 40%, transparent 40%) 0 18% / 34% 8px no-repeat,
+        linear-gradient(var(--border-light) 40%, transparent 40%) 0 30% / 60% 8px no-repeat,
+        linear-gradient(var(--border-light) 40%, transparent 40%) 0 46% / 22% 8px no-repeat,
+        linear-gradient(var(--border-light) 40%, transparent 40%) 0 56% / 50% 8px no-repeat,
+        linear-gradient(var(--border-light) 40%, transparent 40%) 0 68% / 30% 8px no-repeat,
+        linear-gradient(135deg, var(--bg-soft) 0%, var(--bg-sub) 100%);
+    background-origin: content-box;
+    padding: 18% 12%;
+}
+
+.ba-card.is-before .ba-visual::before {
+    content: '';
+    position: absolute;
+    top: 14%;
+    left: 12%;
+    width: 52%;
+    height: 18%;
+    border-radius: 4px;
+    background-color: var(--border);
+}
+
+/* After: branded curated mock */
+.ba-card.is-after .ba-visual {
+    background: linear-gradient(135deg, var(--primary-pale) 0%, var(--accent-pale) 100%);
+}
+
+.ba-card.is-after .ba-visual::before {
+    content: '';
+    position: absolute;
+    inset: 16% 14%;
+    border-radius: var(--radius-md);
+    background:
+        radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.9) 0%, transparent 45%),
+        linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+    opacity: 0.88;
+    box-shadow: 0 20px 40px rgba(43, 58, 107, 0.12);
+}
+
+.ba-card.is-after .ba-visual::after {
+    content: '';
+    position: absolute;
+    right: 14%;
+    bottom: 14%;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 6px 18px rgba(43, 58, 107, 0.12);
+}
+
+.ba-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+.ba-caption {
+    display: block;
+    margin-top: var(--space-16);
+    font-size: 13px;
+    color: var(--text-sub);
+    line-height: 1.6;
+}
+
+/* Interview / User Voice */
+.interview {
+    background-color: var(--surface);
+    padding: var(--space-120) 0;
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.interview-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-40);
+    list-style: none;
+    padding: 0;
+}
+
+.interview-card {
+    background-color: white;
+    padding: var(--space-48);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: var(--transition-base);
+}
+
+.interview-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(43, 58, 107, 0.03);
+}
+
+.interview-quote {
+    font-family: var(--font-family-serif);
+    font-size: 1.4rem;
+    font-style: italic;
+    line-height: 1.5;
+    color: var(--text-main);
+    margin-bottom: var(--space-32);
+    position: relative;
+}
+
+.interview-quote::before {
+    content: '"';
+    position: absolute;
+    top: -20px; left: -10px;
+    font-size: 4rem;
+    color: var(--primary-soft);
+    opacity: 0.3;
+}
+
+.interview-profile {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.interview-name {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--text-main);
+}
+
+.interview-desc {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Technical / Process */
+.technical {
+    padding: var(--space-120) 0;
+    border-top: 1px solid var(--border-light);
+}
+
+.technical-inner {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.technical h2 {
+    font-family: var(--font-family-serif);
+    font-size: clamp(28px, 3vw, 38px);
+    margin-bottom: var(--space-24);
+    color: var(--text-main);
+}
+
+.technical .technical-lead {
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text-sub);
+    margin-bottom: var(--space-40);
+}
+
+.process-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
+    color: var(--text-sub);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.process-list li {
+    padding: var(--space-20) var(--space-24);
+    background-color: var(--surface);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    line-height: 1.6;
+    transition: border-color var(--transition-base), transform var(--transition-base);
+}
+
+.process-list li:hover {
+    border-color: var(--primary);
+    transform: translateX(4px);
+}
+
+.process-list li strong {
+    color: var(--text-main);
+    margin-right: 10px;
+    font-weight: 600;
+}
+
+/* Next Project Link */
+.next-project {
+    padding: var(--space-120) 0;
+    text-align: center;
+    background: linear-gradient(180deg, var(--bg-main) 0%, var(--bg-soft) 100%);
+    border-top: 1px solid var(--border-light);
+}
+
+.next-project-label {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    color: var(--text-light);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: var(--space-16);
+}
+
+.next-project .next-project-title {
+    font-family: var(--font-family-serif);
+    font-size: clamp(48px, 7vw, 80px);
+    color: var(--text-main);
+    margin: 0 0 var(--space-24);
+    line-height: 1;
+    opacity: 0.55;
+    transition: opacity var(--transition-base), transform var(--transition-base);
+}
+
+.next-project:hover .next-project-title {
+    opacity: 1;
+    transform: translateY(-4px);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .before-after-list,
+    .interview-list {
+        grid-template-columns: 1fr;
+    }
+
+    .project-meta {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-hero {
+        padding: 120px 0 80px;
+    }
+
+    .ba-card {
+        padding: var(--space-24);
+    }
+
+    .interview-card {
+        padding: var(--space-32);
+    }
+
+    .interview-quote {
+        font-size: 1.15rem;
+    }
+}

@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="슬슬 Case Study · AI가 하루 외출 루트를 짜 주는 라이프스타일 서비스의 정보 구조와 모바일 퍼블리싱 기록.">
+    <meta name="author" content="Sulgi Ji">
+    <meta name="theme-color" content="#5C8BFF">
+    <meta property="og:title" content="슬슬 · Case Study | Sulgi Ji">
+    <meta property="og:description" content="즉흥 외출부터 코스 제안까지, 루트 탐색과 예약 동선을 하나의 흐름으로 엮은 UX 기록.">
+
+    <title>슬슬 · Case Study | Sulgi Ji</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;1,500&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/collage.css">
+    <link rel="stylesheet" href="styles/subpage.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/sleesl.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="scripts/ui/aos-init.js" defer></script>
+
+    <script>document.documentElement.classList.add('js-enabled');</script>
+</head>
+
+<body class="subpage-body">
+    <a href="#main" class="skip-link">본문으로 바로가기</a>
+    <div class="case-progress" id="caseProgress" aria-hidden="true"></div>
+
+    <div id="wrap">
+        <!-- ========== HEADER ========== -->
+        <header id="header" class="subpage-header">
+            <div class="container header-content">
+                <div class="logo">
+                    <a href="index.html" aria-label="Sulgi Ji · Home">
+                        <span class="logo-mark">S/</span>
+                        <span class="logo-name">Sulgi Ji</span>
+                    </a>
+                </div>
+                <nav class="main-nav" aria-label="Main">
+                    <ul>
+                        <li><a href="index.html#work" class="active">Work</a></li>
+                        <li><a href="index.html#approach">Approach</a></li>
+                        <li><a href="index.html#capabilities">Capabilities</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#contact" class="nav-cta">Get in touch</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main id="main">
+            <!-- ========== HERO ========== -->
+            <section class="case-hero" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-hero-meta-row">
+                        <span class="case-hero-eyebrow">Case 07 / Lifestyle Product</span>
+                        <span class="case-hero-eyebrow-dot"></span>
+                        <span class="case-hero-status">Published 2026 · Concept project</span>
+                    </div>
+
+                    <h1 class="case-hero-title">슬슬</h1>
+
+                    <p class="case-hero-tagline">
+                        오늘은 <em>슬슬 어디 가볼까</em>에서 시작해<br>
+                        AI 제안 루트 · 장소 정보 · 예약 CTA까지<br>
+                        한 페이지 호흡으로 묶었습니다.
+                    </p>
+
+                    <dl class="case-meta-grid">
+                        <div>
+                            <dt>Role</dt>
+                            <dd>UX · UI · Publishing<br>(Solo, end-to-end)</dd>
+                        </div>
+                        <div>
+                            <dt>Scope</dt>
+                            <dd>Landing · Features<br>Route · Booking · CTA</dd>
+                        </div>
+                        <div>
+                            <dt>Timeline</dt>
+                            <dd>2026 · 5 weeks<br>(Q2 Build · Mobile-first)</dd>
+                        </div>
+                        <div>
+                            <dt>Stack</dt>
+                            <dd>Figma · HTML · CSS<br>Vanilla JS · Static publishing</dd>
+                        </div>
+                    </dl>
+
+                    <div class="showcase-buttons">
+                        <a href="#case-start" class="btn-showcase btn-fill">Read case →</a>
+                        <a href="https://www.figma.com/proto/ga3eCiQWG3BlXrYooet4bL/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8?scaling=min-zoom&content-scaling=fixed&hide-ui=1&hotspot-hints=0&disable-default-keyboard-nav=1" target="_blank" rel="noopener" class="btn-showcase btn-outline">Prototype</a>
+                        <a href="https://seulform-design.github.io/seulDesignsleesl/" target="_blank" rel="noopener" class="btn-showcase btn-outline">Git ↗</a>
+                    </div>
+
+                    <figure class="case-hero-cover">
+                        <img src="./images/cover-sleesl.png" alt="슬슬 case cover">
+                        <div class="case-hero-cover-overlay">
+                            <span>Cover · AI route · lifestyle landing</span>
+                        </div>
+                    </figure>
+                </div>
+            </section>
+
+            <!-- ========== 01. BRIEF ========== -->
+            <section id="case-start" class="case-section" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-section-head">
+                        <div>
+                            <span class="case-section-eyebrow">The mandate</span>
+                            <h2 class="case-section-title">
+                                "화보로 들어와서<br>
+                                <em>화보로 나가지 않게</em>."
+                            </h2>
+                            <p class="case-section-lead">
+                                인스타그램 화보로 트래픽은 충분. 다만 그 트래픽이 사이트에 닿으면
+                                다시 "쇼핑몰 메뉴"에서 상품을 검색해야 하는 단절. 화보의 무드가
+                                구매 동선과 분리된 채 끊겼습니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <blockquote class="case-brief">
+                        <div class="case-brief-quote">
+                            화보는 잘 찍었는데, 사이트는 화보랑 다른 사이트 같아요. 사람들이
+                            화보 보다가 사진 속 옷을 못 찾고 그냥 닫아요.
+                            <p class="case-brief-cite">Brand director, kick-off (2026.05)</p>
+                        </div>
+                        <div class="case-brief-take">
+                            <h4>나의 해석</h4>
+                            <p>
+                                화보의 톤과 쇼핑몰의 톤은 본래 다릅니다. 다른 톤을 합치는 대신,
+                                화보 위에 <em>"보이지 않는 결제 동선"</em>을 얹습니다. 사용자는
+                                화보를 떠나지 않은 채 구매할 수 있어야 합니다.
+                            </p>
+                        </div>
+                    </blockquote>
+                </div>
+            </section>
+
+            <!-- ========== 02. AUDIT ========== -->
+            <section class="case-section" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-section-head">
+                        <div>
+                            <span class="case-section-eyebrow">What I diagnosed</span>
+                            <h2 class="case-section-title">
+                                결제 도달까지 <em>7번의 클릭</em>.<br>
+                                3번이면 충분했어야 합니다.
+                            </h2>
+                            <p class="case-section-lead">
+                                인스타에서 사이트로 진입한 사용자가 "사진 속 옷"을 찾아 결제까지 도달하는 <br> 평균 경로 = 7 클릭. 모바일 95% 트래픽 환경에서 이건
+                                실질적 차단막입니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="case-svg-canvas">
+                        <span class="case-svg-canvas-corner">FIG · 02-A</span>
+                        <svg viewBox="0 0 1200 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sleesl purchase-depth audit">
+                            <line x1="60" y1="240" x2="1140" y2="240" stroke="#E4E7EE" stroke-width="1" />
+
+                            <g font-family="JetBrains Mono, monospace" font-size="10" fill="#9AA4BD" letter-spacing="2">
+                                <text x="80" y="80">PURCHASE PATH · BEFORE (7 CLICKS)</text>
+                            </g>
+
+                            <!-- 7 step path -->
+                            <g font-family="Inter, sans-serif" font-size="10" font-weight="600">
+                                <g transform="translate(80, 110)">
+                                    <rect x="0" y="0" width="120" height="56" rx="3" fill="#fff" stroke="#1F2742" />
+                                    <text x="60" y="24" text-anchor="middle" fill="#1F2742">1. 인스타 화보</text>
+                                    <text x="60" y="40" text-anchor="middle" fill="#9AA4BD" font-size="9">진입 (외부)</text>
+                                </g>
+                                <g transform="translate(220, 110)">
+                                    <rect x="0" y="0" width="120" height="56" rx="3" fill="#fff" stroke="#1F2742" />
+                                    <text x="60" y="24" text-anchor="middle" fill="#1F2742">2. 메인 페이지</text>
+                                    <text x="60" y="40" text-anchor="middle" fill="#9AA4BD" font-size="9">화보와 다른 톤</text>
+                                </g>
+                                <g transform="translate(360, 110)">
+                                    <rect x="0" y="0" width="120" height="56" rx="3" fill="#fff" stroke="#1F2742" />
+                                    <text x="60" y="24" text-anchor="middle" fill="#1F2742">3. SHOP 메뉴</text>
+                                    <text x="60" y="40" text-anchor="middle" fill="#C7522A" font-size="9">메뉴 탐색 시작</text>
+                                </g>
+                                <g transform="translate(500, 110)">
+                                    <rect x="0" y="0" width="120" height="56" rx="3" fill="#fff" stroke="#1F2742" />
+                                    <text x="60" y="24" text-anchor="middle" fill="#1F2742">4. 카테고리</text>
+                                    <text x="60" y="40" text-anchor="middle" fill="#C7522A" font-size="9">옷 종류 모름</text>
+                                </g>
+                                <g transform="translate(640, 110)">
+                                    <rect x="0" y="0" width="120" height="56" rx="3" fill="#fff" stroke="#1F2742" />
+                                    <text x="60" y="24" text-anchor="middle" fill="#1F2742">5. 검색 시도</text>
+                                    <text x="60" y="40" text-anchor="middle" fill="#C7522A" font-size="9">키워드 모름</text>
+                                </g>
+                                <g transform="translate(780, 110)">
+                                    <rect x="0" y="0" width="120" height="56" rx="3" fill="#fff" stroke="#1F2742" />
+                                    <text x="60" y="24" text-anchor="middle" fill="#1F2742">6. PDP 진입</text>
+                                    <text x="60" y="40" text-anchor="middle" fill="#9AA4BD" font-size="9">화보와 다른 사진</text>
+                                </g>
+                                <g transform="translate(920, 110)">
+                                    <rect x="0" y="0" width="120" height="56" rx="3" fill="#FCEFE8" stroke="#C7522A" />
+                                    <text x="60" y="24" text-anchor="middle" fill="#C7522A" font-weight="700">7. 장바구니</text>
+                                    <text x="60" y="40" text-anchor="middle" fill="#7C3D1D" font-size="9">도달율 8%</text>
+                                </g>
+                            </g>
+
+                            <g stroke="#9AA4BD" stroke-width="1.5" fill="none">
+                                <line x1="200" y1="138" x2="220" y2="138" />
+                                <line x1="340" y1="138" x2="360" y2="138" />
+                                <line x1="480" y1="138" x2="500" y2="138" />
+                                <line x1="620" y1="138" x2="640" y2="138" />
+                                <line x1="760" y1="138" x2="780" y2="138" />
+                                <line x1="900" y1="138" x2="920" y2="138" />
+                            </g>
+
+                            <!-- After preview -->
+                            <g font-family="JetBrains Mono, monospace" font-size="10" fill="#BFA57D" letter-spacing="2">
+                                <text x="80" y="220">PURCHASE PATH · AFTER (3 CLICKS)</text>
+                            </g>
+
+                            <g font-family="Inter, sans-serif" font-size="10" font-weight="600">
+                                <g transform="translate(80, 250)">
+                                    <rect x="0" y="0" width="120" height="56" rx="3" fill="#fff" stroke="#BFA57D" />
+                                    <text x="60" y="24" text-anchor="middle" fill="#1F2742">1. 화보 진입</text>
+                                    <text x="60" y="40" text-anchor="middle" fill="#BFA57D" font-size="9">동일 톤 hero</text>
+                                </g>
+                                <g transform="translate(280, 250)">
+                                    <rect x="0" y="0" width="160" height="56" rx="3" fill="#1F2742" />
+                                    <text x="80" y="24" text-anchor="middle" fill="#fff">2. 사진 위 dot 탭</text>
+                                    <text x="80" y="40" text-anchor="middle" fill="#BFA57D" font-size="9">바로 hot-spot 활성</text>
+                                </g>
+                                <g transform="translate(520, 250)">
+                                    <rect x="0" y="0" width="160" height="56" rx="3" fill="#BFA57D" />
+                                    <text x="80" y="24" text-anchor="middle" fill="#1F2742" font-weight="700">3. Half-modal · Buy</text>
+                                    <text x="80" y="40" text-anchor="middle" fill="#1F2742" font-size="9">화보 위에서 결제</text>
+                                </g>
+
+                                <g stroke="#BFA57D" stroke-width="1.5" fill="none">
+                                    <line x1="200" y1="278" x2="280" y2="278" />
+                                    <line x1="440" y1="278" x2="520" y2="278" />
+                                </g>
+
+                                <text x="720" y="284" fill="#BFA57D" font-size="11" font-style="italic">화보 → 결제까지 한 호흡</text>
+                            </g>
+                        </svg>
+                        <p class="case-svg-caption">FIG. 02-A · Purchase depth audit · 7 → 3 clicks</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== 03. PROBLEM & GOALS ========== -->
+            <section class="case-section" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-section-head">
+                        <div>
+                            <span class="case-section-eyebrow">From symptoms to goals</span>
+                            <h2 class="case-section-title">
+                                <em>"화보 위" </em>가 카탈로그가<br>
+                                되어야 합니다.
+                            </h2>
+                        </div>
+                    </div>
+
+                    <div class="case-problem-goals">
+                        <div class="case-pg-block">
+                            <h3>Problems · 진단</h3>
+                            <ul>
+                                <li><span class="case-pg-num">P-01</span><span>인스타 진입자의 <strong>1차 화면</strong>이 화보가 아니라 평범한 메뉴 그리드.</span></li>
+                                <li><span class="case-pg-num">P-02</span><span>화보 속 옷을 찾기 위한 <strong>탐색 비용</strong>이 4클릭 이상.</span></li>
+                                <li><span class="case-pg-num">P-03</span><span>모바일 결제까지 <strong>풀 페이지 전환</strong> 5회. 화보 무드 완전 소실.</span></li>
+                                <li><span class="case-pg-num">P-04</span><span>한복 카테고리의 <strong>전통적 분류</strong>(저고리·치마·당의…)가 비전공자에게 진입 장벽.</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="case-pg-block is-goals">
+                            <h3>Goals · 디자인 목표</h3>
+                            <ul>
+                                <li><span class="case-pg-num">G-01</span><span>홈 1차 화면을 <strong>풀-블리드 화보 hero</strong>로. 인스타 톤과의 동일성 확보.</span></li>
+                                <li><span class="case-pg-num">G-02</span><span>Lookbook을 <strong>shoppable 카드 그리드</strong>로 재구성. "코디 전체 구매" 진입점 제공.<br><em>※ 화보 위 hot-spot dot 인터랙션은 컨셉 단계로 다음 빌드 예정</em></span></li>
+                                <li><span class="case-pg-num">G-03</span><span>스타일 진단 (style-test 3-question quiz)으로 <strong>스타일 → 룩 → 제품</strong> 흐름 분리.<br><em>※ Half-modal Buy는 컨셉 단계 라이브는 detail.html 풀 페이지 결제</em></span></li>
+                                <li><span class="case-pg-num">G-04</span><span>스타일 진단 결과 페이지(style.html)에서 <strong>Look 기반 보조 필터</strong> 운영 메인 카테고리 IA(상의·스커트·원피스 등)는 유지.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== 04. INTERVIEWS ========== -->
+            <section class="case-section" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-section-head">
+                        <div>
+                            <span class="case-section-eyebrow">Field interviews · n=10 (mobile-first)</span>
+                            <h2 class="case-section-title">
+                                "어플도 아니고 사이트도 아닌"<br>
+                                <em>그 중간 </em>이 정답이었습니다.
+                            </h2>
+                            <p class="case-section-lead">
+                                10명 모두 모바일 진입자. 인스타 화보를 보다가 사이트로 넘어와본 경험이
+                                있는 사용자. 공통 발화는 "사이트로 넘어오면 다른 데 온 느낌"이었습니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="case-interviews">
+                        <article class="case-interview-card">
+                            <p class="case-interview-quote">
+                                "인스타에서 본 그 옷을 사고 싶은데, 사이트 들어오면 옷 종류가
+                                너무 많아서 다시 찾아야 해요. 그러다 그냥 포기."
+                            </p>
+                            <footer class="case-interview-foot">
+                                <span class="case-interview-name">P-01 · 30대 / SNS 유입</span>
+                                <span class="case-interview-tag">Discovery · 재탐색 비용</span>
+                            </footer>
+                        </article>
+
+                        <article class="case-interview-card">
+                            <p class="case-interview-quote">
+                                "화보랑 쇼핑이 따로 있어서 너무 번거로워요. <br> 그냥 사진 보다가 바로 사고 싶은데, 그게 안 돼요."
+                            </p>
+                            <footer class="case-interview-foot">
+                                <span class="case-interview-name">P-04 · 20대 / 모바일 쇼핑족</span>
+                                <span class="case-interview-tag">Flow · 화보-구매 분리</span>
+                            </footer>
+                        </article>
+
+                        <article class="case-interview-card">
+                            <p class="case-interview-quote">
+                                "한복 카테고리가 이름을 다 어려워요. <br> 저고리, 당의… 저는 그냥 '명절에 입을 옷'을 찾는 건데."
+                            </p>
+                            <footer class="case-interview-foot">
+                                <span class="case-interview-name">P-07 · 30대 / 일반 고객</span>
+                                <span class="case-interview-tag">Labels · 전통어 장벽</span>
+                            </footer>
+                        </article>
+
+                        <article class="case-interview-card">
+                            <p class="case-interview-quote">
+                                "결제할 때 페이지가 자꾸 바뀌면 멈칫하게 돼요. <br> 한 화면에서 다 끝났으면 좋겠어요."
+                            </p>
+                            <footer class="case-interview-foot">
+                                <span class="case-interview-name">P-09 · 40대 / 충동 구매</span>
+                                <span class="case-interview-tag">Conversion · 페이지 전환 마찰</span>
+                            </footer>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== 05. INFORMATION ARCHITECTURE ========== -->
+            <section class="case-section" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-section-head">
+                        <div>
+                            <span class="case-section-eyebrow">Omnichannel map · Concept-stage proposal</span>
+                            <h2 class="case-section-title">
+                                <em>SNS → 룩북 → 결제 </em>를<br>
+                                한 단면에 모았습니다.
+                            </h2>
+                            <p class="case-section-lead">
+                                <strong>현재 라이브 빌드</strong>: Lookbook은 카드 그리드 detail.html 풀페이지 결제. <br>
+                                아래 다이어그램은 <em>컨셉 단계의 IA 제안</em> Lookbook을 중심 허브로 두고 <br> SNS deep-link + half-modal 결제까지 잇는 가상 구조입니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="case-svg-canvas">
+                        <span class="case-svg-canvas-corner">FIG · 05-A</span>
+                        <svg viewBox="0 0 1200 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sleesl journey map">
+                            <defs>
+                                <pattern id="grid-d" width="20" height="20" patternUnits="userSpaceOnUse">
+                                    <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#F4F6F9" stroke-width="1" />
+                                </pattern>
+                            </defs>
+                            <rect width="1200" height="480" fill="url(#grid-d)" />
+
+                            <!-- channels in -->
+                            <g font-family="Inter" font-size="11" font-weight="600">
+                                <rect x="80" y="80" width="160" height="44" rx="22" fill="#fff" stroke="#9AA4BD" />
+                                <text x="160" y="107" text-anchor="middle" fill="#1F2742">Instagram 화보</text>
+
+                                <rect x="80" y="160" width="160" height="44" rx="22" fill="#fff" stroke="#9AA4BD" />
+                                <text x="160" y="187" text-anchor="middle" fill="#1F2742">검색 · 광고</text>
+
+                                <rect x="80" y="240" width="160" height="44" rx="22" fill="#fff" stroke="#9AA4BD" />
+                                <text x="160" y="267" text-anchor="middle" fill="#1F2742">매장 QR</text>
+
+                                <rect x="80" y="320" width="160" height="44" rx="22" fill="#fff" stroke="#9AA4BD" />
+                                <text x="160" y="347" text-anchor="middle" fill="#1F2742">CRM 메일</text>
+                            </g>
+
+                            <!-- arrows to lookbook -->
+                            <g stroke="#BFA57D" stroke-width="1.4" fill="none" stroke-dasharray="4 4">
+                                <path d="M240 102 L500 220" />
+                                <path d="M240 182 L500 220" />
+                                <path d="M240 262 L500 220" />
+                                <path d="M240 342 L500 220" />
+                            </g>
+
+                            <!-- Lookbook (center) -->
+                            <g>
+                                <rect x="500" y="180" width="200" height="80" rx="6" fill="#1F2742" />
+                                <text x="600" y="215" text-anchor="middle" fill="#fff" font-family="Inter" font-size="14" font-weight="700">LOOKBOOK</text>
+                                <text x="600" y="237" text-anchor="middle" fill="#BFA57D" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="2">SHOPPABLE HUB</text>
+                            </g>
+
+                            <!-- forks out of lookbook -->
+                            <g stroke="#BFA57D" stroke-width="1.4" fill="none" stroke-dasharray="4 4">
+                                <path d="M700 220 L900 100" />
+                                <path d="M700 220 L900 220" />
+                                <path d="M700 220 L900 340" />
+                            </g>
+
+                            <g font-family="Inter" font-size="11" font-weight="600">
+                                <rect x="900" y="80" width="200" height="44" rx="6" fill="#fff" stroke="#BFA57D" stroke-width="1.5" />
+                                <text x="1000" y="100" text-anchor="middle" fill="#1F2742">Half-modal · Quick buy</text>
+                                <text x="1000" y="115" text-anchor="middle" fill="#9AA4BD" font-size="9" font-weight="500">화보 위에서 결제</text>
+
+                                <rect x="900" y="200" width="200" height="44" rx="6" fill="#fff" stroke="#BFA57D" stroke-width="1.5" />
+                                <text x="1000" y="220" text-anchor="middle" fill="#1F2742">PDP · Full detail</text>
+                                <text x="1000" y="235" text-anchor="middle" fill="#9AA4BD" font-size="9" font-weight="500">고관여 사용자 분기</text>
+
+                                <rect x="900" y="320" width="200" height="44" rx="6" fill="#fff" stroke="#BFA57D" stroke-width="1.5" />
+                                <text x="1000" y="340" text-anchor="middle" fill="#1F2742">Save · Wishlist</text>
+                                <text x="1000" y="355" text-anchor="middle" fill="#9AA4BD" font-size="9" font-weight="500">CRM 재참여 분기</text>
+                            </g>
+
+                            <text x="40" y="445" font-family="Playfair Display, serif" font-style="italic" font-size="13" fill="#BFA57D">Concept · Lookbook을 모든 채널의 합류점으로 (proposed)</text>
+                        </svg>
+                        <p class="case-svg-caption">FIG. 05-A · Lookbook as the omnichannel hub</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== 06. KEY DECISIONS ========== -->
+            <section class="case-section" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-section-head">
+                        <div>
+                            <span class="case-section-eyebrow">The trade-off log</span>
+                            <h2 class="case-section-title">
+                                전통의 어휘를 <em>일상의 어휘 </em>로<br>
+                                바꾸는 결정.
+                            </h2>
+                            <p class="case-section-lead">
+                                한복 브랜드의 가장 어려운 결정은 "어휘"였습니다. 전통을 지키고 싶지만, <br> 비전공자에게는 진입 장벽. 둘 다 지키기 위한 트레이드오프를
+                                기록합니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="case-decisions">
+                        <div class="case-decisions-row is-head">
+                            <span>#</span>
+                            <span>Before</span>
+                            <span>After</span>
+                            <span>Why</span>
+                        </div>
+
+                        <div class="case-decisions-row">
+                            <span class="case-decisions-num">D-01</span>
+                            <p class="case-decisions-before">홈 = 메뉴 그리드 + 시즌 배너</p>
+                            <p class="case-decisions-after">홈 = 풀-블리드 룩북 hero (인스타 톤과 동일)</p>
+                            <p class="case-decisions-why">진입자의 90%가 SNS 화보에서 옴. <br> 첫 화면이 그 톤과 다르면 즉시 이탈. 일관성이 곧 신뢰.</p>
+                        </div>
+
+                        <div class="case-decisions-row">
+                            <span class="case-decisions-num">D-02</span>
+                            <p class="case-decisions-before">카테고리 = 저고리 · 치마 · 당의 · 두루마기</p>
+                            <p class="case-decisions-after">메인 카테고리 = 상의 · 스커트 · 원피스 · 아우터 (현대 어휘) + style-test 진단으로 <strong>Look 보조 필터</strong> (출근/모임/행사/명절)</p>
+                            <p class="case-decisions-why">전통어 자체는 비전공자 진입 장벽. 1차는 익숙한 현대 카테고리, <br> 2차로 style-test가 사용 맥락(Look) 기반 분기. Look 중심 IA는 보조에서 시작.</p>
+                        </div>
+
+                        <div class="case-decisions-row">
+                            <span class="case-decisions-num">D-03</span>
+                            <p class="case-decisions-before">화보와 쇼핑몰 = 별도 페이지</p>
+                            <p class="case-decisions-after">Lookbook 카드 그리드 + "코디 전체 구매" 진입점 <br><em>※ 화보 위 hot-spot dot은 컨셉 단계 다음 빌드 예정</em></p>
+                            <p class="case-decisions-why">감상의 흐름을 깨지 않으려면 화보가 자체 카탈로그여야 함. <br> 1단계로 카드형 룩북에서 "코디 전체 구매"를 제공, dot 인터랙션은 좌표 운영 부담으로 다음 단계로.</p>
+                        </div>
+
+                        <div class="case-decisions-row">
+                            <span class="case-decisions-num">D-04</span>
+                            <p class="case-decisions-before">결제 = 풀 페이지 (Cart → Checkout → Pay)</p>
+                            <p class="case-decisions-after">현재: detail.html 풀페이지 결제 (Cart → Checkout) <br><em>※ Half-modal 결제는 컨셉 단계 다음 빌드 예정</em></p>
+                            <p class="case-decisions-why">Half-modal은 모바일 인지 부하 면에서 정답이지만, 결제 보안·환불 흐름까지 모달 안에서 관리하려면 운영 비용이 크게 늘어남. <br> 컨셉으로 남기고 라이브는 검증된 풀페이지 결제로 운영.</p>
+                        </div>
+
+                        <div class="case-decisions-row">
+                            <span class="case-decisions-num">D-05</span>
+                            <p class="case-decisions-before">PDP = 거대 사진 + 사이즈 표</p>
+                            <p class="case-decisions-after">PDP = 룩북 사진(편집된) 우선 + 흰 배경 사진은 <br> 보조 갤러리로 강등</p>
+                            <p class="case-decisions-why">한복은 "어떻게 입었을 때"가 결정의 핵심. <br> 흰 배경 사진은 사이즈/색 확인용으로만 충분.</p>
+                        </div>
+
+                        <div class="case-decisions-row">
+                            <span class="case-decisions-num">D-06</span>
+                            <p class="case-decisions-before">데스크톱 디자인을 모바일로 축소</p>
+                            <p class="case-decisions-after">Mobile-optimized. 95% 모바일 트래픽 기준으로 카드 그리드·간격·터치 영역 우선 설계</p>
+                            <p class="case-decisions-why">트래픽 95%가 모바일이라 모바일 경험을 1차로 잡고, 데스크톱은 보조. 빌드는 max-width 브레이크포인트(desktop-first CSS) 기반이지만 <em>의사결정의 우선순위는 모바일</em>로 두었음.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== 07. STATES ========== -->
+            <section class="case-section" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-section-head">
+                        <div>
+                            <span class="case-section-eyebrow">Component states · Hot-spot dot · Concept-stage spec</span>
+                            <h2 class="case-section-title">
+                                Hot-spot의 <em>4가지 상태 </em>가<br>
+                                전체 동선을 결정합니다.
+                            </h2>
+                            <p class="case-section-lead">
+                                <strong>아래는 다음 빌드를 위한 컨셉 스펙</strong> shoppable lookbook의 핵심 컴포넌트로 <br> 사진 위 "dot"을 설계했습니다. <br>
+                                현재 라이브 빌드는 카드 그리드 룩북으로 운영되며, dot 인터랙션은 <br> 좌표 운영과 사진 변경 시 유지보수 비용을 검토한 뒤 차기 단계로 미뤘습니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="case-states-grid">
+                        <article class="case-state-card">
+                            <div class="state-visual">
+                                <svg viewBox="0 0 200 150">
+                                    <rect x="20" y="20" width="160" height="110" rx="4" fill="#1F2742" />
+                                    <circle cx="100" cy="75" r="6" fill="#fff" opacity="0.9" />
+                                    <circle cx="100" cy="75" r="10" fill="none" stroke="#fff" stroke-opacity="0.3" />
+                                </svg>
+                            </div>
+                            <div class="state-meta">
+                                <span class="state-tag">S-01</span>
+                                <h4 class="state-name">Idle</h4>
+                                <p class="state-desc">은은한 글로우 ring, 호흡 애니메이션 4s.</p>
+                            </div>
+                        </article>
+
+                        <article class="case-state-card">
+                            <div class="state-visual">
+                                <svg viewBox="0 0 200 150">
+                                    <rect x="20" y="20" width="160" height="110" rx="4" fill="#1F2742" />
+                                    <circle cx="100" cy="75" r="8" fill="#BFA57D" />
+                                    <circle cx="100" cy="75" r="14" fill="none" stroke="#BFA57D" />
+                                    <circle cx="100" cy="75" r="22" fill="none" stroke="#BFA57D" stroke-opacity="0.4" />
+                                </svg>
+                            </div>
+                            <div class="state-meta">
+                                <span class="state-tag">S-02</span>
+                                <h4 class="state-name">Hover · Tap</h4>
+                                <p class="state-desc">골드 fill + 동심원 펄스 1회.</p>
+                            </div>
+                        </article>
+
+                        <article class="case-state-card">
+                            <div class="state-visual">
+                                <svg viewBox="0 0 200 150">
+                                    <rect x="20" y="20" width="160" height="110" rx="4" fill="#1F2742" />
+                                    <rect x="60" y="80" width="120" height="50" rx="4" fill="#fff" />
+                                    <rect x="68" y="86" width="32" height="32" rx="2" fill="#FAF7F2" />
+                                    <rect x="106" y="90" width="46" height="6" rx="3" fill="#1F2742" />
+                                    <rect x="106" y="100" width="36" height="4" rx="2" fill="#9AA4BD" />
+                                    <rect x="106" y="110" width="60" height="14" rx="7" fill="#1F2742" />
+                                    <text x="136" y="120" text-anchor="middle" fill="#fff" font-family="Inter" font-size="8" font-weight="700">BUY</text>
+                                </svg>
+                            </div>
+                            <div class="state-meta">
+                                <span class="state-tag">S-03</span>
+                                <h4 class="state-name">Active · Card open</h4>
+                                <p class="state-desc">미니 PDP + Quick buy 버튼.</p>
+                            </div>
+                        </article>
+
+                        <article class="case-state-card">
+                            <div class="state-visual">
+                                <svg viewBox="0 0 200 150">
+                                    <rect x="20" y="20" width="160" height="110" rx="4" fill="#1F2742" opacity="0.5" />
+                                    <rect x="20" y="80" width="160" height="50" rx="4" fill="#fff" />
+                                    <rect x="32" y="92" width="40" height="26" rx="2" fill="#FAF7F2" />
+                                    <rect x="80" y="95" width="50" height="6" rx="3" fill="#1F2742" />
+                                    <rect x="80" y="106" width="36" height="4" rx="2" fill="#9AA4BD" />
+                                    <rect x="138" y="98" width="36" height="20" rx="10" fill="#BFA57D" />
+                                    <text x="156" y="111" text-anchor="middle" fill="#1F2742" font-family="Inter" font-size="8" font-weight="700">결제</text>
+                                </svg>
+                            </div>
+                            <div class="state-meta">
+                                <span class="state-tag">S-04</span>
+                                <h4 class="state-name">Half-modal · Buy</h4>
+                                <p class="state-desc">화면 50% slide-up. 화보 안 떠남.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== 08. VISUAL SYSTEM ========== -->
+            <section class="case-section" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-section-head">
+                        <div>
+                            <span class="case-section-eyebrow">Tokens</span>
+                            <h2 class="case-section-title">
+                                맑은 <em>데이 스카이</em> 베이스와<br>
+                                짧은 호흡의 타입.
+                            </h2>
+                            <p class="case-section-lead">
+                                슬슬의 베이스는 밝은 그레이 블루 톤의 서피스와 포인트 블루(Primary). <br>
+                                CTA · 링크 · 핵심 배지에서만 채도를 올려 스크롤 피로를 줄였습니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="case-system">
+                        <div class="case-system-block">
+                            <h3>Color tokens · Core</h3>
+                            <div class="case-color-row">
+                                <div class="case-color-chip case-color-chip--ink-warm">
+                                    <strong>Ink (먹)</strong>
+                                    <span>#161311</span>
+                                    <span>본문 · 위계 1</span>
+                                </div>
+                                <div class="case-color-chip case-color-chip--accent-sleesl">
+                                    <strong>Primary</strong>
+                                    <span>#5C8BFF</span>
+                                    <span>CTA · 링크 · 포커스</span>
+                                </div>
+                            </div>
+                            <div class="case-color-row">
+                                <div class="case-color-chip case-color-chip--ivory is-light">
+                                    <strong>Ivory</strong>
+                                    <span>#FDF9FB</span>
+                                    <span>캔버스 · 베이스</span>
+                                </div>
+                                <div class="case-color-chip case-color-chip--ivory-soft is-light">
+                                    <strong>Ivory Soft</strong>
+                                    <span>#F7F0F4</span>
+                                    <span>섹션 분리 · 카드 hover</span>
+                                </div>
+                                <div class="case-color-chip case-color-chip--hairline-warm is-light">
+                                    <strong>Hairline</strong>
+                                    <span>rgba(22,19,17,.1)</span>
+                                    <span>미세 구분선</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="case-system-block">
+                            <h3>Kitsch palette · 인터랙션 한정</h3>
+                            <div class="case-color-row">
+                                <div class="case-color-chip case-color-chip--pink is-light">
+                                    <strong>Pink</strong>
+                                    <span>#F6C9D8</span>
+                                    <span>버튼 · 라벨</span>
+                                </div>
+                                <div class="case-color-chip case-color-chip--lavender is-light">
+                                    <strong>Lavender</strong>
+                                    <span>#D8CCF5</span>
+                                    <span>호버 · 포커스</span>
+                                </div>
+                                <div class="case-color-chip case-color-chip--mint is-light">
+                                    <strong>Mint</strong>
+                                    <span>#C9EBE2</span>
+                                    <span>태그</span>
+                                </div>
+                                <div class="case-color-chip case-color-chip--sky is-light">
+                                    <strong>Sky</strong>
+                                    <span>#C5E4F2</span>
+                                    <span>알림 · 보조</span>
+                                </div>
+                                <div class="case-color-chip case-color-chip--butter is-light">
+                                    <strong>Butter</strong>
+                                    <span>#F3E8A8</span>
+                                    <span>강조 · 노트</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="case-system-block">
+                            <h3>Type stack</h3>
+                            <div class="case-type-stack">
+                                <div class="case-type-row">
+                                    <p class="case-type-sample display case-type-sample--pretendard-display">슬슬</p>
+                                    <p class="case-type-meta">Display · Pretendard Variable 700 · 40px / -0.03em</p>
+                                </div>
+                                <div class="case-type-row">
+                                    <p class="case-type-sample h1 case-type-sample--pretendard-h1">오늘은 슬슬 어디 가볼까?</p>
+                                    <p class="case-type-meta">H1 · Pretendard Variable 600 · 28px / -0.02em</p>
+                                </div>
+                                <div class="case-type-row">
+                                    <p class="case-type-sample body case-type-sample--pretendard-body">"복잡한 검색 대신, 오늘의 루트를 한 번에 받고 싶어요."</p>
+                                    <p class="case-type-meta">Body · Pretendard Variable 400 · 14px / 1.6</p>
+                                </div>
+                                <div class="case-type-row">
+                                    <p class="case-type-sample mono case-type-sample--pretendard-mono">ROUTE 03 · 카페 · 산책 · 저녁</p>
+                                    <p class="case-type-meta">Caption · Pretendard Variable 500 · 12px · uppercase / 0.18em <em>(전용 mono 미사용 단일 Pretendard 스택)</em></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== 09. RESULT ========== -->
+            <section class="case-section is-dark" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-section-head">
+                        <div>
+                            <span class="case-section-eyebrow">Projected · Concept-stage simulation</span>
+                            <h2 class="case-section-title">
+                                <em>"화보 위 결제"</em>가<br>
+                                작동한다는 가설.
+                            </h2>
+                            <p class="case-section-lead">
+                                컨셉 프로젝트 시뮬레이션 기반 예상치 (라이브 데이터 아님). 라이브 빌드는
+                                Lookbook 카드 그리드 + detail.html 풀페이지 결제 아래 수치는 hot-spot · half-modal까지
+                                구현됐을 때의 가설 결과입니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="case-kpi-board">
+                        <div class="case-kpi-cell">
+                            <span class="case-kpi-tag">K-01 · 장바구니</span>
+                            <span class="case-kpi-num">+21<span class="num-unit">%</span></span>
+                            <p class="case-kpi-label">장바구니 도달율 상승 (예상)</p>
+                            <p class="case-kpi-context">
+                                인스타 진입 코호트에서 +34%, 직접 진입에서 +9% 가설. hot-spot이 구현됐을 때
+                                "화보 컨텍스트"가 살아있는 진입에서 가장 강하게 작동할 것으로 예상.
+                            </p>
+                        </div>
+
+                        <div class="case-kpi-cell">
+                            <span class="case-kpi-tag">K-02 · 동선 깊이</span>
+                            <span class="case-kpi-num">−38<span class="num-unit">%</span></span>
+                            <p class="case-kpi-label">평균 구매 동선 단축 (예상)</p>
+                            <p class="case-kpi-context">
+                                7 클릭 → 3.2 클릭 가설 (반올림). 컨셉 IA(hot-spot + half-modal 풀 구현 기준)에서
+                                포기 시점이 결제 직전이 아닌 진입 직후로 이동할 것으로 예상.
+                            </p>
+                        </div>
+
+                        <div class="case-kpi-cell">
+                            <span class="case-kpi-tag">K-03 · 모바일 결제</span>
+                            <span class="case-kpi-num">+12<span class="num-unit">%</span></span>
+                            <p class="case-kpi-label">모바일 직접 결제 증가 (예상)</p>
+                            <p class="case-kpi-context">
+                                Half-modal 결제 완료율 78% 가설. 페이지 전환 결제 대비 13%p 높음.
+                                "화면 잃지 않음"이 모바일에서 결정적 차이를 만든다는 가설 다음 빌드에서 검증 예정.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== 10. REFLECTIONS ========== -->
+            <section class="case-section" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-section-head">
+                        <div>
+                            <span class="case-section-eyebrow">What I'd do differently · Planned next</span>
+                            <h2 class="case-section-title">
+                                <em>이번 빌드</em>는 카드 그리드까지,<br>
+                                다음 빌드는 그 위에 점을 얹는다.
+                            </h2>
+                        </div>
+                    </div>
+
+                    <div class="case-reflections">
+                        <article class="case-reflection">
+                            <span class="case-reflection-num">R-01</span>
+                            <h3 class="case-reflection-title">Hot-spot 좌표의 운영 비용.</h3>
+                            <p class="case-reflection-body">
+                                컨셉 단계에서 hot-spot 좌표 운영을 시뮬레이션해보니, 룩북마다 디자이너가 수기로 좌표를 찍어야 하는 부담이 큼. 라이브 빌드에서 카드 그리드로 우선 출시한 이유.
+                                다음 단계는 AI 보조 좌표 추천 → 디자이너 확인 흐름을 검토 중입니다.
+                            </p>
+                        </article>
+
+                        <article class="case-reflection">
+                            <span class="case-reflection-num">R-02</span>
+                            <h3 class="case-reflection-title">Half-modal 결제의 운영 vs UX.</h3>
+                            <p class="case-reflection-body">
+                                Half-modal은 모바일 인지 부하 측면에서 답이지만, 결제 보안·환불 흐름까지 모달 안에서 다루려면 운영·CS 비용이 큼. 라이브는 검증된 detail.html 풀페이지 결제로 두고, half-modal은 다음 빌드에서 실험 단계로 접근할 예정.
+                            </p>
+                        </article>
+
+                        <article class="case-reflection">
+                            <span class="case-reflection-num">R-03</span>
+                            <h3 class="case-reflection-title">Mobile-first 의사결정 vs CSS 빌드 패턴.</h3>
+                            <p class="case-reflection-body">
+                                의사결정의 우선순위는 모바일이었지만, 빌드 단계에서 max-width 브레이크포인트(desktop-first 패턴)를 사용했습니다. 다음 빌드에서는 처음부터 min-width 기반 mobile-first CSS로 통일해 태블릿(768–1024px) 사각지대를 줄이는 것이 과제.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- ========== NEXT PROJECT ========== -->
+        <section class="case-next" data-aos="fade-up">
+            <a href="lelabo.html" class="case-next-inner" aria-label="Loop back · Le Labo">
+                <div class="case-next-text">
+                    <span class="case-next-eyebrow">Loop back · 01 / 07</span>
+                    <h3 class="case-next-title">Le Labo.</h3>
+                    <p class="case-next-tagline">
+                        향수 카테고리의 큐레이션 IA 재설계.
+                        "고르게 만드는" 과정 자체를 콘텐츠로 다뤘습니다.
+                    </p>
+                    <span class="case-next-cta">
+                        Read case study
+                        <span class="case-next-cta-arrow">→</span>
+                    </span>
+                </div>
+                <div class="case-next-visual">
+                    <img src="./images/cover5.png" alt="Le Labo loop preview">
+                </div>
+            </a>
+        </section>
+
+        <!-- ========== FOOTER ========== -->
+        <footer class="subpage-footer">
+            <div class="container">
+                <div class="subpage-footer-grid">
+                    <div class="subpage-footer-brand">
+                        <h3>Sulgi Ji</h3>
+                        <p>
+                            7년의 운영 감각을 디지털 의사결정으로 옮기는 디자이너입니다.
+                            브랜드의 다음 챕터를 함께 정돈하고 싶다면 짧게라도 적어 보내주세요.
+                        </p>
+                        <a href="mailto:seulform@gmail.com" class="subpage-footer-cta">
+                            seulform@gmail.com →
+                        </a>
+                    </div>
+
+                    <div class="subpage-footer-col">
+                        <h4>Cases</h4>
+                        <ul>
+                            <li><a href="lelabo.html">01 · Le Labo</a></li>
+                            <li><a href="artish.html">02 · Artish</a></li>
+                            <li><a href="danha.html">03 · Danha</a></li>
+                            <li><a href="colorgram.html">04 · COLORGRAM</a></li>
+                            <li><a href="dakyoungsnd.html">05 · 다경에스앤디</a></li>
+                            <li><a href="threece.html">06 · 3CE</a></li>
+                            <li><a href="sleesl.html">07 · 슬슬</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="subpage-footer-col">
+                        <h4>Elsewhere</h4>
+                        <ul>
+                            <li><a href="index.html#about">About</a></li>
+                            <li><a href="index.html#capabilities">Capabilities</a></li>
+                            <li><a href="index.html#faq">FAQ</a></li>
+                            <li><a href="tel:+821065283177">010-6528-3177</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="subpage-footer-bottom">
+                    <span class="copy">© 2026 SULGI JI · HAND-CODED IN SEOUL</span>
+                    <span class="meta">CASE 07 · UPDATED 2026.05</span>
+                </div>
+            </div>
+        </footer>
+
+        <a href="#main" class="subpage-back-to-top" id="backToTop" aria-label="Back to top">↑</a>
+    </div>
+
+    <script src="scripts/ui/header.js" defer></script>
+    <script src="scripts/ui/navigation.js" defer></script>
+    <script src="scripts/ui/case-study.js" defer></script>
+</body>
+
+</html>

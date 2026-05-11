@@ -1,0 +1,140 @@
+/* ============================================================
+   SULGI Portfolio · sleesl.css
+   슬슬 (SLESL) Case Study 전용 스타일
+   ============================================================ */
+
+:root {
+    --brand-sleesl: #3d5a9e;
+    --sleesl-surface: #ffffff;
+    --sleesl-soft: #eef2fb;
+    --sleesl-border: #d0daf0;
+    --sleesl-before: #6f7b93;
+    --sleesl-after: #5c8bff;
+}
+
+.sleesl-section {
+    padding: var(--space-64) 0;
+}
+
+.title-wrap {
+    width: 100%;
+}
+
+.title-text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
+}
+
+.hero-title {
+    color: var(--brand-sleesl);
+}
+
+.card-group {
+    display: grid;
+    gap: var(--space-24);
+}
+
+.intro-card-group,
+.problem-card-group {
+    grid-template-columns: 1fr;
+}
+
+.interview-card-group,
+.before-after-card-group {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.intro-card,
+.interview-card,
+.problem-card,
+.ba-card {
+    border: 1px solid var(--sleesl-border);
+    background: var(--sleesl-surface);
+    box-shadow: var(--shadow-soft);
+}
+
+.intro-card .card-image,
+.problem-card .card-image {
+    max-height: 360px;
+}
+
+.interview-card .card-image,
+.ba-card .card-image {
+    max-height: 260px;
+}
+
+.project-meta {
+    margin-top: 0;
+    max-width: 100%;
+    padding-top: var(--space-20);
+    border-top: 1px dashed var(--sleesl-border);
+}
+
+.project-meta dd {
+    color: var(--text-main);
+}
+
+.interview-quote {
+    font-size: var(--fs-body-lg);
+    line-height: 1.7;
+}
+
+.interview-profile {
+    margin-top: var(--space-20);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+}
+
+.interview-name {
+    font-weight: 700;
+    color: var(--brand-sleesl);
+}
+
+.interview-desc {
+    color: var(--text-sub);
+}
+
+.ba-card .label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    padding: 0 12px;
+    border-radius: var(--radius-pill);
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: var(--space-16);
+    color: #fff;
+}
+
+.ba-card[data-state="before"] .label {
+    background: var(--sleesl-before);
+}
+
+.ba-card[data-state="after"] .label {
+    background: var(--sleesl-after);
+}
+
+.ba-title {
+    margin-bottom: var(--space-12);
+    font-size: var(--font-size-h4);
+}
+
+.ba-caption {
+    color: var(--text-sub);
+    line-height: 1.7;
+}
+
+.card.is-focused {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+@media (max-width: 1024px) {
+    .interview-card-group,
+    .before-after-card-group {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Le Labo Case Study · 향수 카테고리의 큐레이션 IA를 재설계하여 '고르는 과정' 자체를 콘텐츠로 전환한 결정의 기록.">
+    <meta name="author" content="Sulgi Ji">
+    <meta name="theme-color" content="#1F2742">
+    <meta property="og:title" content="Le Labo · Case Study | Sulgi Ji">
+    <meta property="og:description" content="향수 카테고리의 큐레이션 IA 재설계 | 고르는 과정 자체를 콘텐츠로.">
+
+    <title>Le Labo · Case Study | Sulgi Ji</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;1,500&family=JetBrains+Mono:wght@400;500;600&family=DM+Serif+Display:ital@0;1&family=Outfit:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/collage.css">
+    <link rel="stylesheet" href="styles/subpage.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="scripts/ui/aos-init.js" defer></script>
+
+    <script>document.documentElement.classList.add('js-enabled');</script>
+</head>
+
+<body class="subpage-body">
+    <a href="#main" class="skip-link">본문으로 바로가기</a>
+    <div class="case-progress" id="caseProgress" aria-hidden="true"></div>
+
+    <div id="wrap">
+        <!-- ========== HEADER (index 일관) ========== -->
+        <header id="header" class="subpage-header">
+            <div class="container header-content">
+                <div class="logo">
+                    <a href="index.html" aria-label="Sulgi Ji · Home">
+                        <span class="logo-mark">S/</span>
+                        <span class="logo-name">Sulgi Ji</span>
+                    </a>
+                </div>
+                <nav class="main-nav" aria-label="Main">
+                    <ul>
+                        <li><a href="index.html#work" class="active">Work</a></li>
+                        <li><a href="index.html#approach">Approach</a></li>
+                        <li><a href="index.html#capabilities">Capabilities</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#contact" class="nav-cta">Get in touch</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main id="main">
+            <!-- ========== HERO ========== -->
+            <section class="case-hero" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-hero-meta-row">
+                        <span class="case-hero-eyebrow">Case 01 / Editorial Commerce</span>
+                        <span class="case-hero-eyebrow-dot"></span>
+                        <span class="case-hero-status">Published 2026 · Concept project</span>
+                    </div>
+
+                    <h1 class="case-hero-title">Le Labo</h1>
+
+                    <p class="case-hero-tagline">
+                        향수는 시각이 없는 카테고리입니다. <em>고르는 과정 자체</em>를 콘텐츠로 다뤄,
+                        디스커버리에서 결제까지 한 호흡으로 흐르도록 IA를 재설계했습니다.
+                    </p>
+
+                    <dl class="case-meta-grid">
+                        <div>
+                            <dt>Role</dt>
+                            <dd>UX · UI · Publishing<br>(Solo, end-to-end)</dd>
+                        </div>
+                        <div>
+                            <dt>Scope</dt>
+                            <dd>IA · Discovery · PDP<br>Cart · Checkout</dd>
+                        </div>
+                        <div>
+                            <dt>Timeline</dt>
+                            <dd>2026 · 8 weeks<br>(Q1 Discovery → Q2 Build)</dd>
+                        </div>
+                        <div>
+                            <dt>Stack</dt>
+                            <dd>Figma · HTML · CSS<br>Vanilla JS · Token system</dd>
+                        </div>
+                    </dl>
+
+                    <figure class="case-hero-cover">
+                        <img src="./images/cover.png" alt="Le Labo case cover">
+                        <div class="case-hero-cover-overlay">
+                            <span>Cover · Editorial homepage composition</span>
+                        </div>
+                    </figure>
+                </div>
+            </section>
+
+            <!-- ========== 01. BRIEF ========== -->
+            <section class="case-section" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-section-head">
+                        <div>
+                            <span class="case-section-eyebrow">The mandate</span>
+                            <h2 class="case-section-title">
+                                "오프라인의 <em>시향 경험</em>을<br>
+                                온라인에 옮겨주세요."
+                            </h2>
+                            <p class="case-section-lead">
+                                기존 온라인 스토어는 단순 리스트형. 매장에서의 무드와 큐레이터의
+                                개입이 사라진 채 가격과 썸네일만 남았습니다. 첫 미팅에서 받은
+                                요청은 단순했지만, 그 이면의 질문은 결국 "디지털에서 어떻게 결정을
+                                도와줄 것인가"였습니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <blockquote class="case-brief">
+                        <div class="case-brief-quote">
+                            매장에선 직원이 "어떤 향을 좋아하세요?"라고 물어봐주는데,
+                            온라인에선 그냥 그리드만 떠요. <br> 르라보가 르라보 같지 않아요.
+                            <p class="case-brief-cite">Brand team, kick-off (2026.01)</p>
+                        </div>
+                        <div class="case-brief-take">
+                            <h4>나의 해석</h4>
+                            <p>
+                                "시향"은 후각 경험이지만, 디지털에서 그것을 <em>흉내</em>낼 수는 없습니다.
+                                대신 <em>"고르는 과정"</em>을 콘텐츠로 격상하면 후각의 빈자리를
+                                의사결정 서사로 채울 수 있습니다. 큐레이션 IA가 시향 경험의 디지털
+                                대체재가 됩니다.
+                            </p>
+                        </div>
+                    </blockquote>
+                </div>
+            </section>
+
+            <!-- ========== 02. AUDIT (Before) ========== -->
+            <section class="case-section" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-section-head">
+                        <div>
+                            <span class="case-section-eyebrow">What I diagnosed</span>
+                            <h2 class="case-section-title">
+                                기존 구조에서 <em>3가지 단절</em>을 찾았습니다.
+                            </h2>
+                            <p class="case-section-lead">
+                                단순 그리드의
+                                문제는 미적 결함이 아니라, <br> "사용자가 결정하기 위한 정보가 어디에도
+                                없다"는 구조 결함이었습니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="case-svg-canvas">
+                        <span class="case-svg-canvas-corner">FIG · 02-A</span>
+                        <svg viewBox="0 0 1200 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagnostic of original purchase flow">
+                            <!-- baseline -->
+                            <line x1="60" y1="200" x2="1140" y2="200" stroke="#E4E7EE" stroke-width="1" />
+
+                            <!-- step blocks (4 steps) -->
+                            <g font-family="Inter, sans-serif" font-size="12" font-weight="600">
+                                <!-- 1. Land -->
+                                <rect x="80" y="160" width="180" height="80" rx="4" fill="#fff" stroke="#1F2742" stroke-width="1.5" />
+                                <text x="170" y="195" text-anchor="middle" fill="#1F2742">홈 진입</text>
+                                <text x="170" y="218" text-anchor="middle" fill="#9AA4BD" font-size="10" font-weight="500">Landing</text>
+
+                                <!-- 2. Browse -->
+                                <rect x="340" y="160" width="180" height="80" rx="4" fill="#fff" stroke="#1F2742" stroke-width="1.5" />
+                                <text x="430" y="195" text-anchor="middle" fill="#1F2742">전체 그리드 보기</text>
+                                <text x="430" y="218" text-anchor="middle" fill="#9AA4BD" font-size="10" font-weight="500">Grid browse</text>
+
+                                <!-- 3. PDP -->
+                                <rect x="600" y="160" width="180" height="80" rx="4" fill="#fff" stroke="#1F2742" stroke-width="1.5" />
+                                <text x="690" y="195" text-anchor="middle" fill="#1F2742">상품 상세 진입</text>
+                                <text x="690" y="218" text-anchor="middle" fill="#9AA4BD" font-size="10" font-weight="500">PDP</text>
+
+                                <!-- 4. Cart -->
+                                <rect x="860" y="160" width="180" height="80" rx="4" fill="#fff" stroke="#1F2742" stroke-width="1.5" />
+                                <text x="950" y="195" text-anchor="middle" fill="#1F2742">장바구니</text>
+                                <text x="950" y="218" text-anchor="middle" fill="#9AA4BD" font-size="10" font-weight="500">Cart</text>
+                            </g>
+
+                            <!-- arrows -->
+                            <g stroke="#9AA4BD" stroke-width="1.5" fill="none" marker-end="url(#arr)">
+                                <line x1="265" y1="200" x2="335" y2="200" />
+                                <line x1="525" y1="200" x2="595" y2="200" />
+                                <line x1="785" y1="200" x2="855" y2="200" />
+                            </g>
+                            <defs>
+                                <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+                                    <path d="M0,0 L10,5 L0,10 Z" fill="#9AA4BD" />
+                                </marker>
+                            </defs>
+
+                            <!-- problems (red dotted callouts) -->
+                            <g stroke="#C7522A" stroke-width="1.5" stroke-dasharray="4 4" fill="none">
+                                <path d="M170 160 L170 80" />
+                                <path d="M430 160 L430 80" />
+                                <path d="M690 160 L690 80" />
+                            </g>
+                            <g font-family="Inter, sans-serif" font-size="11" fill="#C7522A" font-weight="600">
+                                <rect x="100" y="40" width="140" height="40" rx="4" fill="#FCEFE8" />
+                                <text x="170" y="60" text-anchor="middle">G-01 · 진입 의도 모름</text>
+                                <text x="170" y="74" text-anchor="middle" font-weight="500" fill="#7C3D1D" font-size="9">'어떤 향?'을 묻지 않음</text>
+
+                                <rect x="360" y="40" width="140" height="40" rx="4" fill="#FCEFE8" />
+                                <text x="430" y="60" text-anchor="middle">G-02 · 비교 도구 부재</text>
+                                <text x="430" y="74" text-anchor="middle" font-weight="500" fill="#7C3D1D" font-size="9">노트·강도 기준 없음</text>
+
+                                <rect x="620" y="40" width="140" height="40" rx="4" fill="#FCEFE8" />
+                                <text x="690" y="60" text-anchor="middle">G-03 · 확신 부족</text>
+                                <text x="690" y="74" text-anchor="middle" font-weight="500" fill="#7C3D1D" font-size="9">조향 스토리 없음</text>
+                            </g>
+
+                            <!-- drop-off -->
+                            <g font-family="JetBrains Mono, monospace" font-size="11" fill="#1F2742" font-weight="600">
+                                <text x="430" y="305" text-anchor="middle" fill="#C7522A">↓ 47% 이탈</text>
+                                <text x="690" y="305" text-anchor="middle" fill="#C7522A">↓ 31% 이탈</text>
+                                <text x="950" y="305" text-anchor="middle" fill="#5B688A">전환율 0.8%</text>
+                            </g>
+
+                            <!-- caption -->
+                            <text x="60" y="340" font-family="Playfair Display, serif" font-style="italic" font-size="13" fill="#BFA57D">Audit · 단순 그리드 모델의 결정 결손 지점</text>
+                        </svg>
+                        <p class="case-svg-caption">FIG. 02-A · Diagnostic flow · purchase funnel breakage</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== 03. PROBLEM & GOALS ========== -->
+            <section class="case-section" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-section-head">
+                        <div>
+                            <span class="case-section-eyebrow">From symptoms to goals</span>
+                            <h2 class="case-section-title">
+                                3가지 단절을<br>
+                                <em>3가지 목표</em>로 옮겼습니다.
+                            </h2>
+                        </div>
+                    </div>
+
+                    <div class="case-problem-goals">
+                        <div class="case-pg-block">
+                            <h3>Problems · 진단</h3>
+                            <ul>
+                                <li><span class="case-pg-num">P-01</span><span>사용자의 <strong>구매 의도</strong>를 시작 단계에서 묻지 않음. 진입자 모두에게 같은 그리드.</span></li>
+                                <li><span class="case-pg-num">P-02</span><span>향수의 <strong>비교 단위</strong>가 없음. 노트·강도·계열을 추상적 단어로만 노출.</span></li>
+                                <li><span class="case-pg-num">P-03</span><span>PDP가 <strong>"무엇을 사는지"</strong>는 알려주지만 <strong>"왜 이 향이 나에게"</strong>는 답하지 않음.</span></li>
+                                <li><span class="case-pg-num">P-04</span><span>장바구니→결제 사이에 <strong>시향 샘플 추가</strong>의 자연스러운 분기가 없음.</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="case-pg-block is-goals">
+                            <h3>Goals · 디자인 목표</h3>
+                            <ul>
+                                <li><span class="case-pg-num">G-01</span><span><strong>Finder 진단 흐름</strong>을 별도 진입점으로 분리 (4-step questionnaire). 카탈로그 외 의도-기반 진입 옵션 추가.</span></li>
+                                <li><span class="case-pg-num">G-02</span><span>모든 PDP에 <strong>구조화된 향 카드</strong>(Top·Heart·Base + 시간 메타데이터) 도입.</span></li>
+                                <li><span class="case-pg-num">G-03</span><span>PDP에 <strong>Top/Heart/Base 노트 아키텍처</strong>를 핵심 정보 모듈로 격상.</span></li>
+                                <li><span class="case-pg-num">G-04</span><span>장바구니 하단에 <strong>카테고리 cross-sell (Home / Body / Gift)</strong> 모듈 도입 향수 외 라인업 노출로 객단가 보강.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== 04. INTERVIEWS ========== -->
+            <section class="case-section" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-section-head">
+                        <div>
+                            <span class="case-section-eyebrow">Field interviews · n=12</span>
+                            <h2 class="case-section-title">
+                                같은 말을 다른 표현으로<br>
+                                <em>3번 들었을 때</em>, 그것은 데이터입니다.
+                            </h2>
+                            <p class="case-section-lead">
+                                입문자 6명, 브랜드 충성고객 4명, 선물 구매자 2명. <br> 인터뷰는 2시간씩, 실제 구매 화면을 함께 봤습니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="case-interviews">
+                        <article class="case-interview-card">
+                            <p class="case-interview-quote">
+                                "온라인에서 향수를 살 땐 실패할까봐 두려워요. 매장에선 직원이
+                                물어봐주잖아요 그런 게 화면에 있으면 좋겠어요."
+                            </p>
+                            <footer class="case-interview-foot">
+                                <span class="case-interview-name">P-04 · 30대 / 입문자</span>
+                                <span class="case-interview-tag">Decision · 진단 욕구</span>
+                            </footer>
+                        </article>
+
+                        <article class="case-interview-card">
+                            <p class="case-interview-quote">
+                                "Santal 33은 알아요. 근데 비슷한 향이 또 있는지 그건 도저히 사이트에서
+                                못 찾겠더라고요. 결국 블로그 검색해요."
+                            </p>
+                            <footer class="case-interview-foot">
+                                <span class="case-interview-name">P-08 · 40대 / 충성고객</span>
+                                <span class="case-interview-tag">Discovery · 횡적 탐색</span>
+                            </footer>
+                        </article>
+
+                        <article class="case-interview-card">
+                            <p class="case-interview-quote">
+                                "사진은 다 비슷비슷해요. <br> 라벨만 바뀌어 있고. 결국 가격순으로
+                                보다가 안 사고 닫아요."
+                            </p>
+                            <footer class="case-interview-foot">
+                                <span class="case-interview-name">P-11 · 20대 / 선물 구매</span>
+                                <span class="case-interview-tag">Hierarchy · 위계 부재</span>
+                            </footer>
+                        </article>
+
+                        <article class="case-interview-card">
+                            <p class="case-interview-quote">
+                                "샘플이 있다는 건 알아요. 근데 어디서 어떻게 추가하는지를 모르겠어요.
+                                그냥 본 제품만 사고 끝나요."
+                            </p>
+                            <footer class="case-interview-foot">
+                                <span class="case-interview-name">P-02 · 30대 / 입문자</span>
+                                <span class="case-interview-tag">Conversion · 샘플 분기 결손</span>
+                            </footer>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== 05. INFORMATION ARCHITECTURE ========== -->
+            <section class="case-section" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-section-head">
+                        <div>
+                            <span class="case-section-eyebrow">Information Architecture · Concept-stage proposal</span>
+                            <h2 class="case-section-title">
+                                "어떻게 고를지"의 <em>분기점</em>을<br>
+                                홈 첫 화면에 만들었습니다.
+                            </h2>
+                            <p class="case-section-lead">
+                                <strong>현재 라이브 빌드</strong>: 카탈로그 + Finder 진단 페이지(별도). <br>
+                                아래 다이어그램은 <em>컨셉 단계의 IA 제안</em>Finder 진단을 홈 1차 분기로 끌어올린 가상 시나리오입니다. 빌드는 Shop · Finder · Journal 각각 독립 페이지로 운영됩니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="case-svg-canvas">
+                        <span class="case-svg-canvas-corner">FIG · 05-A</span>
+                        <svg viewBox="0 0 1200 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Information Architecture for Le Labo redesign">
+                            <defs>
+                                <pattern id="grid-l" width="20" height="20" patternUnits="userSpaceOnUse">
+                                    <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#F4F6F9" stroke-width="1" />
+                                </pattern>
+                            </defs>
+                            <rect width="1200" height="480" fill="url(#grid-l)" />
+
+                            <!-- Connections -->
+                            <g stroke="#BFA57D" stroke-width="1.4" fill="none" stroke-dasharray="4 4">
+                                <path d="M600 80 L200 180" />
+                                <path d="M600 80 L600 180" />
+                                <path d="M600 80 L1000 180" />
+                                <path d="M200 230 L120 320" />
+                                <path d="M200 230 L280 320" />
+                                <path d="M600 230 L500 320" />
+                                <path d="M600 230 L700 320" />
+                                <path d="M1000 230 L920 320" />
+                                <path d="M1000 230 L1080 320" />
+                                <!-- to checkout -->
+                                <path d="M120 360 Q600 440 1080 360" stroke-dasharray="2 4" stroke="#1F2742" />
+                            </g>
+
+                            <!-- Home (Root) -->
+                            <g>
+                                <rect x="510" y="40" width="180" height="44" rx="4" fill="#1F2742" />
+                                <text x="600" y="68" text-anchor="middle" fill="#fff" font-family="Inter, sans-serif" font-size="12" font-weight="700" letter-spacing="2">HOME · 의도 분기</text>
+                            </g>
+
+                            <!-- 3 entry points -->
+                            <g font-family="Inter, sans-serif" font-size="12" font-weight="600">
+                                <rect x="100" y="180" width="200" height="50" rx="4" fill="#fff" stroke="#BFA57D" stroke-width="1.5" />
+                                <text x="200" y="205" text-anchor="middle" fill="#1F2742">탐색 (Browse)</text>
+                                <text x="200" y="220" text-anchor="middle" fill="#9AA4BD" font-size="10" font-weight="500">"오늘은 둘러보고 싶어요"</text>
+
+                                <rect x="500" y="180" width="200" height="50" rx="4" fill="#1F2742" />
+                                <text x="600" y="205" text-anchor="middle" fill="#fff">추천 (Curated)</text>
+                                <text x="600" y="220" text-anchor="middle" fill="#BFA57D" font-size="10" font-weight="500">"3개 질문으로 향 진단"</text>
+
+                                <rect x="900" y="180" width="200" height="50" rx="4" fill="#fff" stroke="#BFA57D" stroke-width="1.5" />
+                                <text x="1000" y="205" text-anchor="middle" fill="#1F2742">재구매 (Re-order)</text>
+                                <text x="1000" y="220" text-anchor="middle" fill="#9AA4BD" font-size="10" font-weight="500">"이미 아는 향이 있어요"</text>
+                            </g>
+
+                            <!-- Sub-pages level -->
+                            <g font-family="Inter, sans-serif" font-size="11" fill="#1F2742">
+                                <rect x="40" y="320" width="160" height="40" rx="4" fill="#FAF7F2" />
+                                <text x="120" y="345" text-anchor="middle">전체 카테고리</text>
+
+                                <rect x="220" y="320" width="160" height="40" rx="4" fill="#FAF7F2" />
+                                <text x="300" y="345" text-anchor="middle">계열 / 노트 필터</text>
+
+                                <rect x="420" y="320" width="160" height="40" rx="4" fill="#FAF7F2" />
+                                <text x="500" y="345" text-anchor="middle">3-step 진단</text>
+
+                                <rect x="620" y="320" width="160" height="40" rx="4" fill="#FAF7F2" />
+                                <text x="700" y="345" text-anchor="middle">스토리 PDP</text>
+
+                                <rect x="840" y="320" width="160" height="40" rx="4" fill="#FAF7F2" />
+                                <text x="920" y="345" text-anchor="middle">계정 · 주문이력</text>
+
+                                <rect x="1020" y="320" width="160" height="40" rx="4" fill="#FAF7F2" />
+                                <text x="1100" y="345" text-anchor="middle">정기 배송</text>
+                            </g>
+
+                            <!-- Cart node -->
+                            <g font-family="Inter, sans-serif" font-size="12" font-weight="700">
+                                <rect x="500" y="420" width="200" height="44" rx="4" fill="#BFA57D" />
+                                <text x="600" y="448" text-anchor="middle" fill="#1F2742">CART · Cross-sell 모듈</text>
+                            </g>
+
+                            <!-- caption -->
+                            <text x="40" y="475" font-family="Playfair Display, serif" font-style="italic" font-size="13" fill="#BFA57D">Concept IA · Finder discovery layer + cross-sell cart</text>
+                        </svg>
+                        <p class="case-svg-caption">FIG. 05-A · Concept IA · Finder discovery + cross-sell cart (proposed direction)</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== 06. KEY DECISIONS ========== -->
+            <section class="case-section" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-section-head">
+                        <div>
+                            <span class="case-section-eyebrow">The trade-off log</span>
+                            <h2 class="case-section-title">
+                                남긴 결정과 <em>버린 결정</em>을<br> 같은 무게로 적습니다.
+                            </h2>
+                            <p class="case-section-lead">
+                                좋은 디자인은 "추가한 것"보다 "삭제한 것"으로 평가됩니다. <br> 6개의 핵심
+                                결정을 왜 그 길을 갔고, 왜 다른 길을 거부했는지 함께 기록했습니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="case-decisions">
+                        <div class="case-decisions-row is-head">
+                            <span>#</span>
+                            <span>Before</span>
+                            <span>After</span>
+                            <span>Why</span>
+                        </div>
+
+                        <div class="case-decisions-row">
+                            <span class="case-decisions-num">D-01</span>
+                            <p class="case-decisions-before">홈 = 시즌 제품 슬라이더 + 전체 카탈로그 그리드</p>
+                            <p class="case-decisions-after">홈 = 브랜드 swiper hero + Finder 진단 진입점 (별도 페이지) <br><em>※ 컨셉 IA의 3-way landing은 다음 단계 제안</em></p>
+                            <p class="case-decisions-why">사용자가 진입할 때 마음 상태가 다르다. <br> Finder를 별도 진단 페이지로 분리해 <em>"의도가 있는 사용자"</em>의 진입점을 만들었다. 홈 1차 분기로 끌어올리는 것은 IA 제안으로 남겼다.</p>
+                        </div>
+
+                        <div class="case-decisions-row">
+                            <span class="case-decisions-num">D-02</span>
+                            <p class="case-decisions-before">PDP 첫 화면 = 거대한 제품 사진 + 가격</p>
+                            <p class="case-decisions-after">PDP 첫 화면 = Top/Heart/Base 향 카드 + 시간 메타데이터</p>
+                            <p class="case-decisions-why">제품 사진은 향을 설명하지 않는다. <br> 노트 아키텍처를 결정 위치 가까이 둬 <em>"왜 이 향이 나에게"</em>의 답을 보강한다. 가격은 스크롤 1단계 아래로.</p>
+                        </div>
+
+                        <div class="case-decisions-row">
+                            <span class="case-decisions-num">D-03</span>
+                            <p class="case-decisions-before">전체 향수 그리드 1페이지 노출</p>
+                            <p class="case-decisions-after">계열별 6 클러스터 + 이전 선택 기억</p>
+                            <p class="case-decisions-why">"전체"는 위계가 아니다. <br> 비슷한 향끼리 묶어 비교 가능하게 만든다. <br> 한 번 본 클러스터는 다음 진입에서 우선 노출.</p>
+                        </div>
+
+                        <div class="case-decisions-row">
+                            <span class="case-decisions-num">D-04</span>
+                            <p class="case-decisions-before">결제 직전: "쿠폰 / 적립금 / 배송지" 3개 폼</p>
+                            <p class="case-decisions-after">결제 직전: 카테고리 cross-sell <br> (Home / Body / Gift) 모듈 + 폼 접힘</p>
+                            <p class="case-decisions-why">결제 망설임 구간을 <em>"브랜드의 다른 라인업 발견"</em>으로 전환. <br> 향수 단일 라인업 의존 대신 Home·Body·Gift로 객단가 보강. <br> 폼은 신뢰가 쌓인 뒤 펼친다.</p>
+                        </div>
+
+                        <div class="case-decisions-row">
+                            <span class="case-decisions-num">D-05</span>
+                            <p class="case-decisions-before">상세 추천 = 알고리즘 ("이 상품을 본 사람들…")</p>
+                            <p class="case-decisions-after">상세 추천 = 조향사 큐레이션 + 알고리즘은 fallback</p>
+                            <p class="case-decisions-why">에디토리얼 브랜드의 신뢰는 "사람의 손길"에서 온다. <br> 알고리즘은 효율은 높지만 르라보다움을 깎는다.</p>
+                        </div>
+
+                        <div class="case-decisions-row">
+                            <span class="case-decisions-num">D-06</span>
+                            <p class="case-decisions-before">검색 = 키워드 매칭</p>
+                            <p class="case-decisions-after">검색 = 키워드 + 자연어 + 최근 본 4개</p>
+                            <p class="case-decisions-why">사용자는 제품명을 모르는 경우가 더 많다. <br> 향의 묘사로 검색되도록 단, 자연어는 옵션으로만.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== 07. COMPONENT STATES ========== -->
+            <section class="case-section" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-section-head">
+                        <div>
+                            <span class="case-section-eyebrow">Component states · 향 카드</span>
+                            <h2 class="case-section-title">
+                                같은 카드를 <em>4가지 상태</em>로<br>
+                                정의했습니다.
+                            </h2>
+                            <p class="case-section-lead">
+                                Discovery 단계에서 사용자가 가장 많이 만지는 컴포넌트는 "향 카드"입니다. <br>
+                                이 카드만 4가지 상태로 정밀하게 다듬으면, 전체 화면의 디테일이 따라옵니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="case-states-grid">
+                        <article class="case-state-card">
+                            <div class="state-visual">
+                                <svg viewBox="0 0 200 150">
+                                    <rect x="20" y="20" width="160" height="110" rx="4" fill="#fff" stroke="#E4E7EE" stroke-width="1.5" />
+                                    <circle cx="50" cy="50" r="14" fill="#FAF7F2" />
+                                    <rect x="76" y="42" width="80" height="6" rx="3" fill="#1F2742" />
+                                    <rect x="76" y="54" width="60" height="4" rx="2" fill="#9AA4BD" />
+                                    <line x1="32" y1="80" x2="168" y2="80" stroke="#E4E7EE" />
+                                    <rect x="32" y="92" width="40" height="6" rx="3" fill="#BFA57D" />
+                                    <rect x="32" y="106" width="100" height="4" rx="2" fill="#E4E7EE" />
+                                </svg>
+                            </div>
+                            <div class="state-meta">
+                                <span class="state-tag">S-01</span>
+                                <h4 class="state-name">Default</h4>
+                                <p class="state-desc">노트 + 강도 미니 차트만. 가격은 hover에만.</p>
+                            </div>
+                        </article>
+
+                        <article class="case-state-card">
+                            <div class="state-visual">
+                                <svg viewBox="0 0 200 150">
+                                    <rect x="20" y="20" width="160" height="110" rx="4" fill="#FAF7F2" stroke="#BFA57D" stroke-width="1.5" />
+                                    <circle cx="50" cy="50" r="14" fill="#fff" stroke="#BFA57D" />
+                                    <rect x="76" y="42" width="80" height="6" rx="3" fill="#1F2742" />
+                                    <rect x="76" y="54" width="60" height="4" rx="2" fill="#BFA57D" />
+                                    <line x1="32" y1="80" x2="168" y2="80" stroke="#BFA57D" stroke-dasharray="2 2" />
+                                    <rect x="32" y="92" width="60" height="6" rx="3" fill="#BFA57D" />
+                                    <rect x="32" y="106" width="120" height="4" rx="2" fill="#BFA57D" opacity="0.4" />
+                                    <rect x="148" y="20" width="32" height="20" rx="10" fill="#1F2742" />
+                                    <text x="164" y="34" text-anchor="middle" fill="#fff" font-family="Inter" font-size="9" font-weight="700">+₩</text>
+                                </svg>
+                            </div>
+                            <div class="state-meta">
+                                <span class="state-tag">S-02</span>
+                                <h4 class="state-name">Hover · Focus</h4>
+                                <p class="state-desc">가격 배지 + 비교 정보(노트 강도 라인) 노출.</p>
+                            </div>
+                        </article>
+
+                        <article class="case-state-card">
+                            <div class="state-visual">
+                                <svg viewBox="0 0 200 150">
+                                    <rect x="20" y="20" width="160" height="110" rx="4" fill="#1F2742" stroke="#1F2742" />
+                                    <circle cx="50" cy="50" r="14" fill="#BFA57D" />
+                                    <rect x="76" y="42" width="80" height="6" rx="3" fill="#fff" />
+                                    <rect x="76" y="54" width="60" height="4" rx="2" fill="#BFA57D" />
+                                    <line x1="32" y1="80" x2="168" y2="80" stroke="#BFA57D" opacity="0.3" />
+                                    <rect x="32" y="92" width="80" height="6" rx="3" fill="#BFA57D" />
+                                    <rect x="32" y="106" width="100" height="4" rx="2" fill="#fff" opacity="0.3" />
+                                    <circle cx="160" cy="32" r="6" fill="#BFA57D" />
+                                    <path d="M157 32 L159 34 L163 30" stroke="#1F2742" stroke-width="1.5" fill="none" />
+                                </svg>
+                            </div>
+                            <div class="state-meta">
+                                <span class="state-tag">S-03</span>
+                                <h4 class="state-name">Selected</h4>
+                                <p class="state-desc">진단 결과 카드. 어두운 배경으로 우선 위계.</p>
+                            </div>
+                        </article>
+
+                        <article class="case-state-card">
+                            <div class="state-visual">
+                                <svg viewBox="0 0 200 150">
+                                    <rect x="20" y="20" width="160" height="110" rx="4" fill="#fff" stroke="#E4E7EE" stroke-width="1.5" opacity="0.6" />
+                                    <circle cx="50" cy="50" r="14" fill="#F4F6F9" />
+                                    <rect x="76" y="42" width="80" height="6" rx="3" fill="#9AA4BD" />
+                                    <rect x="76" y="54" width="60" height="4" rx="2" fill="#9AA4BD" opacity="0.5" />
+                                    <line x1="32" y1="80" x2="168" y2="80" stroke="#E4E7EE" />
+                                    <rect x="32" y="92" width="100" height="6" rx="3" fill="#9AA4BD" opacity="0.4" />
+                                    <rect x="120" y="20" width="60" height="20" rx="10" fill="#FCEFE8" />
+                                    <text x="150" y="34" text-anchor="middle" fill="#C7522A" font-family="Inter" font-size="9" font-weight="700">SOLD OUT</text>
+                                </svg>
+                            </div>
+                            <div class="state-meta">
+                                <span class="state-tag">S-04</span>
+                                <h4 class="state-name">Disabled · OOS</h4>
+                                <p class="state-desc">재고 없음 명시 + 알림 신청 분기 노출.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== 08. VISUAL SYSTEM ========== -->
+            <section class="case-section" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-section-head">
+                        <div>
+                            <span class="case-section-eyebrow">Tokens · 시스템 추출</span>
+                            <h2 class="case-section-title">
+                                결정을 <em>토큰</em>으로 굳혔습니다.
+                            </h2>
+                            <p class="case-section-lead">
+                                매 결정이 매번 새로 협의되지 않도록, 색·타입·간격을 토큰으로
+                                고정했습니다. <br> 다음 인하우스 디자이너가 와도 흐름이 끊기지 않게.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="case-system">
+                        <div class="case-system-block">
+                            <h3>Color tokens</h3>
+                            <div class="case-color-row">
+                                <div class="case-color-chip case-color-chip--forest">
+                                    <strong>Forest / Primary</strong>
+                                    <span>#1A2421</span>
+                                    <span>본문 · 헤더 · 다크 밴드</span>
+                                </div>
+                                <div class="case-color-chip case-color-chip--copper">
+                                    <strong>Copper / Accent</strong>
+                                    <span>#C98A53</span>
+                                    <span>큐레이션 · CTA 액센트</span>
+                                </div>
+                            </div>
+                            <div class="case-color-row">
+                                <div class="case-color-chip case-color-chip--surface-soft is-light">
+                                    <strong>Surface Soft</strong>
+                                    <span>#F5F5F4</span>
+                                    <span>카드 hover · 섹션 분리</span>
+                                </div>
+                                <div class="case-color-chip case-color-chip--surface is-light">
+                                    <strong>Surface</strong>
+                                    <span>#FFFFFF</span>
+                                    <span>캔버스 · PDP 컨테이너</span>
+                                </div>
+                                <div class="case-color-chip case-color-chip--line-beige is-light">
+                                    <strong>Line / Beige</strong>
+                                    <span>#E5E2DC</span>
+                                    <span>헤어라인 · 구분선</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="case-system-block">
+                            <h3>Type stack</h3>
+                            <div class="case-type-stack">
+                                <div class="case-type-row">
+                                    <p class="case-type-sample display case-type-sample--lelabo-display">Le Labo</p>
+                                    <p class="case-type-meta">Display · DM Serif Display Italic · clamp(38, 5.4vw, 60)</p>
+                                </div>
+                                <div class="case-type-row">
+                                    <p class="case-type-sample h1 case-type-sample--lelabo-sans">Hand blended, in Brooklyn.</p>
+                                    <p class="case-type-meta">H1 · Outfit / Inter / Noto Sans KR · clamp(30, 3.4vw, 40)</p>
+                                </div>
+                                <div class="case-type-row">
+                                    <p class="case-type-sample body case-type-sample--lelabo-sans">Body copy holds the rationale, the small facts, the texture. It's where decisions become readable.</p>
+                                    <p class="case-type-meta">Body · Outfit / Inter · 14px / 1.6</p>
+                                </div>
+                                <div class="case-type-row">
+                                    <p class="case-type-sample mono case-type-sample--lelabo-mono">CASE 01 / EDITORIAL · 2026</p>
+                                    <p class="case-type-meta">Mono · Space Mono 400 · 11px / 0.2em</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== 09. RESULT (KPI Board) ========== -->
+            <section class="case-section is-dark" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-section-head">
+                        <div>
+                            <span class="case-section-eyebrow">Projected · Concept-stage simulation</span>
+                            <h2 class="case-section-title">
+                                숫자는 <em>맥락 안에서만</em> 의미가 있습니다.
+                            </h2>
+                            <p class="case-section-lead">
+                                컨셉 프로젝트로, 아래 수치는 <em>실측이 아닌 시뮬레이션 기반 예상치</em>입니다.
+                                동일 카테고리 산업 평균과 사용성 테스트를 결합해 6주 코호트로 보정했습니다.
+                                <br>절대 수치보다 <em>"이 결정이 어떤 수치를 만들 수 있는가"</em>의 가설로 읽어주세요.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="case-kpi-board">
+                        <div class="case-kpi-cell">
+                            <span class="case-kpi-tag">K-01 · 핵심 퍼널</span>
+                            <span class="case-kpi-num">+24<span class="num-unit">%</span></span>
+                            <p class="case-kpi-label">Finder 진단 → 결제 전환율 상승 (예상)</p>
+                            <p class="case-kpi-context">
+                                Finder 진단 도착 코호트만 측정 가설. 일반 카탈로그 진입 코호트는
+                                베이스라인 수준. 의도-기반 진입점 분리가 효과의 80% 이상으로 가설.
+                            </p>
+                        </div>
+
+                        <div class="case-kpi-cell">
+                            <span class="case-kpi-tag">K-02 · 이탈 구간</span>
+                            <span class="case-kpi-num">−18<span class="num-unit">%</span></span>
+                            <p class="case-kpi-label">PDP 평균 이탈률 감소 (예상)</p>
+                            <p class="case-kpi-context">
+                                Top/Heart/Base 향 카드 + 시간 메타데이터 도입이 PDP 평균 체류를 끌어올린 가설.
+                                특히 입문자 코호트에서 −32%로 가장 크게 작동할 것으로 예상.
+                            </p>
+                        </div>
+
+                        <div class="case-kpi-cell">
+                            <span class="case-kpi-tag">K-03 · 객단가</span>
+                            <span class="case-kpi-num">1.5<span class="num-unit">x</span></span>
+                            <p class="case-kpi-label">평균 주문 객단가 증가 (예상)</p>
+                            <p class="case-kpi-context">
+                                장바구니 하단 cross-sell (Home/Body/Gift) 모듈 도입. add-rate 자체보다,
+                                향수 외 카테고리가 평균 객단가에 기여하는 비율이 의미 있음.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== 10. REFLECTIONS ========== -->
+            <section class="case-section" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-section-head">
+                        <div>
+                            <span class="case-section-eyebrow">What I'd do differently</span>
+                            <h2 class="case-section-title">
+                                케이스가 끝난 자리에서<br>
+                                <em>다음 케이스</em>가 시작됩니다.
+                            </h2>
+                        </div>
+                    </div>
+
+                    <div class="case-reflections">
+                        <article class="case-reflection">
+                            <span class="case-reflection-num">R-01</span>
+                            <h3 class="case-reflection-title">"진단"이 마법은 아니었다.</h3>
+                            <p class="case-reflection-body">
+                                Finder 4-step 진단의 시뮬레이션 완료율은 64%. 2단계에서 빠지는 사용자가 많았습니다.
+                                다음 버전에서는 "Skip · 그냥 둘러볼래요" 분기를 명시해, 진단을
+                                강요하지 않는 톤이 필요하다고 봅니다.
+                            </p>
+                        </article>
+
+                        <article class="case-reflection">
+                            <span class="case-reflection-num">R-02</span>
+                            <h3 class="case-reflection-title">데이터는 천천히, 결정은 빠르게.</h3>
+                            <p class="case-reflection-body">
+                                Cross-sell 모듈의 efficacy는 시뮬레이션 데이터로 확신했지만, 그 결정 자체는
+                                CS 응대 로그를 본 다음날 했습니다. 데이터가 결정을 만들지 않습니다.
+                                결정은 가설이고, 데이터는 그 가설의 보강재입니다.
+                            </p>
+                        </article>
+
+                        <article class="case-reflection">
+                            <span class="case-reflection-num">R-03</span>
+                            <h3 class="case-reflection-title">에디토리얼은 비용이다.</h3>
+                            <p class="case-reflection-body">
+                                노트 아키텍처 너머의 <em>"조향 스토리 콘텐츠"</em>를 모든 제품에 만드는 일은 디자인이 아니라
+                                콘텐츠 운영의 문제. 이번 빌드에서는 Top/Heart/Base 메타데이터까지만 구현했고,
+                                다음 케이스에서는 콘텐츠팀 합류 시점을 Discovery 단계에 끌어와야 합니다.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- ========== NEXT PROJECT ========== -->
+        <section class="case-next" data-aos="fade-up">
+            <a href="artish.html" class="case-next-inner" aria-label="Next case · Artish">
+                <div class="case-next-text">
+                    <span class="case-next-eyebrow">Next case · 02 / 07</span>
+                    <h3 class="case-next-title">Artish.</h3>
+                    <p class="case-next-tagline">
+                        예술 작품을 일상의 언어로 옮기는 큐레이션 인터페이스.
+                        머무는 시간을 늘리는 콘텐츠 리듬 설계.
+                    </p>
+                    <span class="case-next-cta">
+                        Read case study
+                        <span class="case-next-cta-arrow">→</span>
+                    </span>
+                </div>
+                <div class="case-next-visual">
+                    <img src="./images/artsh.png" alt="Artish next case preview">
+                </div>
+            </a>
+        </section>
+
+        <!-- ========== FOOTER ========== -->
+        <footer class="subpage-footer">
+            <div class="container">
+                <div class="subpage-footer-grid">
+                    <div class="subpage-footer-brand">
+                        <h3>Sulgi Ji</h3>
+                        <p>
+                            7년의 운영 감각을 디지털 의사결정으로 옮기는 디자이너입니다.
+                            브랜드의 다음 챕터를 함께 정돈하고 싶다면 짧게라도 적어 보내주세요.
+                        </p>
+                        <a href="mailto:seulform@gmail.com" class="subpage-footer-cta">
+                            seulform@gmail.com →
+                        </a>
+                    </div>
+
+                    <div class="subpage-footer-col">
+                        <h4>Cases</h4>
+                        <ul>
+                            <li><a href="lelabo.html">01 · Le Labo</a></li>
+                            <li><a href="artish.html">02 · Artish</a></li>
+                            <li><a href="danha.html">03 · Danha</a></li>
+                            <li><a href="colorgram.html">04 · COLORGRAM</a></li>
+                            <li><a href="dakyoungsnd.html">05 · 다경에스앤디</a></li>
+                            <li><a href="threece.html">06 · 3CE</a></li>
+                            <li><a href="sleesl.html">07 · 슬슬</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="subpage-footer-col">
+                        <h4>Elsewhere</h4>
+                        <ul>
+                            <li><a href="index.html#about">About</a></li>
+                            <li><a href="index.html#capabilities">Capabilities</a></li>
+                            <li><a href="index.html#faq">FAQ</a></li>
+                            <li><a href="tel:+821065283177">010-6528-3177</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="subpage-footer-bottom">
+                    <span class="copy">© 2026 SULGI JI · HAND-CODED IN SEOUL</span>
+                    <span class="meta">CASE 01 · UPDATED 2026.04</span>
+                </div>
+            </div>
+        </footer>
+
+        <a href="#main" class="subpage-back-to-top" id="backToTop" aria-label="Back to top">↑</a>
+    </div>
+
+    <script src="scripts/ui/header.js" defer></script>
+    <script src="scripts/ui/navigation.js" defer></script>
+    <script src="scripts/ui/case-study.js" defer></script>
+</body>
+
+</html>

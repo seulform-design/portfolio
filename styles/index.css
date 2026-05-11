@@ -1,0 +1,131 @@
+/* ============================================================
+   SULGI Portfolio · index.css
+   Text-Focused Hero + Oval Resume Layout
+   ============================================================ */
+
+/* HERO SECTION (Text Only) */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #fff;
+    padding-top: var(--header-h);
+}
+
+.hero-title {
+    font-size: clamp(64px, 10vw, 160px);
+    font-weight: 700;
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    margin-bottom: var(--space-40);
+}
+
+.hero-title .serif-text {
+    font-family: var(--font-family-serif);
+    font-weight: 400;
+    font-style: italic;
+    color: #C5A059; /* Gold accent */
+}
+
+.hero-subtitle {
+    font-size: var(--fs-body-lg);
+    color: var(--text-sub);
+    max-width: 640px;
+    line-height: 1.8;
+}
+
+/* WORK SECTION */
+.slider-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-32);
+}
+
+.slide-visual {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    margin-bottom: var(--space-24);
+    background: #f5f5f5;
+}
+
+.slide-visual img { width: 100%; height: 100%; object-fit: cover; }
+
+/* INTEGRATED RESUME (OVAL LAYOUT - RESTORED) */
+.resume-section-integrated {
+    background-color: #F2F2F2;
+    padding: var(--space-160) 0;
+    color: #1a1a1a;
+}
+
+.resume-layout-wrapper {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 100px;
+    align-items: start;
+}
+
+.resume-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.oval-image-wrap {
+    width: 220px;
+    height: 320px;
+    border-radius: 110px / 160px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.oval-image-wrap img { width: 100%; height: 100%; object-fit: cover; }
+
+.resume-name-serif {
+    font-family: var(--font-family-serif);
+    font-size: 64px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 0.9;
+    color: #000;
+}
+
+/* RESUME DATA GRID */
+.resume-right-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px 40px;
+}
+
+.block-title-caps {
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+}
+
+.resume-data-list { list-style: none; font-size: 13px; line-height: 1.8; }
+.resume-data-list li { margin-bottom: 16px; }
+.resume-data-list strong { display: block; font-weight: 700; margin-bottom: 4px; }
+.resume-data-list .date-range, .resume-data-list .sub-text { font-size: 11px; color: #888; display: block; }
+
+.advantage-tags { font-weight: 700; color: #000; line-height: 2.2; font-size: 13px; }
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .resume-layout-wrapper { grid-template-columns: 1fr; gap: 60px; }
+    .resume-right-columns { grid-template-columns: 1fr 1fr; }
+    .slider-wrapper { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+    .resume-right-columns { grid-template-columns: 1fr; }
+}

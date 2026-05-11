@@ -1,0 +1,518 @@
+/* ============================================================
+   SULGI Portfolio · colorgram.css
+   COLORGRAM Case Study 전용 스타일
+   ============================================================ */
+
+/* Git Pages `css/common.css` :root — case study chip backgrounds */
+.case-color-chip--cg-primary {
+    background: #ff4fb8;
+    color: #fff;
+}
+
+.case-color-chip--cg-primary-deep {
+    background: #ff1f9d;
+    color: #fff;
+}
+
+.case-color-chip--cg-primary-dark {
+    background: #ff1f9d;
+    color: #fff;
+}
+
+.case-color-chip--cg-primary-light.is-light {
+    background: #ffd6ec;
+}
+
+.case-color-chip--cg-purple.is-light {
+    background: #b89cff;
+}
+
+.case-color-chip--cg-lavender.is-light {
+    background: #eadfff;
+}
+
+.case-color-chip--cg-blue.is-light {
+    background: #9fd7ff;
+}
+
+.case-color-chip--cg-blue-light.is-light {
+    background: #dff2ff;
+}
+
+.case-color-chip--cg-iris.is-light {
+    background: #7c9cff;
+}
+
+.case-color-chip--cg-chrome.is-light {
+    background: #d9e3ff;
+}
+
+.case-color-chip--cg-mint.is-light {
+    background: #a8ffdf;
+}
+
+.case-color-chip--cg-lime.is-light {
+    background: #dfff45;
+}
+
+.case-color-chip--cg-yellow.is-light {
+    background: #fff266;
+}
+
+.case-color-chip--cg-coral.is-light {
+    background: #ff5e5e;
+}
+
+.case-color-chip--cg-black {
+    background: #111111;
+    color: #fff;
+}
+
+.case-color-chip--cg-ink {
+    background: #1a1a1a;
+    color: #fff;
+}
+
+.case-color-chip--cg-white.is-light {
+    background: #ffffff;
+    border: 1px solid rgba(17, 17, 17, 0.12);
+}
+
+.case-color-chip--cg-cool-white.is-light {
+    background: #f8fbff;
+}
+
+.case-color-chip--cg-gray-100.is-light {
+    background: #f1f4f8;
+}
+
+.case-color-chip--cg-gray-200.is-light {
+    background: #e3e9f2;
+}
+
+.case-color-chip--cg-gray-600 {
+    background: #5d6b80;
+    color: #fff;
+}
+
+.case-color-chip--cg-line {
+    background: #111111;
+    color: #fff;
+}
+
+/* Legacy aliases (이전 섹션 호환) */
+.case-color-chip--neo-lime.is-light {
+    background: #dfff45;
+}
+
+.case-color-chip--deep-navy {
+    background: #111111;
+    color: #fff;
+}
+
+.case-color-chip--canvas-white.is-light {
+    background: #ffffff;
+    border: 1px solid rgba(17, 17, 17, 0.1);
+}
+
+.case-color-chip--cool-gray.is-light {
+    background: #f1f4f8;
+}
+
+:root {
+    /* COLORGRAM live css/common.css :root sync */
+    --color-primary: #ff4fb8;
+    --color-primary-deep: #ff1f9d;
+    --color-primary-dark: #ff1f9d;
+    --color-primary-light: #ffd6ec;
+    --color-purple: #b89cff;
+    --color-secondary: #b89cff;
+    --color-lavender: #eadfff;
+    --color-blue: #9fd7ff;
+    --color-blue-light: #dff2ff;
+    --color-sky: #9fd7ff;
+    --color-iris: #7c9cff;
+    --color-chrome: #d9e3ff;
+    --color-mint: #a8ffdf;
+    --color-lime: #dfff45;
+    --color-yellow: #fff266;
+    --color-coral: #ff5e5e;
+    --color-magenta: #ff4fb8;
+    --color-peach: #ffd6ec;
+    --color-black: #111111;
+    --color-ink: #1a1a1a;
+    --color-white: #ffffff;
+    --color-cool-white: #f8fbff;
+    --color-line: #111111;
+    --color-gray: #f1f4f8;
+    --color-gray-50: #f8fbff;
+    --color-gray-100: #f1f4f8;
+    --color-gray-200: #e3e9f2;
+    --color-gray-300: #cdd6e3;
+    --color-gray-400: #99a4b6;
+    --color-gray-500: #7d8a9e;
+    --color-gray-600: #5d6b80;
+    --color-gray-700: #404e62;
+    --color-gray-800: #1f2937;
+    --gradient-pop: linear-gradient(135deg, #ff4fb8 0%, #b89cff 50%, #9fd7ff 100%);
+    --gradient-jelly: linear-gradient(135deg, #ffd6ec 0%, #ff4fb8 60%, #b89cff 100%);
+    --gradient-neon: linear-gradient(135deg, #dfff45 0%, #a8ffdf 60%, #9fd7ff 100%);
+    --gradient-chrome: linear-gradient(135deg, #d9e3ff 0%, #b89cff 50%, #ff4fb8 100%);
+    --gradient-pink-blue: linear-gradient(135deg, #ff4fb8 0%, #b89cff 50%, #9fd7ff 100%);
+    --gradient-pixel: linear-gradient(135deg, #fff266 0%, #ff4fb8 50%, #b89cff 100%);
+    --gradient-glow:
+        radial-gradient(circle at 30% 30%, rgba(255, 79, 184, .55), transparent 60%),
+        radial-gradient(circle at 70% 70%, rgba(184, 156, 255, .55), transparent 60%);
+    --shadow-soft: 0 10px 30px rgba(17, 17, 17, .06);
+    --shadow-card: 0 14px 40px rgba(255, 79, 184, .15);
+    --shadow-glow: 0 0 0 4px rgba(255, 79, 184, .15);
+    --shadow-pop: 6px 6px 0 var(--color-line);
+    --shadow-pop-pink: 6px 6px 0 var(--color-primary);
+    --shadow-pop-blue: 6px 6px 0 var(--color-blue);
+    --shadow-pop-sm: 4px 4px 0 var(--color-line);
+    --shadow-glow-purple: 0 18px 60px rgba(184, 156, 255, .3);
+    --pattern-dot-blue: radial-gradient(circle, rgba(159, 215, 255, .55) 1.6px, transparent 1.6px);
+    --pattern-dot-pink: radial-gradient(circle, rgba(255, 79, 184, .35) 1.6px, transparent 1.6px);
+    --pattern-grid-blue:
+        linear-gradient(rgba(159, 215, 255, .35) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(159, 215, 255, .35) 1px, transparent 1px);
+    --pattern-checker:
+        linear-gradient(45deg, var(--color-primary-light) 25%, transparent 25%),
+        linear-gradient(-45deg, var(--color-primary-light) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, var(--color-primary-light) 75%),
+        linear-gradient(-45deg, transparent 75%, var(--color-primary-light) 75%);
+    --border-line: 1.5px solid var(--color-line);
+    --border-line-bold: 2px solid var(--color-line);
+    --font-display: 'Syncopate', 'Pretendard', sans-serif;
+    --font-pixel: 'VT323', 'Syncopate', 'Pretendard', sans-serif;
+    --font-serif: 'Playfair Display', 'Pretendard', serif;
+    --font-body: 'Pretendard', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+    --brand-colorgram: #ff4fb8;
+    --colorgram-surface: #ffffff;
+    --colorgram-soft: #f8fbff;
+    --colorgram-border: #e3e9f2;
+    --colorgram-before: #5d6b80;
+    --colorgram-after: #ff4fb8;
+}
+
+.colorgram-section {
+    padding: var(--space-64) 0;
+}
+
+.subpage-body {
+    font-family: var(--font-body);
+}
+
+.title-wrap {
+    width: 100%;
+}
+
+.title-text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
+}
+
+.hero-title {
+    color: var(--brand-colorgram);
+}
+
+.case-progress {
+    background: var(--color-primary);
+}
+
+.case-hero-title {
+    color: var(--color-primary);
+    font-family: var(--font-display);
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.case-hero-tagline em,
+.case-section-title em {
+    color: var(--color-primary);
+    font-family: var(--font-serif);
+    font-weight: 700;
+}
+
+.card-group {
+    display: grid;
+    gap: var(--space-24);
+}
+
+.intro-card-group,
+.problem-card-group {
+    grid-template-columns: 1fr;
+}
+
+.interview-card-group,
+.before-after-card-group {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.intro-card,
+.interview-card,
+.problem-card,
+.ba-card {
+    border: 1px solid var(--colorgram-border);
+    background: var(--colorgram-surface);
+    box-shadow: var(--shadow-soft);
+}
+
+.intro-card .card-image,
+.problem-card .card-image {
+    max-height: 360px;
+}
+
+.interview-card .card-image,
+.ba-card .card-image {
+    max-height: 260px;
+}
+
+.project-meta {
+    margin-top: 0;
+    max-width: 100%;
+    padding-top: var(--space-20);
+    border-top: 1px dashed var(--colorgram-border);
+}
+
+.project-meta dd {
+    color: var(--text-main);
+}
+
+.interview-quote {
+    font-size: var(--fs-body-lg);
+    line-height: 1.7;
+}
+
+.interview-profile {
+    margin-top: var(--space-20);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+}
+
+.interview-name {
+    font-weight: 700;
+    color: var(--brand-colorgram);
+}
+
+.interview-desc {
+    color: var(--text-sub);
+}
+
+.ba-card .label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    padding: 0 12px;
+    border-radius: var(--radius-pill);
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: var(--space-16);
+    color: #fff;
+}
+
+.ba-card[data-state="before"] .label {
+    background: var(--colorgram-before);
+}
+
+.ba-card[data-state="after"] .label {
+    background: var(--colorgram-after);
+}
+
+.case-states-grid {
+    grid-template-columns: repeat(4, minmax(220px, 1fr));
+    gap: clamp(16px, 2vw, 24px);
+}
+
+.case-state-card {
+    display: flex;
+    min-width: 0;
+    min-height: 100%;
+    flex-direction: column;
+    border: var(--border-line);
+    border-radius: var(--radius-md);
+    background: var(--color-white);
+    box-shadow: var(--shadow-pop-sm);
+    overflow: hidden;
+}
+
+.case-state-card:hover {
+    box-shadow: var(--shadow-pop-pink);
+}
+
+.case-state-card .state-visual {
+    background: linear-gradient(135deg, var(--color-cool-white) 0%, rgba(255, 214, 236, 0.5) 100%);
+    border-bottom: var(--border-line);
+}
+
+.case-state-card .state-visual svg {
+    overflow: visible;
+}
+
+.case-state-card .state-meta {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.case-state-card .state-tag {
+    color: var(--color-primary);
+    font-family: var(--font-display);
+    letter-spacing: 0.12em;
+}
+
+.case-state-card .state-name {
+    color: var(--color-black);
+    font-family: var(--font-body);
+}
+
+.case-state-card .state-desc {
+    color: var(--color-gray-600);
+    font-family: var(--font-body);
+    font-size: 13px;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+.case-system {
+    gap: clamp(32px, 5vw, 64px);
+}
+
+.case-system-block {
+    min-width: 0;
+}
+
+.case-system-block h3 {
+    border-bottom: var(--border-line);
+    color: var(--color-black);
+    font-family: var(--font-display);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.case-system-block:first-of-type {
+    border: var(--border-line);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(223, 242, 255, 0.52));
+    box-shadow: var(--shadow-pop-sm);
+}
+
+.case-color-row {
+    gap: 16px;
+}
+
+.case-color-chip {
+    min-width: min(100%, 148px);
+    min-height: 132px;
+    border: var(--border-line);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-pop-sm);
+    font-family: var(--font-pixel);
+}
+
+.case-color-chip:hover,
+.case-color-chip:not(.is-light):hover,
+.case-color-chip.is-light:hover {
+    box-shadow: var(--shadow-pop-pink);
+}
+
+.case-color-chip strong {
+    font-family: var(--font-display);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.case-color-chip strong + span {
+    font-family: var(--font-pixel);
+    font-size: 24px;
+    letter-spacing: 0.02em;
+    line-height: 1;
+    opacity: 0.95;
+}
+
+.case-color-chip strong + span + span {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 600;
+    opacity: 0.78;
+}
+
+.case-type-stack {
+    gap: 18px;
+}
+
+.case-type-row {
+    padding: 22px;
+    border: var(--border-line);
+    border-radius: var(--radius-md);
+    background: var(--color-white);
+    box-shadow: var(--shadow-pop-sm);
+}
+
+.case-type-row:last-child {
+    border-bottom: var(--border-line);
+}
+
+.case-type-sample.case-type-sample--colorgram-display {
+    font-family: var(--font-display);
+    font-style: normal;
+}
+
+.case-type-sample.case-type-sample--colorgram-h1 {
+    font-family: var(--font-serif);
+}
+
+.case-type-sample.case-type-sample--colorgram-body {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.case-type-sample.case-type-sample--colorgram-mono {
+    font-family: var(--font-pixel);
+}
+
+.case-type-meta {
+    color: var(--color-gray-600);
+}
+
+.ba-title {
+    margin-bottom: var(--space-12);
+    font-size: var(--font-size-h4);
+}
+
+.ba-caption {
+    color: var(--text-sub);
+    line-height: 1.7;
+}
+
+.card.is-focused {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+@media (max-width: 1024px) {
+    .interview-card-group,
+    .before-after-card-group {
+        grid-template-columns: 1fr;
+    }
+
+    .case-states-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .case-states-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .case-color-chip {
+        min-width: 0;
+    }
+}

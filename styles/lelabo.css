@@ -1,0 +1,14 @@
+/* ============================================================
+   SULGI Portfolio · lelabo.css
+   Le Labo Case Study 전용 스타일
+   ============================================================ */
+
+/* Le Labo specific brand colors if any */
+:root {
+    --brand-lelabo: #4A4A4A;
+}
+
+/* Page specific overrides or additions */
+#project-intro .hero-title {
+    color: var(--brand-lelabo);
+}

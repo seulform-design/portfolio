@@ -1,0 +1,187 @@
+/* =========================================================
+   SULGI Portfolio · base.css
+   - Unified Design Tokens + Reset (Single Source of Truth)
+   ========================================================= */
+
+:root {
+    /* COLOR SYSTEM (harmonized across all pages) */
+    --bg-main: #F7F8FB;
+    --bg-sub: #EFF2F7;
+    --bg-soft: #E4EAF2;
+    --surface: #FFFFFF;
+
+    --text-main: #1F2742;
+    --text-sub: #5B688A;
+    --text-light: #9AA4BD;
+
+    --primary: #8CA3C9;
+    --primary-hover: #6E89B7;
+    --primary-soft: #B1C2DF;
+    --primary-pale: #E6ECF7;
+
+    --accent: #C5BFE3;
+    --accent-pale: #EAE6F3;
+
+    --border: #CFD9E8;
+    --border-light: #E4EBF3;
+    --border-strong: #B6C3D6;
+
+    --success: #8BA89B;
+    --danger-soft: #FDE2E2;
+    --danger: #D9596B;
+
+    /* TYPOGRAPHY */
+    --font-family-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-family-serif: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+    --font-family-italic: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+    --font-family-mono: "SF Mono", ui-monospace, Menlo, Consolas, monospace;
+
+    --font-size-display: clamp(56px, 10vw, 120px);
+    --font-size-h1: clamp(36px, 6vw, 64px);
+    --font-size-h2: clamp(28px, 4vw, 42px);
+    --font-size-h3: clamp(20px, 2.5vw, 28px);
+    --font-size-h4: 18px;
+    --fs-body-lg: clamp(16px, 1.2vw, 18px);
+    --fs-body: clamp(14px, 1vw, 15px);
+    --fs-caption: 12px;
+    --fs-label: 10px;
+
+    --ls-tight: -0.03em;
+    --ls-normal: 0.01em;
+    --ls-wide: 0.18em;
+
+    /* SPACING */
+    --space-4: 4px;
+    --space-8: 8px;
+    --space-12: 12px;
+    --space-16: 16px;
+    --space-20: 20px;
+    --space-24: 24px;
+    --space-32: 32px;
+    --space-40: 40px;
+    --space-48: 48px;
+    --space-64: 64px;
+    --space-80: 80px;
+    --space-120: 120px;
+    --space-160: clamp(100px, 15vh, 180px);
+
+    /* EFFECTS */
+    --radius-sm: 6px;
+    --radius-md: 14px;
+    --radius-lg: 24px;
+    --radius-pill: 999px;
+
+    --shadow-soft: 0 6px 24px rgba(28, 40, 80, 0.04);
+    --shadow-hover: 0 20px 48px rgba(28, 40, 80, 0.08);
+
+    --transition-base: 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    --transition-slow: 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+
+    /* HEADER */
+    --header-h: 88px;
+}
+
+/* RESET */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: var(--font-family-sans);
+    font-size: var(--fs-body);
+    line-height: 1.65;
+    color: var(--text-main);
+    background-color: var(--bg-main);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+/* Typography Base */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-serif);
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--text-main);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color var(--transition-base);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+button, input, textarea, select {
+    font: inherit;
+    color: inherit;
+    background: none;
+    border: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    padding: 10px 16px;
+    background: var(--text-main);
+    color: #fff;
+    z-index: 3000;
+    border-radius: 0 0 6px 0;
+}
+
+.skip-link:focus {
+    left: 0;
+}
+
+:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

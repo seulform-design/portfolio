@@ -1,0 +1,1422 @@
+/* ============================================================
+   SULGI Portfolio · subpage.css
+   서브페이지(케이스 스터디) — Editorial Director Layer
+   ============================================================ */
+
+/* -----------------------------------------------------------
+   1. SUB-PAGE HEADER · index와 일관된 헤더 (sticky, ticker 없는 단순 버전)
+----------------------------------------------------------- */
+.subpage-body {
+    background: var(--paper-cream, #FAF7F2);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+#header.subpage-header {
+    padding: 16px 0;
+    background: rgba(250, 247, 242, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--rule, #E4E7EE);
+}
+
+#header.subpage-header .logo a {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 10px;
+    color: var(--ink-900, #1F2742);
+}
+
+#header.subpage-header .logo-mark {
+    font-family: var(--font-family-serif);
+    font-style: italic;
+    font-size: 22px;
+    color: var(--gold, #BFA57D);
+}
+
+#header.subpage-header .logo-name {
+    font-family: var(--font-family-sans);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--ink-900, #1F2742);
+}
+
+#header.subpage-header .main-nav ul {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+#header.subpage-header .main-nav a {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ink-500, #5B688A);
+    transition: color 0.3s ease;
+}
+
+#header.subpage-header .main-nav a:hover,
+#header.subpage-header .main-nav a.active {
+    color: var(--ink-900, #1F2742);
+}
+
+#header.subpage-header .main-nav .nav-cta {
+    display: inline-block;
+    padding: 8px 18px;
+    background: var(--ink-900, #1F2742);
+    color: #fff;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+#header.subpage-header .main-nav .nav-cta:hover {
+    background: var(--gold, #BFA57D);
+    color: var(--ink-900, #1F2742);
+}
+
+/* -----------------------------------------------------------
+   2. CASE HERO · 에디토리얼 비대칭 레이아웃
+----------------------------------------------------------- */
+.case-hero {
+    padding: 140px 0 0;
+    position: relative;
+}
+
+.case-hero .container { max-width: 1280px; }
+
+.case-hero-meta-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.case-hero-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold, #BFA57D);
+}
+
+.case-hero-eyebrow-dot {
+    color: var(--ink-300, #9AA4BD);
+}
+
+.case-hero-status {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-300, #9AA4BD);
+}
+
+.case-hero-title {
+    font-family: var(--font-family-serif);
+    font-size: clamp(56px, 9vw, 140px);
+    font-style: italic;
+    font-weight: 500;
+    line-height: 0.92;
+    letter-spacing: -0.04em;
+    color: var(--ink-900, #1F2742);
+    margin-bottom: 32px;
+    text-wrap: balance;
+}
+
+.case-hero-tagline {
+    font-family: var(--font-family-sans);
+    font-size: clamp(20px, 2vw, 24px);
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    color: var(--ink-700, #3A4566);
+    max-width: 720px;
+    font-weight: 500;
+    margin-bottom: 64px;
+    text-wrap: pretty;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+.case-hero-tagline em {
+    font-family: var(--font-family-serif);
+    font-style: italic;
+    font-weight: 500;
+    color: var(--gold, #BFA57D);
+}
+
+.case-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    padding: 28px 0;
+    border-top: 1px solid var(--ink-900, #1F2742);
+    border-bottom: 1px solid var(--rule, #E4E7EE);
+}
+
+.case-meta-grid > div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.case-meta-grid dt {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-300, #9AA4BD);
+    font-weight: 600;
+}
+
+.case-meta-grid dd {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ink-900, #1F2742);
+    line-height: 1.55;
+    font-variant-numeric: tabular-nums lining-nums;
+    font-feature-settings: "tnum" 1, "lnum" 1;
+}
+
+.case-hero .showcase-buttons {
+    margin-top: 28px;
+    margin-bottom: 40px;
+}
+
+/* HERO COVER VISUAL (커다란 비주얼) */
+.case-hero-cover {
+    margin-top: 64px;
+    position: relative;
+    border-radius: var(--radius-sm, 6px);
+    overflow: hidden;
+    aspect-ratio: 21 / 10;
+    background: var(--ink-900, #1F2742);
+    box-shadow: 0 30px 60px rgba(28, 40, 80, 0.12);
+}
+
+.case-hero-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.case-hero-cover-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(31, 39, 66, 0) 60%, rgba(31, 39, 66, 0.6));
+    display: flex;
+    align-items: flex-end;
+    padding: 32px;
+}
+
+.case-hero-cover-overlay span {
+    font-family: 'JetBrains Mono', monospace;
+    color: #fff;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+/* -----------------------------------------------------------
+   3. SECTION SCAFFOLD · 모든 케이스 섹션 공통
+----------------------------------------------------------- */
+.case-section {
+    padding: 120px 0;
+    border-top: 1px solid var(--rule, #E4E7EE);
+}
+
+.case-section.is-dark {
+    background: var(--ink-900, #1F2742);
+    color: rgba(255, 255, 255, 0.92);
+    border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+.case-section.is-dark .case-section-eyebrow {
+    color: var(--gold, #BFA57D);
+}
+
+.case-section.is-dark .case-section-title { color: #fff; }
+
+.case-section.is-dark .case-section-lead {
+    color: rgba(255, 255, 255, 0.7);
+    text-wrap: pretty;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+.case-section .container { max-width: 1280px; }
+
+.case-section-head {
+    margin-bottom: 64px;
+}
+
+.case-section-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold, #BFA57D);
+    margin-bottom: 16px;
+    display: block;
+    font-weight: 600;
+}
+
+.case-section-title {
+    font-family: var(--font-family-sans);
+    font-size: clamp(32px, 4.5vw, 56px);
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    color: var(--ink-900, #1F2742);
+    margin-bottom: 24px;
+    text-wrap: balance;
+}
+
+.case-section-title em {
+    font-family: var(--font-family-serif);
+    font-style: italic;
+    font-weight: 500;
+    color: var(--gold, #BFA57D);
+}
+
+.case-section-lead {
+    font-size: 17px;
+    line-height: 1.82;
+    color: var(--ink-500, #5B688A);
+    max-width: 640px;
+    text-wrap: pretty;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+/* -----------------------------------------------------------
+   4. BRIEF · 클라이언트 brief 인용 박스
+----------------------------------------------------------- */
+.case-brief {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 64px;
+    padding: 56px 64px;
+    background: var(--paper-cream, #FAF7F2);
+    border-radius: var(--radius-sm, 6px);
+    border-left: 4px solid var(--gold, #BFA57D);
+    box-shadow: var(--shadow-soft, 0 6px 24px rgba(28, 40, 80, 0.04));
+}
+
+.case-brief-quote {
+    font-family: var(--font-family-serif);
+    font-style: italic;
+    font-size: 22px;
+    line-height: 1.62;
+    color: var(--ink-900, #1F2742);
+    position: relative;
+    text-wrap: pretty;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+.case-brief-quote::before {
+    content: "\201C";
+    position: absolute;
+    top: -32px;
+    left: -16px;
+    font-size: 88px;
+    color: var(--gold, #BFA57D);
+    line-height: 1;
+    font-weight: 600;
+}
+
+.case-brief-cite {
+    margin-top: 28px;
+    font-family: 'JetBrains Mono', monospace;
+    font-style: normal;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-500, #5B688A);
+}
+
+.case-brief-take {
+    border-left: 1px solid var(--rule, #E4E7EE);
+    padding-left: 48px;
+}
+
+.case-brief-take h4 {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold, #BFA57D);
+    margin-bottom: 16px;
+}
+
+.case-brief-take p {
+    font-size: 15px;
+    line-height: 1.82;
+    color: var(--ink-700, #3A4566);
+    text-wrap: pretty;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+/* -----------------------------------------------------------
+   5. PROBLEM / GOALS — 컬럼 분할
+----------------------------------------------------------- */
+.case-problem-goals {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+.case-pg-block h3 {
+    font-family: var(--font-family-sans);
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.005em;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--ink-900, #1F2742);
+}
+
+.case-pg-block ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.case-pg-block ul li {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--rule, #E4E7EE);
+    font-size: 15px;
+    line-height: 1.72;
+    color: var(--ink-700, #3A4566);
+    text-wrap: pretty;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+.case-pg-block ul li:last-child { border-bottom: none; }
+
+.case-pg-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--gold, #BFA57D);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    padding-top: 4px;
+}
+
+.case-pg-block.is-goals h3 {
+    color: var(--gold, #BFA57D);
+    border-bottom-color: var(--gold, #BFA57D);
+}
+
+/* -----------------------------------------------------------
+   6. INTERVIEW · 인용 카드
+----------------------------------------------------------- */
+.case-interviews {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+.case-interview-card {
+    background: #fff;
+    border: 1px solid var(--rule, #E4E7EE);
+    border-radius: var(--radius-sm, 6px);
+    padding: 48px 40px;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.case-interview-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover, 0 20px 48px rgba(28, 40, 80, 0.08));
+}
+
+.case-interview-card::before {
+    content: "\201C";
+    position: absolute;
+    top: 24px;
+    left: 36px;
+    font-family: var(--font-family-serif);
+    font-size: 72px;
+    line-height: 1;
+    color: var(--gold, #BFA57D);
+    opacity: 0.4;
+}
+
+.case-interview-quote {
+    font-family: var(--font-family-serif);
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.68;
+    color: var(--ink-900, #1F2742);
+    margin: 32px 0 32px;
+    position: relative;
+    z-index: 1;
+    text-wrap: pretty;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+.case-interview-foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+    border-top: 1px dashed var(--rule, #E4E7EE);
+}
+
+.case-interview-name {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--ink-900, #1F2742);
+}
+
+.case-interview-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-300, #9AA4BD);
+}
+
+/* -----------------------------------------------------------
+   7. SVG CANVAS · IA / WIREFRAME / FLOW 공통
+----------------------------------------------------------- */
+.case-svg-canvas {
+    background: #fff;
+    border: 1px solid var(--rule, #E4E7EE);
+    border-radius: var(--radius-sm, 6px);
+    padding: 48px;
+    box-shadow: var(--shadow-soft, 0 6px 24px rgba(28, 40, 80, 0.04)), 0 1px 0 rgba(255, 255, 255, 0.9) inset;
+    position: relative;
+}
+
+.case-svg-canvas svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.case-svg-caption {
+    margin-top: 16px;
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-300, #9AA4BD);
+}
+
+.case-svg-canvas-corner {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--ink-300, #9AA4BD);
+    letter-spacing: 0.1em;
+}
+
+/* -----------------------------------------------------------
+   8. DECISIONS TABLE · Before / After / Why
+----------------------------------------------------------- */
+.case-decisions {
+    border-top: 1px solid var(--ink-900, #1F2742);
+    border-bottom: 1px solid var(--ink-900, #1F2742);
+}
+
+.case-decisions-row {
+    display: grid;
+    grid-template-columns: 80px 1fr 1fr 1.2fr;
+    gap: 32px;
+    padding: 32px 0;
+    border-bottom: 1px solid var(--rule, #E4E7EE);
+    align-items: start;
+}
+
+.case-decisions-row:last-child { border-bottom: none; }
+
+.case-decisions-row.is-head {
+    padding: 16px 0;
+    border-bottom: 2px solid var(--ink-900, #1F2742);
+}
+
+.case-decisions-row.is-head span {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-300, #9AA4BD);
+    font-weight: 600;
+}
+
+.case-decisions-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--gold, #BFA57D);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    padding-top: 4px;
+}
+
+.case-decisions-before {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--ink-300, #9AA4BD);
+    text-decoration: line-through;
+    text-decoration-color: rgba(154, 164, 189, 0.5);
+}
+
+.case-decisions-after {
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--ink-900, #1F2742);
+    font-weight: 600;
+    text-wrap: pretty;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+.case-decisions-why {
+    font-size: 13px;
+    line-height: 1.72;
+    color: var(--ink-500, #5B688A);
+    border-left: 2px solid var(--gold, #BFA57D);
+    padding-left: 16px;
+    text-wrap: pretty;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+/* -----------------------------------------------------------
+   9. STATES BOARD · Component states 시각화
+----------------------------------------------------------- */
+.case-states-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.case-state-card {
+    background: #fff;
+    border: 1px solid var(--rule, #E4E7EE);
+    border-radius: var(--radius-sm, 6px);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.case-state-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover, 0 20px 48px rgba(28, 40, 80, 0.08));
+}
+
+.case-state-card .state-visual {
+    aspect-ratio: 4 / 3;
+    background: var(--paper-cream, #FAF7F2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--rule, #E4E7EE);
+    padding: 24px;
+}
+
+.case-state-card .state-visual svg {
+    display: block;
+    width: 200px;
+    height: 150px;
+    max-width: 100%;
+    max-height: 100%;
+    box-sizing: border-box;
+}
+
+.case-state-card .state-meta {
+    padding: 20px 24px 24px;
+}
+
+.case-state-card .state-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold, #BFA57D);
+    font-weight: 600;
+}
+
+.case-state-card .state-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--ink-900, #1F2742);
+    margin: 8px 0 6px;
+    letter-spacing: -0.01em;
+}
+
+.case-state-card .state-desc {
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--ink-500, #5B688A);
+}
+
+/* -----------------------------------------------------------
+   10. SYSTEM (Color + Type tokens)
+----------------------------------------------------------- */
+.case-system {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: start;
+}
+
+.case-system-block h3 {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--ink-900, #1F2742);
+    color: var(--ink-900, #1F2742);
+}
+
+/* Color column: soft field behind chips (does not replace chip fills) */
+.case-system-block:first-of-type {
+    padding: 26px 24px 30px;
+    border-radius: 8px;
+    border: 1px solid var(--rule, #E4E7EE);
+    background: linear-gradient(165deg, rgba(250, 247, 242, 0.65) 0%, rgba(255, 255, 255, 0.35) 55%, transparent 100%);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.85) inset;
+}
+
+.case-color-row {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.case-color-row:last-of-type {
+    margin-bottom: 0;
+}
+
+/* Swatches — color tokens shared across portfolio case pages */
+.case-color-chip--paper-7   { background: #FAFAF7; }
+.case-color-chip--paper-2   { background: #FAF7F2; }
+.case-color-chip--surface   { background: #fff; border: 1px solid #E4E7EE; }
+.case-color-chip--ink-900   { background: #1F2742; }
+.case-color-chip--ink-800   { background: #1B2D4A; }
+.case-color-chip--brand     { background: #BFA57D; }
+.case-color-chip--rule-100  { background: #E4E7EE; }
+.case-color-chip--rule-200  { background: #D8DDE6; }
+.case-color-chip--sand      { background: #F4EDE0; }
+
+/* Brand-specific tokens — synced with actual project source CSS systems */
+/* Le Labo · project/lelabo/styles/common.css */
+.case-color-chip--forest        { background: #1a2421; }
+.case-color-chip--copper        { background: #c98a53; }
+.case-color-chip--surface-soft  { background: #f5f5f4; border: 1px solid #e5e2dc; }
+.case-color-chip--line-beige    { background: #e5e2dc; }
+
+/* Artish · project/artish/styles/common.css */
+.case-color-chip--ink-pure      { background: #0A0A0A; }
+.case-color-chip--rust          { background: #A8330F; }
+.case-color-chip--muted-warm    { background: #6B675F; }
+.case-color-chip--line-neutral  { background: #E6E6E6; }
+
+/* Danha · project/danha/styles/common.css */
+.case-color-chip--ink-warm      { background: #161311; }
+.case-color-chip--ivory         { background: #fdf9fb; border: 1px solid rgba(22,19,17,0.1); }
+.case-color-chip--ivory-soft    { background: #f7f0f4; }
+.case-color-chip--rust-danha    { background: #b24a38; }
+
+/* 슬슬 · SLESL */
+.case-color-chip--accent-sleesl { background: #5c8bff; }
+
+.case-color-chip--accent-colorgram { background: #ff4fb8; }
+.case-color-chip--accent-threece { background: #ec407a; }
+.case-color-chip--accent-dakyoungsnd { background: #1e88e5; }
+.case-color-chip--hairline-warm { background: #f4f1ee; border: 1px solid rgba(22,19,17,0.1); }
+.case-color-chip--pink          { background: #f6c9d8; }
+.case-color-chip--lavender      { background: #d8ccf5; }
+.case-color-chip--mint          { background: #c9ebe2; }
+.case-color-chip--sky           { background: #c5e4f2; }
+.case-color-chip--butter        { background: #f3e8a8; }
+
+.case-color-chip {
+    position: relative;
+    flex: 1 1 120px;
+    min-width: min(100%, 132px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 118px;
+    padding: 28px 18px 18px;
+    border-radius: 6px;
+    color: #fff;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    line-height: 1.45;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.12) inset,
+        0 10px 28px rgba(28, 40, 80, 0.1);
+    transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease;
+}
+
+.case-color-chip:not(.is-light) {
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.1) inset,
+        0 14px 36px rgba(15, 22, 45, 0.28);
+}
+
+.case-color-chip.is-light {
+    color: var(--ink-900, #1F2742);
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.75) inset,
+        0 8px 22px rgba(31, 39, 66, 0.07);
+}
+
+.case-color-chip:hover {
+    transform: translateY(-3px);
+}
+
+.case-color-chip:not(.is-light):hover {
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.14) inset,
+        0 20px 44px rgba(15, 22, 45, 0.34);
+}
+
+.case-color-chip.is-light:hover {
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.9) inset,
+        0 14px 32px rgba(31, 39, 66, 0.1);
+}
+
+.case-color-chip strong {
+    display: block;
+    font-family: var(--font-family-serif);
+    font-size: 14px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    margin-bottom: 6px;
+}
+
+.case-color-chip:not(.is-light) strong {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+.case-color-chip span {
+    display: block;
+}
+
+.case-color-chip strong + span {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    opacity: 0.88;
+    margin-bottom: 2px;
+}
+
+.case-color-chip strong + span + span {
+    font-family: var(--font-family-sans, 'Inter', system-ui, sans-serif);
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    opacity: 0.72;
+    max-width: 18rem;
+}
+
+.case-color-chip.is-light strong + span + span {
+    color: var(--ink-500, #5B688A);
+    opacity: 1;
+}
+
+.case-type-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.case-type-row {
+    padding-bottom: 20px;
+    border-bottom: 1px dashed var(--rule, #E4E7EE);
+}
+
+.case-type-row:last-child { border-bottom: none; }
+
+.case-type-sample {
+    color: var(--ink-900, #1F2742);
+    margin-bottom: 8px;
+}
+
+.case-type-row .display { font-family: var(--font-family-serif); font-style: italic; font-size: 40px; line-height: 1; }
+.case-type-row .h1 { font-size: 28px; font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; }
+.case-type-row .body {
+    font-size: 15px;
+    line-height: 1.72;
+    color: var(--ink-700, #3A4566);
+    text-wrap: pretty;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+.case-type-row .mono { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.1em; }
+
+/* Type stack — font stacks (formerly inline on .case-type-sample) */
+.case-type-sample.case-type-sample--pretendard-display {
+    font-family: 'Pretendard Variable', 'Pretendard', system-ui, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+
+.case-type-sample.case-type-sample--pretendard-h1 {
+    font-family: 'Pretendard Variable', 'Pretendard', system-ui, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.case-type-sample.case-type-sample--pretendard-h1.case-type-sample--fw-700 {
+    font-weight: 700;
+}
+
+.case-type-sample.case-type-sample--pretendard-body {
+    font-family: 'Pretendard Variable', 'Pretendard', system-ui, sans-serif;
+}
+
+.case-type-sample.case-type-sample--pretendard-mono {
+    font-family: 'Pretendard Variable', 'Pretendard', system-ui, sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.case-type-sample.case-type-sample--lelabo-display {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+}
+
+.case-type-sample.case-type-sample--lelabo-sans {
+    font-family: 'Outfit', 'Inter', 'Noto Sans KR', sans-serif;
+}
+
+.case-type-sample.case-type-sample--lelabo-mono {
+    font-family: 'Space Mono', monospace;
+}
+
+.case-type-sample.case-type-sample--artish-display {
+    font-family: 'PT Serif', serif;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.case-type-sample.case-type-sample--colorgram-display {
+    font-family: 'Syncopate', 'Pretendard', system-ui, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.case-type-sample.case-type-sample--colorgram-h1 {
+    font-family: 'Playfair Display', 'Pretendard', serif;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.case-type-sample.case-type-sample--colorgram-body {
+    font-family: 'Pretendard Variable', 'Pretendard', system-ui, sans-serif;
+}
+
+.case-type-sample.case-type-sample--colorgram-mono {
+    font-family: 'VT323', 'Pretendard', monospace;
+    font-size: 26px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+/* COLORGRAM — layout helpers (formerly inline) */
+.case-problem-goals--mt-48 { margin-top: 48px; }
+.case-problem-goals--mt-40 { margin-top: 40px; }
+
+.case-pg-list--plain {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.case-pg-list--plain > li { margin-bottom: 10px; }
+.case-pg-list--plain > li:last-child { margin-bottom: 0; }
+
+.case-section-lead--note {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.case-link-inherit {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.case-type-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-300, #9AA4BD);
+}
+
+/* -----------------------------------------------------------
+   11. RESULT BOARD · 큰 KPI 보드
+----------------------------------------------------------- */
+.case-kpi-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.case-section.is-dark .case-kpi-board {
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.case-kpi-cell {
+    padding: 56px 32px;
+    border-right: 1px solid rgba(255, 255, 255, 0.12);
+    transition: background 0.4s ease;
+}
+
+.case-kpi-cell:last-child { border-right: none; }
+
+.case-kpi-cell:hover {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.case-kpi-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold, #BFA57D);
+    font-weight: 600;
+    margin-bottom: 24px;
+    display: block;
+}
+
+.case-kpi-num {
+    font-family: var(--font-family-serif);
+    font-style: italic;
+    font-size: clamp(56px, 8vw, 96px);
+    line-height: 1;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: -0.04em;
+    margin-bottom: 16px;
+    display: block;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-variant-numeric: tabular-nums lining-nums;
+}
+
+.case-kpi-num .num-unit {
+    font-size: 0.4em;
+    opacity: 0.7;
+    margin-left: 4px;
+    font-style: normal;
+    font-family: var(--font-family-sans);
+}
+
+.case-kpi-label {
+    font-size: 14px;
+    line-height: 1.62;
+    color: rgba(255, 255, 255, 0.82);
+    font-weight: 500;
+    margin-bottom: 12px;
+    text-wrap: pretty;
+    word-break: keep-all;
+}
+
+.case-kpi-context {
+    font-size: 12px;
+    line-height: 1.72;
+    color: rgba(255, 255, 255, 0.52);
+    padding-top: 16px;
+    border-top: 1px dashed rgba(255, 255, 255, 0.15);
+    text-wrap: pretty;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+/* -----------------------------------------------------------
+   12. REFLECTIONS / LEARNINGS
+----------------------------------------------------------- */
+.case-reflections {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.case-reflection {
+    padding-top: 32px;
+    border-top: 2px solid var(--ink-900, #1F2742);
+    transition: border-color 0.3s ease;
+}
+
+.case-reflection:hover { border-top-color: var(--gold, #BFA57D); }
+
+.case-reflection-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--gold, #BFA57D);
+    letter-spacing: 0.15em;
+    font-weight: 600;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.case-reflection-title {
+    font-family: var(--font-family-sans);
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--ink-900, #1F2742);
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+}
+
+.case-reflection-body {
+    font-size: 14px;
+    line-height: 1.82;
+    color: var(--ink-500, #5B688A);
+    text-wrap: pretty;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+/* -----------------------------------------------------------
+   13. NEXT PROJECT · 풀 와이드 cinematic
+----------------------------------------------------------- */
+.case-next {
+    padding: 0;
+    background: var(--paper-cream, #FAF7F2);
+    border-top: 1px solid var(--rule, #E4E7EE);
+}
+
+.case-next-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    min-height: 480px;
+}
+
+.case-next-text {
+    padding: 80px 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+}
+
+.case-next-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold, #BFA57D);
+    font-weight: 600;
+}
+
+.case-next-title {
+    font-family: var(--font-family-serif);
+    font-style: italic;
+    font-size: clamp(48px, 6vw, 88px);
+    font-weight: 500;
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    color: var(--ink-900, #1F2742);
+    text-wrap: balance;
+}
+
+.case-next-tagline {
+    font-size: 15px;
+    color: var(--ink-500, #5B688A);
+    line-height: 1.72;
+    max-width: 360px;
+    text-wrap: pretty;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+.case-next-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 28px;
+    background: var(--ink-900, #1F2742);
+    color: #fff;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    width: fit-content;
+    margin-top: 16px;
+    transition: all 0.3s ease;
+}
+
+.case-next-cta:hover {
+    background: var(--gold, #BFA57D);
+    color: var(--ink-900, #1F2742);
+    transform: translateY(-2px);
+}
+
+.case-next-cta-arrow {
+    transition: transform 0.3s ease;
+}
+
+.case-next-cta:hover .case-next-cta-arrow { transform: translateX(4px); }
+
+.case-next-visual {
+    position: relative;
+    overflow: hidden;
+    background: var(--ink-900, #1F2742);
+}
+
+.case-next-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.case-next-inner:hover .case-next-visual img { transform: scale(1.04); }
+
+/* -----------------------------------------------------------
+   14. FULL FOOTER · index와 동일 톤
+----------------------------------------------------------- */
+.subpage-footer {
+    background: var(--ink-900, #1F2742);
+    color: rgba(255, 255, 255, 0.85);
+    padding: 100px 0 40px;
+}
+
+.subpage-footer .container { max-width: 1280px; }
+
+.subpage-footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 80px;
+    padding-bottom: 64px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.subpage-footer-brand h3 {
+    font-family: var(--font-family-serif);
+    font-style: italic;
+    font-size: 48px;
+    line-height: 1;
+    color: #fff;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+}
+
+.subpage-footer-brand p {
+    font-size: 14px;
+    line-height: 1.82;
+    color: rgba(255, 255, 255, 0.62);
+    max-width: 360px;
+    margin-bottom: 32px;
+    text-wrap: pretty;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+.subpage-footer-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 24px;
+    background: var(--gold, #BFA57D);
+    color: var(--ink-900, #1F2742);
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+}
+
+.subpage-footer-cta:hover {
+    background: #fff;
+    transform: translateY(-2px);
+}
+
+.subpage-footer-col h4 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold, #BFA57D);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.subpage-footer-col ul { list-style: none; padding: 0; margin: 0; }
+
+.subpage-footer-col ul li {
+    font-size: 13px;
+    line-height: 2;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.subpage-footer-col ul li a {
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s ease;
+}
+
+.subpage-footer-col ul li a:hover { color: var(--gold, #BFA57D); }
+
+.subpage-footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 32px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.subpage-footer-bottom .copy {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.subpage-footer-bottom .meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* -----------------------------------------------------------
+   15. BACK TO TOP — only visible when scrolled
+----------------------------------------------------------- */
+.subpage-back-to-top {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--ink-900, #1F2742);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+    box-shadow: 0 8px 24px rgba(28, 40, 80, 0.2);
+    z-index: 100;
+    transition: all 0.4s ease;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+}
+
+.subpage-back-to-top.is-visible {
+    opacity: 0.92;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.subpage-back-to-top:hover {
+    background: var(--gold, #BFA57D);
+    color: var(--ink-900, #1F2742);
+    opacity: 1;
+    transform: translateY(-4px);
+}
+
+/* -----------------------------------------------------------
+   16. CASE PROGRESS BAR (top of page)
+----------------------------------------------------------- */
+.case-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 2px;
+    background: var(--gold, #BFA57D);
+    width: 0%;
+    z-index: 9999;
+    transition: width 0.1s linear;
+}
+
+/* -----------------------------------------------------------
+   17. RESPONSIVE
+----------------------------------------------------------- */
+@media (max-width: 1200px) {
+    .case-decisions-row { grid-template-columns: 60px 1fr 1fr; }
+    .case-decisions-row .case-decisions-why {
+        grid-column: 1 / -1;
+        margin-top: 8px;
+        margin-left: 76px;
+    }
+    .case-decisions-row.is-head span:nth-child(4) { display: none; }
+}
+
+@media (max-width: 1024px) {
+    .case-section { padding: 80px 0; }
+    .case-section-head { margin-bottom: 48px; }
+    .case-meta-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .case-brief { grid-template-columns: 1fr; gap: 32px; padding: 40px; }
+    .case-brief-take { border-left: none; padding-left: 0; padding-top: 32px; border-top: 1px solid var(--rule); }
+    .case-problem-goals { grid-template-columns: 1fr; gap: 48px; }
+    .case-interviews { grid-template-columns: 1fr; }
+    .case-states-grid { grid-template-columns: repeat(2, 1fr); }
+    .case-system { grid-template-columns: 1fr; gap: 48px; }
+    .case-system-block:first-of-type {
+        padding: 22px 18px 26px;
+    }
+    .case-kpi-board { grid-template-columns: 1fr; }
+    .case-kpi-cell { border-right: none; border-bottom: 1px solid rgba(255, 255, 255, 0.12); }
+    .case-kpi-cell:last-child { border-bottom: none; }
+    .case-reflections { grid-template-columns: 1fr; }
+    .subpage-footer-grid { grid-template-columns: 1fr; gap: 48px; }
+    .case-next-inner { grid-template-columns: 1fr; }
+    .case-next-text { padding: 56px 32px; }
+    .case-next-visual { aspect-ratio: 16 / 10; }
+}
+
+@media (max-width: 640px) {
+    .case-color-row {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .case-color-chip {
+        flex: 1 1 auto;
+        min-width: 0;
+        width: 100%;
+        min-height: 108px;
+    }
+    .case-hero { padding-top: 100px; }
+    .case-hero-title { font-size: 56px; }
+    .case-hero-cover { aspect-ratio: 4 / 3; }
+    .case-svg-canvas { padding: 24px; }
+    .case-states-grid { grid-template-columns: 1fr; }
+    .case-decisions-row { grid-template-columns: 40px 1fr; }
+    .case-decisions-row .case-decisions-why,
+    .case-decisions-row .case-decisions-after,
+    .case-decisions-row .case-decisions-before {
+        grid-column: 1 / -1;
+        margin-left: 56px;
+    }
+    .case-meta-grid { grid-template-columns: 1fr; gap: 16px; }
+}

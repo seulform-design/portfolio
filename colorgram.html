@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="COLORGRAM 리브랜딩 케이스 · Play Your Mood · 인터랙티브 컬러 플랫폼 UX/BX 기획, IA, 디자인 토큰, 라이브 빌드 매핑.">
+    <meta name="author" content="Sulgi Ji">
+    <meta name="theme-color" content="#ff4fb8">
+    <meta property="og:title" content="COLORGRAM · Case Study | Sulgi Ji">
+    <meta property="og:description" content="Neo Pop Editorial 무드 허브 · 스펙트럼 탐색 · 발색 중심 커머스를 한 리브랜딩 제안서 수준으로 정리한 케이스 스터디.">
+
+    <title>COLORGRAM · Case Study | Sulgi Ji</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&family=Syncopate:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/collage.css">
+    <link rel="stylesheet" href="styles/subpage.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/colorgram.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="scripts/ui/aos-init.js" defer></script>
+
+    <script>document.documentElement.classList.add('js-enabled');</script>
+</head>
+
+<body class="subpage-body">
+    <a href="#main" class="skip-link">본문으로 바로가기</a>
+    <div class="case-progress" id="caseProgress" aria-hidden="true"></div>
+
+    <div id="wrap">
+        <!-- ========== HEADER ========== -->
+        <header id="header" class="subpage-header">
+            <div class="container header-content">
+                <div class="logo">
+                    <a href="index.html" aria-label="Sulgi Ji · Home">
+                        <span class="logo-mark">S/</span>
+                        <span class="logo-name">Sulgi Ji</span>
+                    </a>
+                </div>
+                <nav class="main-nav" aria-label="Main">
+                    <ul>
+                        <li><a href="index.html#work" class="active">Work</a></li>
+                        <li><a href="index.html#approach">Approach</a></li>
+                        <li><a href="index.html#capabilities">Capabilities</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#contact" class="nav-cta">Get in touch</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main id="main">
+            <!-- ========== HERO ========== -->
+            <section class="case-hero" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-hero-meta-row">
+                        <span class="case-hero-eyebrow">Case 04 / Beauty Commerce</span>
+                        <span class="case-hero-eyebrow-dot"></span>
+                        <span class="case-hero-status">Published 2026 · Concept project</span>
+                    </div>
+
+                    <h1 class="case-hero-title">COLORGRAM</h1>
+
+                    <p class="case-hero-tagline">
+                        <em>Play Your Mood</em>를 디지털 경험으로 번역했습니다.<br>
+                        컬러 탐색 · 무드 네비게이션 · 인터랙티브 스펙트럼으로<br>
+                        단순 쇼핑몰이 아닌 <em>컬러 경험 플랫폼</em> 리브랜딩을 제안합니다.
+                    </p>
+
+                    <dl class="case-meta-grid">
+                        <div>
+                            <dt>Role</dt>
+                            <dd>UX · UI · BX framing<br>(Solo, end-to-end)</dd>
+                        </div>
+                        <div>
+                            <dt>Scope</dt>
+                            <dd>Main · Mood · Lip · Eye · Face<br>Brand · PDP · Cart · Live</dd>
+                        </div>
+                        <div>
+                            <dt>Timeline</dt>
+                            <dd>2026 · 5 weeks<br>(Q2 Build · Mobile-first)</dd>
+                        </div>
+                        <div>
+                            <dt>Stack</dt>
+                            <dd>Figma · HTML · CSS<br>Vanilla JS · Static publishing</dd>
+                        </div>
+                    </dl>
+
+                    <div class="showcase-buttons">
+                        <a href="#case-start" class="btn-showcase btn-fill">Read case →</a>
+                        <a href="https://brand.naver.com/colorgram/?n_media=27758&amp;n_query=%EC%BB%AC%EB%9F%AC%EA%B7%B8%EB%9E%A8%EA%B3%B5%EC%8B%9D%EC%82%AC%EC%9D%B4%ED%8A%B8&amp;n_rank=1&amp;n_ad_group=grp-a001-01-000000041314941&amp;n_ad=nad-a001-01-000000449406894&amp;n_keyword_id=nkw-a001-01-000006118690857&amp;n_keyword=%EC%BB%AC%EB%9F%AC%EA%B7%B8%EB%9E%A8%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80&amp;n_campaign_type=1&amp;n_ad_group_type=1&amp;n_match=4&amp;NaPm=ct%3Dmp0z0qla%7Cci%3DERc421ec02%2D4d17%2D11f1%2Da215%2D4e61dae840e9%7Ctr%3Dsa%7Chk%3Da1bfd044c45d34f5c8822e5a58513190dc9b4f24%7Cnacn%3D3lH9BExU5dOR" target="_blank" rel="noopener" class="btn-showcase btn-outline">Official Site</a>
+                        <a href="https://seulform-design.github.io/seulcolorgram/" target="_blank" rel="noopener" class="btn-showcase btn-outline">Git ↗</a>
+                    </div>
+
+                    <figure class="case-hero-cover">
+                        <img src="./images/cover6.png" alt="COLORGRAM case cover">
+                        <div class="case-hero-cover-overlay">
+                            <span>Cover · Neo Pop editorial · interactive color</span>
+                        </div>
+                    </figure>
+                </div>
+            </section>
+
+            <!-- ========== 01. BRAND STRATEGY & BRIEF ========== -->
+            <section id="case-start" class="case-section" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-section-head">
+                        <div>
+                            <span class="case-section-eyebrow">01 · Brand strategy</span>
+                            <h2 class="case-section-title">
+                                색을 파는 몰이 아니라,<br>
+                                <em>무드를 플레이하는 표면</em>으로.
+                            </h2>
+                            <p class="case-section-lead">
+                                리브랜딩 축은 <strong>Play Your Mood · Color Experience · Interactive Beauty</strong>입니다.<br>
+                                경쟁사와 겹치는 “세일·그리드 중심 코스메틱 몰”이 아니라,
+                                <strong>컬러를 탐험하고 경험한 뒤 자연스럽게 구매로 이어지는 BX</strong>를 목표로 했습니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <blockquote class="case-brief">
+                        <div class="case-brief-quote">
+                            우리 제품은 ‘발색’과 ‘무드’인데, 사이트는 왜 항상 할인 릴레이처럼 보일까요?
+                            틱톡·숏폼에서 온 사람들이 첫 화면에서 바로 이탈합니다.
+                            <p class="case-brief-cite">Brand lead, kick-off (concept · 2026)</p>
+                        </div>
+                        <div class="case-brief-take">
+                            <h4>디렉터 해석 → UX 연결</h4>
+                            <p>
+                                브랜드 철학을 IA에 직결했습니다. 슬로건 <em>Play Your Mood</em>는
+                                내비게이션의 <strong>Mood 축</strong>, 메인의 <strong>무드 히어로</strong>,
+                                PLP의 <strong>톤·텍스처 필터</strong>로 번역합니다.
+                                Z세대 타겟은 “가격 비교”보다 <strong>캡처 가능한 장면·자기표현</strong>에서 전환됩니다.
+                            </p>
+                        </div>
+                    </blockquote>
+
+                    <div class="case-problem-goals case-problem-goals--mt-48">
+                        <div class="case-pg-block is-goals">
+                            <h3>Brand toolkit · 기획서 보완</h3>
+                            <ul>
+                                <li><span class="case-pg-num">B-01</span><span><strong>Slogan:</strong> Play Your Mood · <em>Color is the interface.</em></span></li>
+                                <li><span class="case-pg-num">B-02</span><span><strong>Mission:</strong> 디지털에서 컬러 선택을 놀이·발견·자기표현으로 승격하고, 그 여정이 제품 서사와 끊기지 않게 한다.</span></li>
+                                <li><span class="case-pg-num">B-03</span><span><strong>Core values:</strong> Mood-first 탐색 · Interactive color truth · Capture-worthy 장면 · 저마찰 커머스.</span></li>
+                                <li><span class="case-pg-num">B-04</span><span><strong>Mood language:</strong> Neo Pop Editorial · Soft Neon · Jelly · Window UI 키치가 아니라 <em>규칙 있는 레이어링</em>으로만 사용.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== 02. UX FLOW AUDIT ========== -->
+            <section class="case-section" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-section-head">
+                        <div>
+                            <span class="case-section-eyebrow">02 · UX flow review</span>
+                            <h2 class="case-section-title">
+                                감정 축을 <em>탐험 → 경험 → 몰입 → 구매</em>로<br>
+                                다시 세웠습니다.
+                            </h2>
+                            <p class="case-section-lead">
+                                기존 패턴은 배너·이벤트·상품 나열의 <strong>쇼핑몰식 깊이</strong>였습니다.
+                                리브랜딩안은 SNS에서 온 무드를 끊지 않고, <strong>컬러 스펙트럼·무드 필터</strong>로
+                                탐색을 설계한 뒤 발색 중심 PDP에서 전환을 받습니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="case-svg-canvas">
+                        <span class="case-svg-canvas-corner">FIG · 02-A</span>
+                        <svg viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="UX journey before and after">
+                            <line x1="48" y1="210" x2="1152" y2="210" stroke="#E4E7EE" stroke-width="1" />
+                            <g font-family="JetBrains Mono, monospace" font-size="10" fill="#9AA4BD" letter-spacing="2">
+                                <text x="64" y="56">JOURNEY · BEFORE · COMMODITY FUNNEL</text>
+                            </g>
+                            <g font-family="Inter, sans-serif" font-size="10" font-weight="600">
+                                <g transform="translate(64, 88)">
+                                    <rect width="128" height="52" rx="4" fill="#fff" stroke="#1F2742" />
+                                    <text x="64" y="22" text-anchor="middle" fill="#1F2742">SNS 티저</text>
+                                    <text x="64" y="38" text-anchor="middle" fill="#9AA4BD" font-size="9">무드 단절</text>
+                                </g>
+                                <g transform="translate(212, 88)">
+                                    <rect width="128" height="52" rx="4" fill="#fff" stroke="#1F2742" />
+                                    <text x="64" y="22" text-anchor="middle" fill="#1F2742">배너 릴레이</text>
+                                    <text x="64" y="38" text-anchor="middle" fill="#C7522A" font-size="9">프로모션 중심</text>
+                                </g>
+                                <g transform="translate(360, 88)">
+                                    <rect width="128" height="52" rx="4" fill="#fff" stroke="#1F2742" />
+                                    <text x="64" y="22" text-anchor="middle" fill="#1F2742">카테고리</text>
+                                    <text x="64" y="38" text-anchor="middle" fill="#9AA4BD" font-size="9">컬러 약함</text>
+                                </g>
+                                <g transform="translate(508, 88)">
+                                    <rect width="128" height="52" rx="4" fill="#fff" stroke="#1F2742" />
+                                    <text x="64" y="22" text-anchor="middle" fill="#1F2742">그리드 PLP</text>
+                                    <text x="64" y="38" text-anchor="middle" fill="#9AA4BD" font-size="9">가격 노출</text>
+                                </g>
+                                <g transform="translate(656, 88)">
+                                    <rect width="128" height="52" rx="4" fill="#fff" stroke="#1F2742" />
+                                    <text x="64" y="22" text-anchor="middle" fill="#1F2742">이벤트 띠</text>
+                                    <text x="64" y="38" text-anchor="middle" fill="#C7522A" font-size="9">주의 분산</text>
+                                </g>
+                                <g transform="translate(804, 88)">
+                                    <rect width="128" height="52" rx="4" fill="#fff" stroke="#1F2742" />
+                                    <text x="64" y="22" text-anchor="middle" fill="#1F2742">스펙 PDP</text>
+                                    <text x="64" y="38" text-anchor="middle" fill="#9AA4BD" font-size="9">발색 후순위</text>
+                                </g>
+                                <g transform="translate(952, 88)">
+                                    <rect width="128" height="52" rx="4" fill="#FCEFE8" stroke="#C7522A" />
+                                    <text x="64" y="22" text-anchor="middle" fill="#C7522A">결제</text>
+                                    <text x="64" y="38" text-anchor="middle" fill="#7C3D1D" font-size="9">피로 누적</text>
+                                </g>
+                            </g>
+                            <g stroke="#9AA4BD" stroke-width="1.4" fill="none">
+                                <line x1="192" y1="114" x2="212" y2="114" />
+                                <line x1="340" y1="114" x2="360" y2="114" />
+                                <line x1="488" y1="114" x2="508" y2="114" />
+                                <line x1="636" y1="114" x2="656" y2="114" />
+                                <line x1="784" y1="114" x2="804" y2="114" />
+                                <line x1="932" y1="114" x2="952" y2="114" />
+                            </g>
+                            <g font-family="JetBrains Mono, monospace" font-size="10" fill="#ff4fb8" letter-spacing="2">
+                                <text x="64" y="248">JOURNEY · AFTER · MOOD → COLOR → COMMERCE</text>
+                            </g>
+                            <g font-family="Inter, sans-serif" font-size="11" font-weight="600">
+                                <g transform="translate(64, 276)">
+                                    <rect width="200" height="56" rx="6" fill="#1F2742" />
+                                    <text x="100" y="26" text-anchor="middle" fill="#fff">1 · 무드 히어로</text>
+                                    <text x="100" y="44" text-anchor="middle" fill="#FFB8D0" font-size="9" font-weight="500">탐험 · 동일 톤 유지</text>
+                                </g>
+                                <g transform="translate(292, 276)">
+                                    <rect width="200" height="56" rx="6" fill="#fff" stroke="#ff4fb8" stroke-width="1.5" />
+                                    <text x="100" y="26" text-anchor="middle" fill="#1F2742">2 · 스펙트럼 · 필터</text>
+                                    <text x="100" y="44" text-anchor="middle" fill="#9AA4BD" font-size="9" font-weight="500">경험 · 컬러 탐색</text>
+                                </g>
+                                <g transform="translate(520, 276)">
+                                    <rect width="200" height="56" rx="6" fill="#fff" stroke="#ff4fb8" stroke-width="1.5" />
+                                    <text x="100" y="26" text-anchor="middle" fill="#1F2742">3 · 큐레이션 PLP</text>
+                                    <text x="100" y="44" text-anchor="middle" fill="#9AA4BD" font-size="9" font-weight="500">몰입 · 발색 카드</text>
+                                </g>
+                                <g transform="translate(748, 276)">
+                                    <rect width="200" height="56" rx="6" fill="#ff4fb8" />
+                                    <text x="100" y="26" text-anchor="middle" fill="#fff">4 · 발색 PDP → 담기</text>
+                                    <text x="100" y="44" text-anchor="middle" fill="#1F2742" font-size="9" font-weight="500">구매 · 저마찰 CTA</text>
+                                </g>
+                            </g>
+                            <g stroke="#ff4fb8" stroke-width="1.6" fill="none">
+                                <line x1="264" y1="304" x2="292" y2="304" />
+                                <line x1="492" y1="304" x2="520" y2="304" />
+                                <line x1="720" y1="304" x2="748" y2="304" />
+                            </g>
+                            <text x="64" y="372" font-family="Playfair Display, serif" font-style="italic" font-size="12" fill="#1F2742">Live · <tspan fill="#ff4fb8">seulcolorgram</tspan> · 무드 내비 · 인터랙티브 컬러 블록 반영</text>
+                        </svg>
+                        <p class="case-svg-caption">FIG. 02-A · Emotional journey re-map · commodity funnel vs mood-led color platform</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== 03. PROBLEMS, GOALS & MAIN PRINCIPLES ========== -->
+            <section class="case-section" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-section-head">
+                        <div>
+                            <span class="case-section-eyebrow">03 · Symptoms → goals · Main page rules</span>
+                            <h2 class="case-section-title">
+                                메인은 <em>배너→상품→이벤트</em>가 아니라<br>
+                                무드 허브여야 합니다.
+                            </h2>
+                            <p class="case-section-lead">
+                                라이브 빌드(<a href="https://seulform-design.github.io/seulcolorgram/" target="_blank" rel="noopener">seulcolorgram</a>)에 맞춰
+                                히어로·무드 내비게이션·인터랙티브 컬러·에디토리얼 스토리를 한 리듬으로 묶었습니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="case-problem-goals">
+                        <div class="case-pg-block">
+                            <h3>Problems · 진단</h3>
+                            <ul>
+                                <li><span class="case-pg-num">P-01</span><span><strong>쇼핑몰식 상품 나열</strong>이 브랜드 철학(컬러 경험)보다 앞서는 구조.</span></li>
+                                <li><span class="case-pg-num">P-02</span><span><strong>이벤트·혜택 축</strong>이 첫인상을 지배하면 플랫폼 정체성이 흐려짐.</span></li>
+                                <li><span class="case-pg-num">P-03</span><span><strong>컬러 탐색 UX</strong>가 카테고리 하위에 묻혀 발색·톤 비교가 어려움.</span></li>
+                                <li><span class="case-pg-num">P-04</span><span>SNS·숏폼 유입층에게 <strong>캡처·공유 가능한 장면</strong>이 연속되지 않음.</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="case-pg-block is-goals">
+                            <h3>Goals · 디자인 목표</h3>
+                            <ul>
+                                <li><span class="case-pg-num">G-01</span><span><strong>무드 히어로 다중 루프</strong> <br> Jelly / Soft Neon / Chrome 등 시즌 무드를 첫 화면에서 즉시 읽히게.</span></li>
+                                <li><span class="case-pg-num">G-02</span><span><strong>Mood Navigation + Spectrum</strong> <br> “Pick Your Vibe”와 “Find Your Signature Color”로 탐험→경험 축 고정.</span></li>
+                                <li><span class="case-pg-num">G-03</span><span><strong>에디토리얼 섹션(Color Story)</strong> <br> 상품 그리드 전에 무드 서사를 삽입해 코스메틱 몰 리듬 탈피.</span></li>
+                                <li><span class="case-pg-num">G-04</span><span><strong>PLP·PDP</strong> <br> 카드 정보 위계를 발색·무드·텍스처 우선으로 재정렬(모바일 sticky 구매).</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== 04. USER INSIGHTS ========== -->
+            <section class="case-section" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-section-head">
+                        <div>
+                            <span class="case-section-eyebrow">04 · Field notes · Z-led beauty (mobile)</span>
+                            <h2 class="case-section-title">
+                                "브랜드 무드는 좋은데,<br>
+                                <em>색 고르기가 너무 쇼핑몰이에요.</em>"
+                            </h2>
+                            <p class="case-section-lead">
+                                숏폼·SNS에서 무드를 이해한 뒤 사이트에 들어오면,
+                                기대는 <strong>컬러 플레이</strong>인데 현실은 <strong>할인·그리드</strong>로 바뀌는 순간 이탈이 발생했습니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="case-interviews">
+                        <article class="case-interview-card">
+                            <p class="case-interview-quote">
+                                "틱톡에서 본 그 핑크 그대로 찾고 싶은데, 필터가 텍스트만 있어요.
+                                스와치가 크게 안 보이면 못 사요."
+                            </p>
+                            <footer class="case-interview-foot">
+                                <span class="case-interview-name">P-02 · 20대 / 숏폼 유입</span>
+                                <span class="case-interview-tag">Color discovery · 발색 우선</span>
+                            </footer>
+                        </article>
+
+                        <article class="case-interview-card">
+                            <p class="case-interview-quote">
+                                "무드 있는 브랜드인 줄 알았는데 들어가면 이벤트밖에 안 보여요.
+                                인스타 감성이랑 다른 사이트 같아요."
+                            </p>
+                            <footer class="case-interview-foot">
+                                <span class="case-interview-name">P-05 · 20대 / IG Save 유입</span>
+                                <span class="case-interview-tag">BX continuity · 첫 화면</span>
+                            </footer>
+                        </article>
+
+                        <article class="case-interview-card">
+                            <p class="case-interview-quote">
+                                "쿨톤인지 웜톤인지 헷갈릴 때가 많아요. 같이 놓고 보면 바로 살 텐데 비교가 안 돼요."
+                            </p>
+                            <footer class="case-interview-foot">
+                                <span class="case-interview-name">P-06 · 30대 / 재구매</span>
+                                <span class="case-interview-tag">Warm/Cool · 비교 UX</span>
+                            </footer>
+                        </article>
+
+                        <article class="case-interview-card">
+                            <p class="case-interview-quote">
+                                "스토리 있는 메이크업 사진은 저장하고 싶어요. 그냥 가격 표만 있으면 안 찍어요."
+                            </p>
+                            <footer class="case-interview-foot">
+                                <span class="case-interview-name">P-08 · 10대 후반 / UGC 성향</span>
+                                <span class="case-interview-tag">Capture-worthy · 에디토리얼</span>
+                            </footer>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== 05. PAGE STRUCTURE & IA ========== -->
+            <section class="case-section" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-section-head">
+                        <div>
+                            <span class="case-section-eyebrow">05 · Site map · Mood-first IA</span>
+                            <h2 class="case-section-title">
+                                모든 페이지가<br>
+                                <em>같은 무드 언어</em>를 공유해야 합니다.
+                            </h2>
+                            <p class="case-section-lead">
+                                필수 페이지: <strong>Main · PLP · PDP · Brand Story · Event · Review/SNS · Cart · Login · Search · My</strong>.
+                                각 페이지의 목적을 분리하고, 반복 모듈(히어로·그리드·윈도우 카드)은 동일한 토큰으로 묶었습니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="case-svg-canvas">
+                        <span class="case-svg-canvas-corner">FIG · 05-A</span>
+                        <svg viewBox="0 0 1200 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mood-first information architecture">
+                            <defs>
+                                <pattern id="cg-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+                                    <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#EEF0F7" stroke-width="1" />
+                                </pattern>
+                            </defs>
+                            <rect width="1200" height="460" fill="url(#cg-grid)" />
+
+                            <g font-family="Inter, sans-serif" font-size="11" font-weight="600">
+                                <rect x="72" y="72" width="140" height="40" rx="20" fill="#fff" stroke="#9AA4BD" />
+                                <text x="142" y="97" text-anchor="middle" fill="#1F2742">SNS · Ads</text>
+
+                                <rect x="72" y="132" width="140" height="40" rx="20" fill="#fff" stroke="#9AA4BD" />
+                                <text x="142" y="157" text-anchor="middle" fill="#1F2742">Search</text>
+
+                                <rect x="72" y="192" width="140" height="40" rx="20" fill="#fff" stroke="#9AA4BD" />
+                                <text x="142" y="217" text-anchor="middle" fill="#1F2742">CRM · Mail</text>
+                            </g>
+
+                            <g stroke="#ff4fb8" stroke-width="1.4" fill="none" stroke-dasharray="5 4">
+                                <path d="M212 92 L420 200" />
+                                <path d="M212 152 L420 200" />
+                                <path d="M212 212 L420 200" />
+                            </g>
+
+                            <g>
+                                <rect x="420" y="160" width="240" height="88" rx="8" fill="#1a1f36" />
+                                <text x="540" y="198" text-anchor="middle" fill="#fff" font-family="Inter" font-size="15" font-weight="700">MAIN · Mood Hub</text>
+                                <text x="540" y="222" text-anchor="middle" fill="#FFB8D0" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="2">PLAY YOUR MOOD</text>
+                            </g>
+
+                            <g stroke="#1F2742" stroke-width="1.3" fill="none">
+                                <path d="M660 204 L760 104" />
+                                <path d="M660 204 L760 204" />
+                                <path d="M660 204 L760 304" />
+                                <path d="M660 220 L760 380" />
+                            </g>
+
+                            <g font-family="Inter" font-size="11" font-weight="600">
+                                <rect x="760" y="80" width="200" height="48" rx="6" fill="#fff" stroke="#ff4fb8" stroke-width="1.4" />
+                                <text x="860" y="103" text-anchor="middle" fill="#1F2742">Color Lab · Spectrum</text>
+                                <text x="860" y="118" text-anchor="middle" fill="#9AA4BD" font-size="9" font-weight="500">Interactive color</text>
+
+                                <rect x="760" y="180" width="200" height="48" rx="6" fill="#fff" stroke="#ff4fb8" stroke-width="1.4" />
+                                <text x="860" y="203" text-anchor="middle" fill="#1F2742">PLP · Lip / Eye / Face</text>
+                                <text x="860" y="218" text-anchor="middle" fill="#9AA4BD" font-size="9" font-weight="500">Mood &amp; tone filters</text>
+
+                                <rect x="760" y="280" width="200" height="48" rx="6" fill="#fff" stroke="#ff4fb8" stroke-width="1.4" />
+                                <text x="860" y="303" text-anchor="middle" fill="#1F2742">Brand · Event · Review</text>
+                                <text x="860" y="318" text-anchor="middle" fill="#9AA4BD" font-size="9" font-weight="500">Story &amp; social proof</text>
+
+                                <rect x="760" y="356" width="200" height="48" rx="6" fill="#fff" stroke="#1F2742" />
+                                <text x="860" y="379" text-anchor="middle" fill="#1F2742">Cart · Login · My</text>
+                                <text x="860" y="394" text-anchor="middle" fill="#9AA4BD" font-size="9" font-weight="500">Commerce layer</text>
+                            </g>
+
+                            <text x="48" y="430" font-family="Playfair Display, serif" font-style="italic" font-size="13" fill="#1F2742">Diagram · 채널 유입이 동일한 무드 허브로 합류한 뒤 컬러 경험으로 분기</text>
+                        </svg>
+                        <p class="case-svg-caption">FIG. 05-A · Mood-first hub · pages branch from one BX core</p>
+                    </div>
+
+                    <div class="case-problem-goals case-problem-goals--mt-40">
+                        <div class="case-pg-block is-goals">
+                            <h3>Main modules · 라이브 매핑</h3>
+                            <ul>
+                                <li><span class="case-pg-num">M-01</span><span>히어로 슬라이드 Jelly / Soft Neon / Chrome 무드 루프.</span></li>
+                                <li><span class="case-pg-num">M-02</span><span>Mood Navigation · Interactive Color · Top Pick · Editorial · Promo · SNS UGC · Brand teaser.</span></li>
+                                <li><span class="case-pg-num">M-03</span><span>GNB Mega Category × Mood × Color 축으로 컬러 탐색을 상단에서 노출.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== 06. KEY DECISIONS · PRODUCT UX ========== -->
+            <section class="case-section" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-section-head">
+                        <div>
+                            <span class="case-section-eyebrow">06 · Trade-off log · Product color UX</span>
+                            <h2 class="case-section-title">
+                                예쁜 그리드가 아니라<br>
+                                <em>발색 논리</em>를 우선했습니다.
+                            </h2>
+                            <p class="case-section-lead">
+                                카드에는 가격보다 <strong>스와치·무드 태그·텍스처</strong>를 먼저 배치하고,
+                                PDP에서는 <strong>warm/cool · 글로우/매트</strong> 정보를 서사 상단에 고정했습니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="case-decisions">
+                        <div class="case-decisions-row is-head">
+                            <span>#</span>
+                            <span>Before</span>
+                            <span>After</span>
+                            <span>Why</span>
+                        </div>
+
+                        <div class="case-decisions-row">
+                            <span class="case-decisions-num">D-01</span>
+                            <p class="case-decisions-before">GNB = 카테고리 단일 축</p>
+                            <p class="case-decisions-after">Mega에 <strong>Category × Mood × Color</strong> 병렬 <br> 컬러그램만의 탐색 언어.</p>
+                            <p class="case-decisions-why">사용자가 제품명보다 먼저 무드·톤으로 생각합니다.</p>
+                        </div>
+
+                        <div class="case-decisions-row">
+                            <span class="case-decisions-num">D-02</span>
+                            <p class="case-decisions-before">메인 = 프로모션 배너 스택</p>
+                            <p class="case-decisions-after">히어로 무드 루프 + Mood Navigation + Spectrum <br> 블록을 동일 리듬으로.</p>
+                            <p class="case-decisions-why">첫 화면에서 리브랜딩 메시지가 즉시 읽혀야 합니다.</p>
+                        </div>
+
+                        <div class="case-decisions-row">
+                            <span class="case-decisions-num">D-03</span>
+                            <p class="case-decisions-before">PLP 카드 = 썸네일 + 가격 중심</p>
+                            <p class="case-decisions-after">배지·무드·할인은 보조, <strong>발색 영역·텍스처 키워드</strong> 확대.</p>
+                            <p class="case-decisions-why">컬러 커머스에서 전환은 “색 신뢰”에서 출발합니다.</p>
+                        </div>
+
+                        <div class="case-decisions-row">
+                            <span class="case-decisions-num">D-04</span>
+                            <p class="case-decisions-before">브랜드 스토리 분리·소극</p>
+                            <p class="case-decisions-after">메인 하단 <strong>Brand Story 큐</strong> <br> “We share moods” 카피로 BX 재확인.</p>
+                            <p class="case-decisions-why">구매 전에 브랜드 서사를 한 번 더 각인시켜 재방문을 설계.</p>
+                        </div>
+
+                        <div class="case-decisions-row">
+                            <span class="case-decisions-num">D-05</span>
+                            <p class="case-decisions-before">인터랙션 장식 목적</p>
+                            <p class="case-decisions-after">스펙트럼·호버는 <strong>필터 상태 피드백</strong>에만 사용 <br> 과한 바운스 금지.</p>
+                            <p class="case-decisions-why">Neo Pop은 강도보다 통제된 모션으로 고급스러워집니다.</p>
+                        </div>
+
+                        <div class="case-decisions-row">
+                            <span class="case-decisions-num">D-06</span>
+                            <p class="case-decisions-before">데스크톱 우선 레이아웃</p>
+                            <p class="case-decisions-after">모바일 터치·하단 시트 <br> sticky cart 기준으로 간격 재설계.</p>
+                            <p class="case-decisions-why">뷰티 트래픽은 모바일 중심 포트폴리오에서도 의사결정을 명시.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== 07. INTERACTION · COLOR CHIP STATES ========== -->
+            <section class="case-section" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-section-head">
+                        <div>
+                            <span class="case-section-eyebrow">07 · Interaction strategy · Swatch system</span>
+                            <h2 class="case-section-title">
+                                컬러 칩의 <em>4단계 상태</em>가<br>
+                                발색 신뢰를 만듭니다.
+                            </h2>
+                            <p class="case-section-lead">
+                                4단계는 장식이 아니라 구매 전 확신을 쌓는 피드백입니다.
+                                Idle은 색을 차분히 비교하게 두고, Hover/Focus는 선택 가능성을,
+                                Selected와 Compare는 실제 발색 판단을 분리해 보여줍니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="case-states-grid">
+                        <article class="case-state-card">
+                            <div class="state-visual">
+                                <svg viewBox="0 0 200 150">
+                                    <rect x="24" y="36" width="152" height="88" rx="8" fill="#ffffff" stroke="#E4E7EE" />
+                                    <circle cx="78" cy="80" r="14" fill="#ff4fb8" opacity="0.35" />
+                                    <circle cx="122" cy="80" r="14" fill="#D8CCF5" opacity="0.6" />
+                                    <circle cx="166" cy="80" r="14" fill="#C5E4F2" opacity="0.7" />
+                                </svg>
+                            </div>
+                            <div class="state-meta">
+                                <span class="state-tag">S-01</span>
+                                <h4 class="state-name">Idle · Spectrum</h4>
+                                <p class="state-desc">쿨 화이트 캔버스와 얇은 블랙 라인으로 색 자체가 먼저 보이게 합니다.</p>
+                            </div>
+                        </article>
+
+                        <article class="case-state-card">
+                            <div class="state-visual">
+                                <svg viewBox="0 0 200 150">
+                                    <defs>
+                                        <filter id="cg-glow" x="-40%" y="-40%" width="180%" height="180%">
+                                            <feGaussianBlur stdDeviation="3" result="b" />
+                                            <feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge>
+                                        </filter>
+                                    </defs>
+                                    <rect x="24" y="36" width="152" height="88" rx="8" fill="#ffffff" stroke="#E4E7EE" />
+                                    <circle cx="100" cy="80" r="16" fill="#ff4fb8" filter="url(#cg-glow)" />
+                                </svg>
+                            </div>
+                            <div class="state-meta">
+                                <span class="state-tag">S-02</span>
+                                <h4 class="state-name">Hover · Focus</h4>
+                                <p class="state-desc">핑크 글로우와 4% 확대만 사용해 선택 가능성을 짧고 명확하게 알려줍니다.</p>
+                            </div>
+                        </article>
+
+                        <article class="case-state-card">
+                            <div class="state-visual">
+                                <svg viewBox="0 0 200 150">
+                                    <rect x="24" y="36" width="152" height="88" rx="8" fill="#1a1f36" />
+                                    <circle cx="100" cy="72" r="18" fill="#ff4fb8" stroke="#fff" stroke-width="2" />
+                                    <rect x="52" y="102" width="96" height="10" rx="5" fill="#ffffff" opacity="0.85" />
+                                </svg>
+                            </div>
+                            <div class="state-meta">
+                                <span class="state-tag">S-03</span>
+                                <h4 class="state-name">Selected · True tone</h4>
+                                <p class="state-desc">블랙 패널 위 발색을 확대하고 warm/cool 라벨을 함께 노출합니다.</p>
+                            </div>
+                        </article>
+
+                        <article class="case-state-card">
+                            <div class="state-visual">
+                                <svg viewBox="0 0 200 150">
+                                    <rect x="24" y="36" width="72" height="88" rx="8" fill="#fff" stroke="#ff4fb8" stroke-width="1.5" />
+                                    <circle cx="60" cy="72" r="14" fill="#ff4fb8" />
+                                    <rect x="104" y="36" width="72" height="88" rx="8" fill="#f0f2fa" stroke="#E4E7EE" />
+                                    <circle cx="140" cy="72" r="14" fill="#D8CCF5" />
+                                    <text x="100" y="128" text-anchor="middle" fill="#1F2742" font-family="Inter" font-size="8" font-weight="600">COMPARE · 2 SLOT</text>
+                                </svg>
+                            </div>
+                            <div class="state-meta">
+                                <span class="state-tag">S-04</span>
+                                <h4 class="state-name">Compare mode</h4>
+                                <p class="state-desc">최대 2색을 고정해 같은 조명과 같은 크기에서 발색 차이를 비교합니다.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== 08. COLOR · TYPOGRAPHY · VISUAL SYSTEM ========== -->
+            <section class="case-section" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-section-head">
+                        <div>
+                            <span class="case-section-eyebrow">08 · Color system · Typography · Git Pages sync</span>
+                            <h2 class="case-section-title">
+                                라이브 <em>:root</em>와 동일한<br>
+                                Y2K 웹코어 팔레트입니다.
+                            </h2>
+                            <p class="case-section-lead">
+                                스와치는 GitHub Pages
+                                <a href="https://seulform-design.github.io/seulcolorgram/css/common.css" target="_blank" rel="noopener"><code>css/common.css</code></a>
+                                의 <strong>:root</strong> 값을 기준으로 정리했습니다.
+                                Pink primary, Pastel accent, Cool white neutral을 그대로 가져오고,
+                                베이지 대신 <em>NO beige</em> 규칙을 유지했습니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="case-system">
+                        <div class="case-system-block">
+                            <h3>Pink · Primary <code>--color-primary*</code></h3>
+                            <div class="case-color-row">
+                                <div class="case-color-chip case-color-chip--cg-primary">
+                                    <strong>primary</strong>
+                                    <span>#ff4fb8</span>
+                                    <span>CTA · 포커스 링 · 스크롤 thumb</span>
+                                </div>
+                                <div class="case-color-chip case-color-chip--cg-primary-deep">
+                                    <strong>primary-deep</strong>
+                                    <span>#ff1f9d</span>
+                                    <span>호버 시 진하게</span>
+                                </div>
+                                <div class="case-color-chip case-color-chip--cg-primary-dark">
+                                    <strong>primary-dark</strong>
+                                    <span>#ff1f9d</span>
+                                    <span>legacy alias</span>
+                                </div>
+                                <div class="case-color-chip case-color-chip--cg-primary-light is-light">
+                                    <strong>primary-light</strong>
+                                    <span>#ffd6ec</span>
+                                    <span>배경 틴트 (= peach 별칭)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="case-system-block">
+                            <h3>Pastel · Purple / Blue</h3>
+                            <div class="case-color-row">
+                                <div class="case-color-chip case-color-chip--cg-purple is-light">
+                                    <strong>purple · secondary</strong>
+                                    <span>#b89cff</span>
+                                    <span>그라데이션 축</span>
+                                </div>
+                                <div class="case-color-chip case-color-chip--cg-lavender is-light">
+                                    <strong>lavender</strong>
+                                    <span>#eadfff</span>
+                                    <span>라벤더 서피스</span>
+                                </div>
+                                <div class="case-color-chip case-color-chip--cg-blue is-light">
+                                    <strong>blue · sky</strong>
+                                    <span>#9fd7ff</span>
+                                    <span>쿨 포인트 · 패턴 도트</span>
+                                </div>
+                                <div class="case-color-chip case-color-chip--cg-blue-light is-light">
+                                    <strong>blue-light</strong>
+                                    <span>#dff2ff</span>
+                                    <span>라이트 블루 필드</span>
+                                </div>
+                            </div>
+                            <div class="case-color-row">
+                                <div class="case-color-chip case-color-chip--cg-iris is-light">
+                                    <strong>iris</strong>
+                                    <span>#7c9cff</span>
+                                    <span>블루 변주</span>
+                                </div>
+                                <div class="case-color-chip case-color-chip--cg-chrome is-light">
+                                    <strong>chrome</strong>
+                                    <span>#d9e3ff</span>
+                                    <span>크롬 하이라이트</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="case-system-block">
+                            <h3>Pop accent</h3>
+                            <div class="case-color-row">
+                                <div class="case-color-chip case-color-chip--cg-mint is-light">
+                                    <strong>mint</strong>
+                                    <span>#a8ffdf</span>
+                                    <span>네온 그라데이션</span>
+                                </div>
+                                <div class="case-color-chip case-color-chip--cg-lime is-light">
+                                    <strong>lime</strong>
+                                    <span>#dfff45</span>
+                                    <span>스티커 · 한정</span>
+                                </div>
+                                <div class="case-color-chip case-color-chip--cg-yellow is-light">
+                                    <strong>yellow</strong>
+                                    <span>#fff266</span>
+                                    <span>윈도우 닷 · 스티커</span>
+                                </div>
+                                <div class="case-color-chip case-color-chip--cg-coral is-light">
+                                    <strong>coral</strong>
+                                    <span>#ff5e5e</span>
+                                    <span>닫기 닷 등 강조</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="case-system-block">
+                            <h3>Neutral · Cool white</h3>
+                            <div class="case-color-row">
+                                <div class="case-color-chip case-color-chip--cg-black">
+                                    <strong>black · line</strong>
+                                    <span>#111111</span>
+                                    <span>본문 · Y2K 보더</span>
+                                </div>
+                                <div class="case-color-chip case-color-chip--cg-ink">
+                                    <strong>ink</strong>
+                                    <span>#1a1a1a</span>
+                                    <span>보조 텍스트</span>
+                                </div>
+                                <div class="case-color-chip case-color-chip--cg-white is-light">
+                                    <strong>white</strong>
+                                    <span>#ffffff</span>
+                                    <span>카드 바디</span>
+                                </div>
+                                <div class="case-color-chip case-color-chip--cg-cool-white is-light">
+                                    <strong>cool-white</strong>
+                                    <span>#f8fbff</span>
+                                    <span>패턴 베이스 (= gray-50)</span>
+                                </div>
+                            </div>
+                            <div class="case-color-row">
+                                <div class="case-color-chip case-color-chip--cg-gray-100 is-light">
+                                    <strong>gray · 100</strong>
+                                    <span>#f1f4f8</span>
+                                    <span>섹션 서피스</span>
+                                </div>
+                                <div class="case-color-chip case-color-chip--cg-gray-200 is-light">
+                                    <strong>gray-200</strong>
+                                    <span>#e3e9f2</span>
+                                    <span>디바이더</span>
+                                </div>
+                                <div class="case-color-chip case-color-chip--cg-gray-600">
+                                    <strong>gray-600</strong>
+                                    <span>#5d6b80</span>
+                                    <span>본문 서브 (.section-desc)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="case-system-block">
+                            <h3>Gradient · Shadow · Pattern</h3>
+                            <ul class="case-pg-block is-goals case-pg-list--plain">
+                                <li><span class="case-pg-num">∇</span><span><code>--gradient-pop</code> · <code>jelly</code> · <code>neon</code> · <code>chrome</code> · <code>pink-blue</code> · <code>pixel</code> 핑크·퍼플·블루·라임·민트 조합.</span></li>
+                                <li><span class="case-pg-num">◎</span><span><code>--gradient-glow</code> 듀얼 라디얼 글로우.</span></li>
+                                <li><span class="case-pg-num">▢</span><span><code>--shadow-pop</code> 6px 라인 섀도 · <code>--shadow-card</code> · <code>--shadow-glow</code> 핑크 미스트.</span></li>
+                                <li><span class="case-pg-num">◇</span><span><code>--pattern-grid-blue</code> · <code>--pattern-dot-pink</code> / <code>blue</code>.</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="case-system-block">
+                            <h3>Type stack · Live CSS</h3>
+                            <p class="case-section-lead case-section-lead--note">
+                                라이브의 <code>--font-display</code>, <code>--font-pixel</code>, <code>--font-serif</code>, <code>--font-body</code> 조합을
+                                같은 순서로 보여줍니다.
+                            </p>
+                            <div class="case-type-stack">
+                                <div class="case-type-row">
+                                    <p class="case-type-sample display case-type-sample--colorgram-display">COLORGRAM</p>
+                                    <p class="case-type-meta">Display · var(--font-display)</p>
+                                </div>
+                                <div class="case-type-row">
+                                    <p class="case-type-sample h1 case-type-sample--colorgram-h1">Play Your Mood Jelly Edition</p>
+                                    <p class="case-type-meta">Italic hero · var(--font-serif)</p>
+                                </div>
+                                <div class="case-type-row">
+                                    <p class="case-type-sample body case-type-sample--colorgram-body">컬러를 누르는 순간 무드, 발색, 추천 제품이 한 화면에서 이어집니다.</p>
+                                    <p class="case-type-meta">Body · var(--font-body) · 16px / 1.6</p>
+                                </div>
+                                <div class="case-type-row">
+                                    <p class="case-type-sample mono case-type-sample--colorgram-mono">WINDOW · STICKER</p>
+                                    <p class="case-type-meta">Pixel UI · var(--font-pixel)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== 09. RESULT · PORTFOLIO KPI 프레임 ========== -->
+            <section class="case-section is-dark" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-section-head">
+                        <div>
+                            <span class="case-section-eyebrow">09 · Hypothesis KPIs · Color-platform metrics</span>
+                            <h2 class="case-section-title">
+                                리브랜딩은<br>
+                                <em>컬러 행동 지표</em>로 검증합니다.
+                            </h2>
+                            <p class="case-section-lead">
+                                아래 수치는 실운영 로그가 아니라 <strong>제안서·프로토타입 시뮬레이션 가설</strong>입니다. <br>
+                                검증 시 Mood 진입 → Spectrum 상호작용 → PLP 필터 유지 → PDP 발색 스크롤까지 이벤트를 세분화합니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="case-kpi-board">
+                        <div class="case-kpi-cell">
+                            <span class="case-kpi-tag">K-01 · Mood funnel</span>
+                            <span class="case-kpi-num">+18<span class="num-unit">%</span></span>
+                            <p class="case-kpi-label">무드 허브 전환 유지율 (가설)</p>
+                            <p class="case-kpi-context">
+                                첫 스크린에서 Mood Navigation을 탄 사용자가 Spectrum까지 도달할 확률을 기준으로 설정.
+                                숏폼 유입 코호트에서 개선 폭이 클 것으로 가정.
+                            </p>
+                        </div>
+
+                        <div class="case-kpi-cell">
+                            <span class="case-kpi-tag">K-02 · Color interaction</span>
+                            <span class="case-kpi-num">2.1<span class="num-unit">×</span></span>
+                            <p class="case-kpi-label">스와치·스펙트럼 상호작용 대비 PDP 진입 (가설)</p>
+                            <p class="case-kpi-context">
+                                인터랙티브 컬러 블록을 사용한 세션에서 발색 확인 후 PDP로 넘어가는 비율을 단순 그리드 대비 배 가까이 본다는 가설.
+                            </p>
+                        </div>
+
+                        <div class="case-kpi-cell">
+                            <span class="case-kpi-tag">K-03 · Checkout clarity</span>
+                            <span class="case-kpi-num">−22<span class="num-unit">%</span></span>
+                            <p class="case-kpi-label">옵션 단계 이탈 감소 (가설)</p>
+                            <p class="case-kpi-context">
+                                톤·텍스처 정보를 PDP 상단에 고정하고 sticky cart로 단계를 줄여 결제 직전 이탈을 줄인다는 가설.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== 10. DIRECTOR REVIEW · NEXT · PORTFOLIO ========== -->
+            <section class="case-section" data-aos="fade-up">
+                <div class="container">
+                    <div class="case-section-head">
+                        <div>
+                            <span class="case-section-eyebrow">10 · Senior review · Risks · Portfolio read</span>
+                            <h2 class="case-section-title">
+                                사이트 디자인이 아니라<br>
+                                <em>브랜드 리브랜딩 제안</em>으로 읽히게.
+                            </h2>
+                            <p class="case-section-lead">
+                                포트폴리오 관람자는 “예쁜 템플릿”이 아니라 <strong> <br> 문제 정의 → BX 프레임 → IA 결정 → 토큰 시스템 → 검증 지표</strong>의 연결을 본다. <br>
+                                이번 케이스는 그 서사를 드러내기 위해 기존 패션 몰 서술을 전면 교체했습니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="case-reflections">
+                        <article class="case-reflection">
+                            <span class="case-reflection-num">R-01</span>
+                            <h3 class="case-reflection-title">냉정한 디렉터 피드백.</h3>
+                            <p class="case-reflection-body">
+                                프로모 리본과 배너 밀도가 높으면 무드 허브 메시지가 흐려집니다. 라이브에서도 이벤트 모듈은 윈도우 카드 리듬으로 제한하고,
+                                글로우·그라데이션 사용처를 토큰화하지 않으면 “키치 몰”로 역전됩니다.
+                            </p>
+                        </article>
+
+                        <article class="case-reflection">
+                            <span class="case-reflection-num">R-02</span>
+                            <h3 class="case-reflection-title">다음 스프린트 우선순위.</h3>
+                            <p class="case-reflection-body">
+                                ① PLP 2색 비교 슬롯의 모바일 제스처 버전 ② Spectrum 선택값을 URL 쿼리로 공유 ③ 접근성 대비(네온 핑크 포커스 링) 자동 검사 파이프라인.
+                            </p>
+                        </article>
+
+                        <article class="case-reflection">
+                            <span class="case-reflection-num">R-03</span>
+                            <h3 class="case-reflection-title">포트폴리오 강화 포인트.</h3>
+                            <p class="case-reflection-body">
+                                라이브 URL(<a href="https://seulform-design.github.io/seulcolorgram/" class="case-link-inherit" target="_blank" rel="noopener">seulcolorgram</a>)과 기획서 섹션을 1:1로 매핑한 표를 슬라이드 부록으로 두면,
+                                디렉팅 역량이 한 장에 증명됩니다.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- ========== NEXT PROJECT ========== -->
+        <section class="case-next" data-aos="fade-up">
+            <a href="dakyoungsnd.html" class="case-next-inner" aria-label="Next case · 다경에스앤디">
+                <div class="case-next-text">
+                    <span class="case-next-eyebrow">Next case · 05 / 07</span>
+                    <h3 class="case-next-title">다경에스앤디.</h3>
+                    <p class="case-next-tagline">
+                        B2B 서비스 소개와 문의 동선을 단순화한 코퍼레이트
+                        신뢰감 있는 타입과 여백으로 정보 밀도를 조절했습니다.
+                    </p>
+                    <span class="case-next-cta">
+                        Read case study
+                        <span class="case-next-cta-arrow">→</span>
+                    </span>
+                </div>
+                <div class="case-next-visual">
+                    <img src="./images/cover8.png" alt="다경에스앤디 next case preview">
+                </div>
+            </a>
+        </section>
+
+        <!-- ========== FOOTER ========== -->
+        <footer class="subpage-footer">
+            <div class="container">
+                <div class="subpage-footer-grid">
+                    <div class="subpage-footer-brand">
+                        <h3>Sulgi Ji</h3>
+                        <p>
+                            7년의 운영 감각을 디지털 의사결정으로 옮기는 디자이너입니다.
+                            브랜드의 다음 챕터를 함께 정돈하고 싶다면 짧게라도 적어 보내주세요.
+                        </p>
+                        <a href="mailto:seulform@gmail.com" class="subpage-footer-cta">
+                            seulform@gmail.com →
+                        </a>
+                    </div>
+
+                    <div class="subpage-footer-col">
+                        <h4>Cases</h4>
+                        <ul>
+                            <li><a href="lelabo.html">01 · Le Labo</a></li>
+                            <li><a href="artish.html">02 · Artish</a></li>
+                            <li><a href="danha.html">03 · Danha</a></li>
+                            <li><a href="colorgram.html">04 · COLORGRAM</a></li>
+                            <li><a href="dakyoungsnd.html">05 · 다경에스앤디</a></li>
+                            <li><a href="threece.html">06 · 3CE</a></li>
+                            <li><a href="sleesl.html">07 · 슬슬</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="subpage-footer-col">
+                        <h4>Elsewhere</h4>
+                        <ul>
+                            <li><a href="index.html#about">About</a></li>
+                            <li><a href="index.html#capabilities">Capabilities</a></li>
+                            <li><a href="index.html#faq">FAQ</a></li>
+                            <li><a href="tel:+821065283177">010-6528-3177</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="subpage-footer-bottom">
+                    <span class="copy">© 2026 SULGI JI · HAND-CODED IN SEOUL</span>
+                    <span class="meta">CASE 04 · STRATEGY SYNC 2026.05</span>
+                </div>
+            </div>
+        </footer>
+
+        <a href="#main" class="subpage-back-to-top" id="backToTop" aria-label="Back to top">↑</a>
+    </div>
+
+    <script src="scripts/ui/header.js" defer></script>
+    <script src="scripts/ui/navigation.js" defer></script>
+    <script src="scripts/ui/case-study.js" defer></script>
+</body>
+
+</html>
