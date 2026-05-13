@@ -6632,6 +6632,145 @@ html {
     font-weight: 600;
 }
 
+/* ---- Tabs (Category navigator) ---- */
+.gfx-tabs {
+    display: flex;
+    align-items: stretch;
+    margin: 16px 0 28px;
+    padding: 0;
+    border-top: 1px solid var(--ink-900, #1F2742);
+    border-bottom: 1px solid var(--rule, #e5e5e5);
+}
+
+.gfx-tab {
+    position: relative;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 12px;
+    padding: 14px 0;
+    margin-right: 56px;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    color: var(--ink-400, #9099B5);
+    transition: color 0.3s ease;
+}
+
+.gfx-tab:last-child {
+    margin-right: 0;
+}
+
+.gfx-tab-label {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.01em;
+}
+
+.gfx-tab-count {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: inherit;
+    opacity: 0.55;
+    transition: opacity 0.3s ease;
+}
+
+.gfx-tab-ink {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 2px;
+    background: var(--ink-900, #1F2742);
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.gfx-tab:hover {
+    color: var(--ink-700, #3D4869);
+}
+
+.gfx-tab.is-active {
+    color: var(--ink-900, #1F2742);
+}
+
+.gfx-tab.is-active .gfx-tab-count {
+    opacity: 1;
+}
+
+.gfx-tab.is-active .gfx-tab-ink {
+    transform: scaleX(1);
+}
+
+/* ---- Groups (Tab panels) ---- */
+.gfx-groups {
+    position: relative;
+}
+
+.gfx-group {
+    display: none;
+    padding: 0;
+}
+
+.gfx-group.is-active {
+    display: block;
+    animation: gfxPanelFadeIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.gfx-groups.is-all .gfx-group + .gfx-group {
+    margin-top: 20px;
+}
+
+@keyframes gfxPanelFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---- Group head (sub-section labels, visible only in "All" view) ---- */
+.gfx-group-head {
+    display: none;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule, #e5e5e5);
+}
+
+.gfx-groups.is-all .gfx-group-head {
+    display: flex;
+}
+
+.gfx-group-title {
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.01em;
+    color: var(--ink-900, #1F2742);
+}
+
+.gfx-group-count {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--ink-600, #5B688A);
+    text-transform: uppercase;
+}
+
 /* ---- Grid ---- */
 .gfx-grid {
     display: grid;
@@ -6662,6 +6801,21 @@ html {
     transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
+/* Hide scrollbar by default for a cleaner look, show on hover or scroll */
+.gfx-thumb::-webkit-scrollbar {
+    width: 4px;
+}
+.gfx-thumb::-webkit-scrollbar-track {
+    background: transparent;
+}
+.gfx-thumb::-webkit-scrollbar-thumb {
+    background: rgba(31, 39, 66, 0.1);
+    border-radius: 2px;
+}
+.gfx-thumb:hover::-webkit-scrollbar-thumb {
+    background: rgba(31, 39, 66, 0.3);
+}
+
 .gfx-card:hover .gfx-thumb {
     transform: translateY(-4px);
 }
@@ -6669,12 +6823,47 @@ html {
 /* Graphic design image mapping styling */
 .gfx-thumb .gfx-img {
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     object-fit: cover;
     display: block;
     transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
-.gfx-card:hover .gfx-thumb .gfx-img {
+
+/* Detail cards: inner scroll wrapper keeps long image scrollable while overlay stays fixed */
+.gfx-card[data-category="detail"] .gfx-thumb {
+    overflow: hidden;
+}
+.gfx-thumb-scroll {
+    position: absolute;
+    inset: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    cursor: n-resize;
+    z-index: 0;
+}
+.gfx-thumb-scroll::-webkit-scrollbar {
+    width: 4px;
+}
+.gfx-thumb-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+.gfx-thumb-scroll::-webkit-scrollbar-thumb {
+    background: rgba(31, 39, 66, 0.1);
+    border-radius: 2px;
+}
+.gfx-thumb-scroll:hover::-webkit-scrollbar-thumb {
+    background: rgba(31, 39, 66, 0.3);
+}
+.gfx-thumb-scroll .gfx-img {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    display: block;
+    object-fit: unset;
+}
+
+/* Hover zoom — only on non-scrolling (poster) cards */
+.gfx-card:not([data-category="detail"]):hover .gfx-thumb .gfx-img {
     transform: scale(1.04);
 }
 
@@ -6753,6 +6942,7 @@ html {
     opacity: 0;
     transition: opacity 0.4s ease;
     z-index: 2;
+    pointer-events: none;
 }
 
 .gfx-thumb:hover .gfx-info {
